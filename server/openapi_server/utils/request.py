@@ -226,6 +226,8 @@ def post_resource(**kwargs):
     else:
         body.type = [rdf_type_uri]
     body.id = generate_new_uri()
+    logger.info("Inserting the resource: {}".format(body.id))
+
     try:
         username = kwargs["user"]
 
