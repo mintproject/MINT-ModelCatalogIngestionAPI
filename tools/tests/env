@@ -1,3 +1,5 @@
-#SERVER=https://api.models.mint.isi.edu/v1.3.0
-SERVER=http://localhost:8080/v1.3.0
-TOKEN=$(curl -s -X GET "$SERVER/user/login?username=mint%40isi.edu&password=mint123" -H "accept: application/json" | jq -r '.access_token')
+SERVER=https://api.models.mint.isi.edu/v1.4.0
+#SERVER=http://localhost:8080/v1.3.0
+USERNAME="mosorio@isi.edu"
+PASSWORD="Cs0WgIQPWJ"
+TOKEN=$(curl -s -X GET "$SERVER/user/login?username=$USERNAME&password=$PASSWORD" -H "accept: application/json" | jq -r '.access_token')

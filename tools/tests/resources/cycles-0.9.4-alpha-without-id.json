@@ -1,0 +1,472 @@
+{
+  "noauthor": [
+    {
+      "label": [
+        "Rafael Silva"
+      ],
+      "type": "sd:Person"
+    }
+  ],
+  "description": [
+    "Cycles configuration (version 0.9.4) exposing additional parameters such as weeds fraction and fertilizer rate"
+  ],
+  "hasCausalDiagram": [
+    {
+      "label": [
+        "CAG for Cycles with the most important variables in the model"
+      ],
+      "type": [
+        "CausalDiagram"
+      ]
+    },
+    {
+      "label": [
+        "CAG for Cycles representing a more complex version of the variables and processes of the model"
+      ],
+      "type": [
+        "CausalDiagram"
+      ]
+    }
+  ],
+  "hasComponentLocation": [
+    "https://github.com/mintproject/MINT-WorkflowDomain/blob/18cf8de2b117fad2a4ede6eb1a439b76ff241486/WINGSWorkflowComponents/cycles-0.9.4-alpha/cycles-0.9.4-alpha.zip?raw=true"
+  ],
+  "hasGrid": [
+    {
+      "label": [
+        "Grid from the Cycles agriculture model"
+      ],
+      "type": [
+        "Grid",
+        "PointBasedGrid"
+      ]
+    }
+  ],
+  "hasImplementationScriptLocation": [
+    "https://github.com/mintproject/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/cycles-0.9.4-alpha/src/run"
+  ],
+  "hasInput": [
+    {
+      "label": [
+        "cycles_soil"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesSoil",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_crops"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesCrops",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_weather"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesWeather",
+        "DatasetSpecification"
+      ]
+    }
+  ],
+  "hasModelCategory": [
+    "Agriculture"
+  ],
+  "hasOutput": [
+    {
+      "label": [
+        "cycles_soilProfile"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesAnnualSoilProfile",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_crop"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesCropOutput",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_water"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesWaterOutput",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_summary"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesSummary",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_season"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesSeason",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_outputs"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesOutputs",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_nitrogen"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesNitrogen",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_som"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesAnnualSOM",
+        "DatasetSpecification"
+      ]
+    },
+    {
+      "label": [
+        "cycles_weatherOutput"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesWeatherOutput",
+        "DatasetSpecification"
+      ]
+    }
+  ],
+  "hasOutputTimeInterval": [
+    {
+      "label": [
+        "Simple cycles time interval"
+      ],
+      "type": [
+        "TimeInterval"
+      ]
+    }
+  ],
+  "hasParameter": [
+    {
+      "label": [
+        "weed_fraction"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesWeedFraction",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "crop_name"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesCropName",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "end_year"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesEndYear",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "fertilizer_rate"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesFertilizerRate",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "start_year"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesStartYear",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "end_planting_day"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesEndPlantingDay",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "start_planting_day"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesStartPlantingDay",
+        "Parameter"
+      ]
+    },
+    {
+      "label": [
+        "use_forcing"
+      ],
+      "type": [
+        "https://w3id.org/wings/export/MINT#CyclesUseForcing",
+        "Parameter"
+      ]
+    }
+  ],
+  "hasProcess": [
+    {
+      "label": [
+        "Nitrogen uptake"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Precipitation"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Solar radiation"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Transpiration"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Management"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Humification"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Nitrogen mineralization and immobalization"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Biomass growth"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Nitrogen transport"
+      ],
+      "type": [
+        "Process"
+      ]
+    },
+    {
+      "label": [
+        "Respiration"
+      ],
+      "type": [
+        "Process"
+      ]
+    }
+  ],
+  "hasSetup": [
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for the Gambella region (Ethiopia) with adjustable parameters"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for a single point in the Gambella region, with fixed planting dates and an adjustable weather file"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles configured model (v0.9.4) for the Pongo region with planting dates. Weather file (single point) can be selected"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for the full Gambella region (Ethiopia) with adjustable planting dates"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for a single point (weather file) in Texas"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles configured model (v0.9.4) for the Pongo region (single point per weather file) with adjustable planting dates"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for the Pongo region (South Sudan) with adjustable planting dates and for multiple points for weather (pre-selected)"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for a single point in Texas, with fixed planting dates and adjustable weather file (single point)"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles model (v0.9.4) set up for a single point (weather file) in Texas with adjustable parameters"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    },
+    {
+      "label": [
+        "Cycles configured model (v0.9.4) for the Pongo region-no file selection"
+      ],
+      "type": [
+        "ConfigurationSetup",
+        "ModelConfigurationSetup",
+        "ModelConfiguration",
+        "Theory-GuidedModel"
+      ]
+    }
+  ],
+  "hasSoftwareImage": [
+    {
+      "label": [
+        "mintproject/cycles:0.9.4-alpha"
+      ],
+      "type": "SoftwareImage"
+    }
+  ],
+  "keywords": [
+    "agriculture; cycles; crop growth; weather;soil;crop management"
+  ],
+  "label": [
+    "Cycles configuration (v0.9.4) exposing weed fraction and fertilizer rate"
+  ],
+  "type": [
+    "ModelConfiguration",
+    "Theory-GuidedModel",
+    "SoftwareConfiguration"
+  ],
+  "usefulForCalculatingIndex": [
+    {
+      "id": "http://www.geoscienceontology.org/svo/svl/variable#crop_production__seasonal_production_index",
+      "label": [
+        "crop__seasonal_production_index"
+      ],
+      "type": [
+        "http://www.geoscienceontology.org/svo/svu#Variable",
+        "http://www.w3.org/2002/07/owl#NamedIndividual"
+      ]
+    }
+  ]
+}
