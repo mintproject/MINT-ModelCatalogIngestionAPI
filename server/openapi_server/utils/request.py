@@ -250,11 +250,12 @@ def traverse_obj(body, username):
                 for inner_values in value:
                     if not (isinstance(inner_values, primitives.__args__) or isinstance(inner_values, dict)):
                         list_of_obj = get_all_complex_objects(inner_values, username)
-                        if len(list_of_obj) == 0:
-                            inner_values.id = generate_new_uri()
-                            insert_response = insert_all_resources(inner_values, username)
-                        else:
-                            traverse_obj(inner_values)
+                        
+                        if len(list_of_obj) != 0:
+                            traverse_obj(inner_values, username)
+                        
+                        inner_values.id = generate_new_uri()
+                        insert_response = insert_all_resources(inner_values, username)
 
                         # print(inner_values)
             elif isinstance(value, dict):

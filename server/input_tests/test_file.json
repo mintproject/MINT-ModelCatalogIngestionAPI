@@ -1,0 +1,370 @@
+{
+    "type": [
+        "ModelConfiguration"
+    ],
+    "id": "https://w3id.org/okn/i/mint/EACS",
+    "description": [
+        "Aggregate crop supply response model for the country of South Sudan (version 2)"
+    ],
+    "author": [
+        {
+            "type": [
+                "Person"
+            ],
+            "label": [
+                "Rajiv Mayani"
+            ]
+        }
+    ],
+    "contributor": [
+        {
+            "type": [
+                "Person"
+            ],
+            "label": [
+                "Deborah Khider"
+            ]
+        },
+        {
+            "type": [
+                "Person"
+            ],
+            "label": [
+                "Zeya Zhang"
+            ],
+            "email": [
+                "blah@b.com"
+            ]
+        }
+    ],
+    "hasComponentLocation": [
+        "https://github.com/mintproject/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/economic-v2/economic-v2.zip"
+    ],
+    "hasImplementationScriptLocation": [
+        "https://github.com/mintproject/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/economic-v2/run"
+    ],
+    "keywords": [
+        "economy; land use; crop production; fertilizer costs"
+    ],
+    "hasGrid": [
+        {
+            "type": [
+                "Grid"
+            ],
+            "label": [
+                "Grid from the economic crop supply model"
+            ],
+            "description": [
+                "Grid from the economic crop supply model"
+            ],
+            "hasDimension": [
+                "0D"
+            ],
+            "hasShape": [
+                "Point"
+            ],
+            "hasSpatialResolution": [
+                "Point"
+            ]
+        }
+    ],
+    "hasModelCategory": [
+        "Economy"
+    ],
+    "hasRegion": [
+        {
+            "type": [
+                "Region"
+            ],
+            "description": [
+                "Area of the Pongo Basin in South Sudan"
+            ],
+            "label": [
+                "Pongo basin region (South Sudan)"
+            ]
+        }
+    ],
+    "hasSoftwareImage": [
+        {
+            "label": [
+                "mintproject/economic:v2"
+            ]
+        }
+    ],
+    "hasSourceCode": [
+        {
+            "type": [
+                "SourceCode"
+            ],
+            "codeRepository": [
+                "https://github.com/mintproject/MINT-WorkflowDomain/tree/master/WINGSWorkflowComponents/economic-v2"
+            ],
+            "description": [
+                "Code for creating an encapsulation of EACS for a model configuration (version 2)"
+            ],
+            "label": [
+                "EACS configuration component (version 2 of code)"
+            ],
+            "programmingLanguage": [
+                "shell"
+            ]
+        }
+    ],
+    "hasOutputTimeInterval": [
+        {
+            "type": [
+                "TimeInterval"
+            ],
+            "label": [
+                "Simple economic time interval"
+            ],
+            "description": [
+                "Time interval used in the aggregate crop supply response model for the country of South Sudan configuration"
+            ]
+        }
+    ],
+    "hasProcess": [
+        {
+            "label": [
+                "Supply of Crop"
+            ],
+            "type": [
+                "Process"
+            ]
+        },
+        {
+            "label": [
+                "Use of Fertilizer"
+            ],
+            "type": [
+                "Process"
+            ]
+        },
+        {
+            "label": [
+                "Use of land"
+            ],
+            "type": [
+                "Process"
+            ]
+        }
+    ],
+    "hasInput": [
+        {
+            "hasDimensionality": [
+                0
+            ],
+            "label": [
+                "economic-sim"
+            ],
+            "description": [
+                "Contains the economic data used in the simulation analysis"
+            ],
+            "position": [
+                1
+            ],
+            "type": [
+                "https://w3id.org/wings/export/MINT#EconomicSimData",
+                "DatasetSpecification"
+            ],
+            "hasFormat": [
+                "csv"
+            ],
+            "hasPresentation": [
+                {
+                    "type": [
+                        "VariablePresentation"
+                    ],
+                    "label": [
+                        "c1"
+                    ],
+                    "description": [
+                        "costs of production per unit land area"
+                    ],
+                    "hasLongName": [
+                        "land cost"
+                    ],
+                    "hasShortName": [
+                        "c1"
+                    ],
+                    "hasStandardVariable": [
+                        {
+                            "label": [
+                                "land_crop__production_cost-per-area"
+                            ],
+                            "type": [
+                                "StandardVariable"
+                            ]
+                        }
+                    ],
+                    "usesUnit": [
+                        {
+                            "label": [
+                                "USD ha-1"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hasDimensionality": [
+                0
+            ],
+            "label": [
+                "economic-subsidies"
+            ],
+            "description": [
+                "File indicating the economic subsidies to use on each iteration of the model"
+            ],
+            "hasFormat": [
+                "txt"
+            ],
+            "position": [
+                2
+            ],
+            "type": [
+                "https://w3id.org/wings/export/MINT#EconomicSubsidies",
+                "DatasetSpecification"
+            ],
+            "hasPresentation": [
+                {
+                    "type": [
+                        "VariablePresentation"
+                    ],
+                    "label": [
+                        "c2"
+                    ],
+                    "description": [
+                        "costs of production per unit land area example"
+                    ],
+                    "hasLongName": [
+                        "land cost example"
+                    ],
+                    "hasStandardVariable": [
+                        {
+                            "label": [
+                                "land_crop__production_cost-per-area_example"
+                            ],
+                            "type": [
+                                "StandardVariable"
+                            ]
+                        }
+                    ],
+                    "usesUnit": [
+                        {
+                            "label": [
+                                "USD ha-1"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "hasOutput": [
+        {
+            "hasDimensionality": [
+                0
+            ],
+            "label": [
+                "crop-yield"
+            ],
+            "description": [
+                "Contains the yield elasticities to fertilizer use that are derived from Cycles output"
+            ],
+            "hasFormat": [
+                "csv"
+            ],
+            "position": [
+                1
+            ],
+            "type": [
+                "https://w3id.org/wings/export/MINT#CropYield",
+                "DatasetSpecification"
+            ],
+            "hasPresentation": [
+                {
+                    "type": [
+                        "VariablePresentation"
+                    ],
+                    "label": [
+                        "eta"
+                    ],
+                    "description": [
+                        "Econ Eta"
+                    ]
+                },
+                {
+                    "type": [
+                        "VariablePresentation"
+                    ],
+                    "label": [
+                        "c2"
+                    ],
+                    "description": [
+                        "Econ C2"
+                    ]
+                },
+                {
+                    "type": [
+                        "VariablePresentation"
+                    ],
+                    "label": [
+                        "p"
+                    ],
+                    "description": [
+                        "Econ P"
+                    ]
+                }
+            ]
+        },
+        {
+            "hasDimensionality": [
+                0
+            ],
+            "label": [
+                "economic-data"
+            ],
+            "description": [
+                "Contains data on observed prices for each crop and supply elasticities and the costs of production for each crop"
+            ],
+            "position": [
+                2
+            ],
+            "type": [
+                "https://w3id.org/wings/export/MINT#EconomicData",
+                "DatasetSpecification"
+            ]
+        }
+    ],
+    "hasParameter": [
+        {
+            "type": [
+                "Parameter"
+            ],
+            "label": [
+                "maize-crop-price-adjustment"
+            ],
+            "description": [
+                "Change in market price by crop"
+            ],
+            "usesUnit": [
+                {
+                    "label": [
+                        "%"
+                    ]
+                }
+            ],
+            "hasDataType": [
+                "float"
+            ],
+            "hasMaximumAcceptedValue": [
+                50
+            ],
+            "hasMinimumAcceptedValue": [
+                -50
+            ]
+        }
+    ]
+}

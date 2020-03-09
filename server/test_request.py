@@ -29,10 +29,11 @@ def modelconfigurations_post(user, model_configuration=None):  # noqa: E501
         kls=ModelConfiguration)
 
 
-configuration_json = "input_tests/cycles-0.9.4-alpha-without-id.json"
+#configuration_json = "input_tests/cycles-0.9.4-alpha-without-id.json"
+configuration_json = "input_tests/test_file.json"
 with open(configuration_json, 'r') as file:
     data = json.load(file)
     user = "dhruvrpa@usc.edu"
     #Create a modelconfiguration
     m = modelconfigurations_post(user, data)
-    print(m[0].id)
+    print(m)
