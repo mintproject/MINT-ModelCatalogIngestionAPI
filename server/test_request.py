@@ -30,10 +30,13 @@ def modelconfigurations_post(user, model_configuration=None):  # noqa: E501
 
 
 #configuration_json = "input_tests/cycles-0.9.4-alpha-without-id.json"
-configuration_json = "input_tests/test_file.json"
+configuration_json = "input_tests/cycles-0.9.4-alpha-without-id.json"
 with open(configuration_json, 'r') as file:
     data = json.load(file)
     user = "dhruvrpa@usc.edu"
     #Create a modelconfiguration
     m = modelconfigurations_post(user, data)
     print(m)
+    assert m[0].id!=None
+    assert len(m[0].has_input)==3
+    assert m[0].has_input[0].id!=None
