@@ -15,13 +15,13 @@ class ConfigurationSetup(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, has_documentation=None, keywords=None, has_implementation_script_location=None, software_requirements=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, has_contact_person=None, logo=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, has_implementation_script_location=None, software_requirements=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
         """ConfigurationSetup - a model defined in OpenAPI
 
-        :param has_documentation: The has_documentation of this ConfigurationSetup.  # noqa: E501
-        :type has_documentation: List[str]
         :param keywords: The keywords of this ConfigurationSetup.  # noqa: E501
         :type keywords: List[str]
+        :param has_documentation: The has_documentation of this ConfigurationSetup.  # noqa: E501
+        :type has_documentation: List[str]
         :param has_implementation_script_location: The has_implementation_script_location of this ConfigurationSetup.  # noqa: E501
         :type has_implementation_script_location: List[str]
         :param software_requirements: The software_requirements of this ConfigurationSetup.  # noqa: E501
@@ -36,10 +36,10 @@ class ConfigurationSetup(Model):
         :type compatible_visualization_software: List[Software]
         :param has_faq: The has_faq of this ConfigurationSetup.  # noqa: E501
         :type has_faq: List[str]
-        :param has_contact_person: The has_contact_person of this ConfigurationSetup.  # noqa: E501
-        :type has_contact_person: List[object]
         :param logo: The logo of this ConfigurationSetup.  # noqa: E501
         :type logo: List[Image]
+        :param has_contact_person: The has_contact_person of this ConfigurationSetup.  # noqa: E501
+        :type has_contact_person: List[object]
         :param id: The id of this ConfigurationSetup.  # noqa: E501
         :type id: str
         :param identifier: The identifier of this ConfigurationSetup.  # noqa: E501
@@ -150,8 +150,8 @@ class ConfigurationSetup(Model):
           # noqa: E501
 
         self.openapi_types = {
-            'has_documentation': List[str],
             'keywords': List[str],
+            'has_documentation': List[str],
             'has_implementation_script_location': List[str],
             'software_requirements': List[str],
             'has_download_url': List[str],
@@ -159,8 +159,8 @@ class ConfigurationSetup(Model):
             'has_installation_instructions': List[str],
             'compatible_visualization_software': List[Software],
             'has_faq': List[str],
-            'has_contact_person': List[object],
             'logo': List[Image],
+            'has_contact_person': List[object],
             'id': str,
             'identifier': List[str],
             'has_sample_execution': List[SampleExecution],
@@ -205,8 +205,8 @@ class ConfigurationSetup(Model):
         }
 
         self.attribute_map = {
-            'has_documentation': 'hasDocumentation',
             'keywords': 'keywords',
+            'has_documentation': 'hasDocumentation',
             'has_implementation_script_location': 'hasImplementationScriptLocation',
             'software_requirements': 'softwareRequirements',
             'has_download_url': 'hasDownloadURL',
@@ -214,8 +214,8 @@ class ConfigurationSetup(Model):
             'has_installation_instructions': 'hasInstallationInstructions',
             'compatible_visualization_software': 'compatibleVisualizationSoftware',
             'has_faq': 'hasFAQ',
-            'has_contact_person': 'hasContactPerson',
             'logo': 'logo',
+            'has_contact_person': 'hasContactPerson',
             'id': 'id',
             'identifier': 'identifier',
             'has_sample_execution': 'hasSampleExecution',
@@ -259,8 +259,8 @@ class ConfigurationSetup(Model):
             'has_input': 'hasInput'
         }
 
-        self._has_documentation = has_documentation
         self._keywords = keywords
+        self._has_documentation = has_documentation
         self._has_implementation_script_location = has_implementation_script_location
         self._software_requirements = software_requirements
         self._has_download_url = has_download_url
@@ -268,8 +268,8 @@ class ConfigurationSetup(Model):
         self._has_installation_instructions = has_installation_instructions
         self._compatible_visualization_software = compatible_visualization_software
         self._has_faq = has_faq
-        self._has_contact_person = has_contact_person
         self._logo = logo
+        self._has_contact_person = has_contact_person
         self._id = id
         self._identifier = identifier
         self._has_sample_execution = has_sample_execution
@@ -324,27 +324,6 @@ class ConfigurationSetup(Model):
         return util.deserialize_model(dikt, cls)
 
     @property
-    def has_documentation(self):
-        """Gets the has_documentation of this ConfigurationSetup.
-
-
-        :return: The has_documentation of this ConfigurationSetup.
-        :rtype: List[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this ConfigurationSetup.
-
-
-        :param has_documentation: The has_documentation of this ConfigurationSetup.
-        :type has_documentation: List[str]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
     def keywords(self):
         """Gets the keywords of this ConfigurationSetup.
 
@@ -364,6 +343,27 @@ class ConfigurationSetup(Model):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this ConfigurationSetup.
+
+
+        :return: The has_documentation of this ConfigurationSetup.
+        :rtype: List[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this ConfigurationSetup.
+
+
+        :param has_documentation: The has_documentation of this ConfigurationSetup.
+        :type has_documentation: List[str]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def has_implementation_script_location(self):
@@ -513,27 +513,6 @@ class ConfigurationSetup(Model):
         self._has_faq = has_faq
 
     @property
-    def has_contact_person(self):
-        """Gets the has_contact_person of this ConfigurationSetup.
-
-
-        :return: The has_contact_person of this ConfigurationSetup.
-        :rtype: List[object]
-        """
-        return self._has_contact_person
-
-    @has_contact_person.setter
-    def has_contact_person(self, has_contact_person):
-        """Sets the has_contact_person of this ConfigurationSetup.
-
-
-        :param has_contact_person: The has_contact_person of this ConfigurationSetup.
-        :type has_contact_person: List[object]
-        """
-
-        self._has_contact_person = has_contact_person
-
-    @property
     def logo(self):
         """Gets the logo of this ConfigurationSetup.
 
@@ -553,6 +532,27 @@ class ConfigurationSetup(Model):
         """
 
         self._logo = logo
+
+    @property
+    def has_contact_person(self):
+        """Gets the has_contact_person of this ConfigurationSetup.
+
+
+        :return: The has_contact_person of this ConfigurationSetup.
+        :rtype: List[object]
+        """
+        return self._has_contact_person
+
+    @has_contact_person.setter
+    def has_contact_person(self, has_contact_person):
+        """Sets the has_contact_person of this ConfigurationSetup.
+
+
+        :param has_contact_person: The has_contact_person of this ConfigurationSetup.
+        :type has_contact_person: List[object]
+        """
+
+        self._has_contact_person = has_contact_person
 
     @property
     def id(self):

@@ -1,4 +1,6 @@
-language: generic
+language: python
+python:
+    3.7
 env:
   matrix:
   - DOCKER_COMPOSE_VERSION=1.23.2
@@ -10,21 +12,13 @@ before_install:
 - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 - sudo apt-get install nodejs
 - npm install --global release-it
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- sudo rm /usr/local/bin/docker-compose
-- curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
-  -s`-`uname -m` > docker-compose
-- chmod +x docker-compose
-- sudo mv docker-compose /usr/local/bin
-- pushd server
-- docker build -t model-catalog-api .
-- docker tag model-catalog-api mintproject/model-catalog-api:latest
-- docker push mintproject/model-catalog-api:latest
-- popd
-
-install: pip install tox-travis
-script: cd server; tox
-
+install:
+    - cd server
+    - pip install tox
+script:
+    - tox
+before_deploy:
+    - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: script
   script: bash .deploy

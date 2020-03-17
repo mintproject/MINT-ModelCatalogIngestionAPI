@@ -78,6 +78,54 @@ def custom_model_region_get(label, custom_query_name=None, username=None):  # no
         rdf_type_name=MODEL_TYPE_NAME, 
         kls=Model)
 
+def custom_models_standard_variable_get(label, custom_query_name=None, username=None):  # noqa: E501
+    """Get a list of models
+
+    Gets a list of model filter by the label of a standard variable # noqa: E501
+
+    :param label: standard variable name
+    :type label: str
+    :param custom_query_name: Name of the custom query
+    :type custom_query_name: str
+    :param username: Username to query
+    :type username: str
+
+    :rtype: List[Model]
+    """
+
+
+    return get_resource(
+        custom_query_name=custom_query_name,
+        username=username,
+        label=label,
+        rdf_type_uri=MODEL_TYPE_URI,
+        rdf_type_name=MODEL_TYPE_NAME, 
+        kls=Model)
+
+def custom_models_variable_get(label, custom_query_name=None, username=None):  # noqa: E501
+    """Get a list of Model
+
+    Get models by variable name # noqa: E501
+
+    :param label: variable to search
+    :type label: str
+    :param custom_query_name: Name of the custom query
+    :type custom_query_name: str
+    :param username: Username to query
+    :type username: str
+
+    :rtype: List[Model]
+    """
+
+
+    return get_resource(
+        custom_query_name=custom_query_name,
+        username=username,
+        label=label,
+        rdf_type_uri=MODEL_TYPE_URI,
+        rdf_type_name=MODEL_TYPE_NAME, 
+        kls=Model)
+
 def models_get(username=None, label=None):  # noqa: E501
     """List all Model entities
 

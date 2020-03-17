@@ -18,11 +18,7 @@
   "github": {
     "release": true
   },
-  "hooks": {
-    "after:bump": "echo ${version} > VERSION"
-  },
-  "npm": {
-    "publish": true,
+"npm": { "publish": true,
     "publishPath": ".",
     "access": null,
     "otp": null

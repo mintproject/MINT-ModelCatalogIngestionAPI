@@ -23,7 +23,7 @@ Jinja2==2.10.1
 jsonschema==2.6.0
 keepalive==0.5
 MarkupSafe==0.23
-obasparql==2.0.2
+obasparql==2.1.1
 openapi-spec-validator==0.2.8
 pathlib==1.0.1
 ply==3.11

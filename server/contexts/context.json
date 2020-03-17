@@ -238,11 +238,6 @@
       "@id": "https://w3id.org/okn/o/sd#copyrightYear",
       "@type": "@id"
     },
-    "country": {
-      "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sdm#country",
-      "@type": "@id"
-    },
     "created": {
       "@container": "@set",
       "@id": "http://purl.org/dc/elements/1.1/created"
@@ -584,6 +579,7 @@
       "@id": "https://w3id.org/okn/o/sd#hasVersionId",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "id": "@id",
     "identifier": {
       "@container": "@set",
       "@id": "http://schema.org/identifier"
@@ -652,6 +648,11 @@
       "@id": "https://w3id.org/okn/o/sdm#parameterAssignmentMethod",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "partOf": {
+      "@container": "@set",
+      "@id": "https://w3id.org/okn/o/sdm#partOf",
+      "@type": "@id"
+    },
     "partOfDataset": {
       "@container": "@set",
       "@id": "https://w3id.org/okn/o/sd#partOfDataset",
@@ -688,6 +689,11 @@
       "@id": "https://w3id.org/okn/o/sd#publisher",
       "@type": "@id"
     },
+    "recommendedIncrement": {
+      "@container": "@set",
+      "@id": "https://w3id.org/okn/o/sdm#recommendedIncrement",
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
+    },
     "referencePublication": {
       "@container": "@set",
       "@id": "https://codemeta.github.io/terms/referencePublication"
@@ -716,6 +722,11 @@
       "@id": "https://w3id.org/okn/o/sd#supportDetails",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "tag": {
+      "@container": "@set",
+      "@id": "https://w3id.org/okn/o/sdm#tag",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "title": {
       "@container": "@set",
       "@id": "http://purl.org/dc/elements/1.1/title"
@@ -725,6 +736,7 @@
       "@id": "http://www.w3.org/2002/07/owl#topObjectProperty",
       "@type": "@id"
     },
+    "type": "@type",
     "used": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/prov#used",

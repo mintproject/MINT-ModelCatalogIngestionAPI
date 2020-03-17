@@ -15,15 +15,15 @@ class Region(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, geo=None, description=None, country=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, geo=None, description=None, part_of=None, id=None, label=None, type=None):  # noqa: E501
         """Region - a model defined in OpenAPI
 
         :param geo: The geo of this Region.  # noqa: E501
         :type geo: List[object]
         :param description: The description of this Region.  # noqa: E501
         :type description: List[str]
-        :param country: The country of this Region.  # noqa: E501
-        :type country: List[Region]
+        :param part_of: The part_of of this Region.  # noqa: E501
+        :type part_of: List[Region]
         :param id: The id of this Region.  # noqa: E501
         :type id: str
         :param label: The label of this Region.  # noqa: E501
@@ -36,7 +36,7 @@ class Region(Model):
         self.openapi_types = {
             'geo': List[object],
             'description': List[str],
-            'country': List[Region],
+            'part_of': List[Region],
             'id': str,
             'label': List[str],
             'type': List[str]
@@ -45,7 +45,7 @@ class Region(Model):
         self.attribute_map = {
             'geo': 'geo',
             'description': 'description',
-            'country': 'country',
+            'part_of': 'partOf',
             'id': 'id',
             'label': 'label',
             'type': 'type'
@@ -53,7 +53,7 @@ class Region(Model):
 
         self._geo = geo
         self._description = description
-        self._country = country
+        self._part_of = part_of
         self._id = id
         self._label = label
         self._type = type
@@ -112,25 +112,25 @@ class Region(Model):
         self._description = description
 
     @property
-    def country(self):
-        """Gets the country of this Region.
+    def part_of(self):
+        """Gets the part_of of this Region.
 
 
-        :return: The country of this Region.
+        :return: The part_of of this Region.
         :rtype: List[Region]
         """
-        return self._country
+        return self._part_of
 
-    @country.setter
-    def country(self, country):
-        """Sets the country of this Region.
+    @part_of.setter
+    def part_of(self, part_of):
+        """Sets the part_of of this Region.
 
 
-        :param country: The country of this Region.
-        :type country: List[Region]
+        :param part_of: The part_of of this Region.
+        :type part_of: List[Region]
         """
 
-        self._country = country
+        self._part_of = part_of
 
     @property
     def id(self):

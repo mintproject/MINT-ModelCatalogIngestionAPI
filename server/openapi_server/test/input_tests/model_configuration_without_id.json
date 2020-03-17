@@ -1,10 +1,11 @@
 {
   "author": [
     {
+      "id": "https://w3id.org/okn/i/mint/silva_rafael",
       "label": [
         "Rafael Silva"
       ],
-      "type": "sd:Person"
+      "type": "Person"
     }
   ],
   "description": [
@@ -12,6 +13,7 @@
   ],
   "hasCausalDiagram": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_cfg_simple_CAG",
       "label": [
         "CAG for Cycles with the most important variables in the model"
       ],
@@ -20,6 +22,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_cfg_complex_CAG",
       "label": [
         "CAG for Cycles representing a more complex version of the variables and processes of the model"
       ],
@@ -29,16 +32,17 @@
     }
   ],
   "hasComponentLocation": [
-    "https://github.com/mintproject/MINT-WorkflowDomain/blob/18cf8de2b117fad2a4ede6eb1a439b76ff241486/WINGSWorkflowComponents/cycles-0.9.4-alpha/cycles-0.9.4-alpha.zip?raw=true"
+    "https://github.com/mintproject/MINT-WorkflowDomain/blob/master/WINGSWorkflowComponents/cycles-0.9.4-alpha/cycles-0.9.4-alpha.zip?raw=true"
   ],
   "hasGrid": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_grid",
       "label": [
         "Grid from the Cycles agriculture model"
       ],
       "type": [
-        "Grid",
-        "PointBasedGrid"
+        "PointBasedGrid",
+        "Grid"
       ]
     }
   ],
@@ -47,6 +51,7 @@
   ],
   "hasInput": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_soil",
       "label": [
         "cycles_soil"
       ],
@@ -56,6 +61,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_crops",
       "label": [
         "cycles_crops"
       ],
@@ -65,6 +71,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_weather",
       "label": [
         "cycles_weather"
       ],
@@ -79,6 +86,7 @@
   ],
   "hasOutput": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_soilProfile",
       "label": [
         "cycles_soilProfile"
       ],
@@ -88,6 +96,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_crop",
       "label": [
         "cycles_crop"
       ],
@@ -97,6 +106,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_water",
       "label": [
         "cycles_water"
       ],
@@ -106,6 +116,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_summary",
       "label": [
         "cycles_summary"
       ],
@@ -115,6 +126,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_season",
       "label": [
         "cycles_season"
       ],
@@ -124,6 +136,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_outputs",
       "label": [
         "cycles_outputs"
       ],
@@ -133,6 +146,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_nitrogen",
       "label": [
         "cycles_nitrogen"
       ],
@@ -142,6 +156,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_somF",
       "label": [
         "cycles_som"
       ],
@@ -151,6 +166,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_weatherOutput",
       "label": [
         "cycles_weatherOutput"
       ],
@@ -162,6 +178,7 @@
   ],
   "hasOutputTimeInterval": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_cfg_simple_TI",
       "label": [
         "Simple cycles time interval"
       ],
@@ -172,6 +189,7 @@
   ],
   "hasParameter": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_weed_fraction",
       "label": [
         "weed_fraction"
       ],
@@ -181,6 +199,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_crop_name",
       "label": [
         "crop_name"
       ],
@@ -190,6 +209,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_end_year",
       "label": [
         "end_year"
       ],
@@ -199,6 +219,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_fertilizer_rate",
       "label": [
         "fertilizer_rate"
       ],
@@ -208,6 +229,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_start_year",
       "label": [
         "start_year"
       ],
@@ -217,6 +239,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_end_planting_day",
       "label": [
         "end_planting_day"
       ],
@@ -226,6 +249,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_start_planting_day",
       "label": [
         "start_planting_day"
       ],
@@ -235,6 +259,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha_use_forcing",
       "label": [
         "use_forcing"
       ],
@@ -246,6 +271,7 @@
   ],
   "hasProcess": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_Nuptake_process",
       "label": [
         "Nitrogen uptake"
       ],
@@ -254,6 +280,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_precipitation_process",
       "label": [
         "Precipitation"
       ],
@@ -262,6 +289,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_solarradiation_process",
       "label": [
         "Solar radiation"
       ],
@@ -270,6 +298,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_transpiration_process",
       "label": [
         "Transpiration"
       ],
@@ -278,6 +307,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_management_process",
       "label": [
         "Management"
       ],
@@ -286,6 +316,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_humification_process",
       "label": [
         "Humification"
       ],
@@ -294,6 +325,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_Nmineralizationandimmobalization_process",
       "label": [
         "Nitrogen mineralization and immobalization"
       ],
@@ -302,6 +334,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_biomassgrowth_process",
       "label": [
         "Biomass growth"
       ],
@@ -310,6 +343,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_Ntransport_process",
       "label": [
         "Nitrogen transport"
       ],
@@ -318,6 +352,7 @@
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles_respiration_process",
       "label": [
         "Respiration"
       ],
@@ -328,130 +363,136 @@
   ],
   "hasSetup": [
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-ethiopia",
       "label": [
-        "Cycles model (v0.9.4) set up for the Gambella region (Ethiopia) with adjustable parameters"
+        "Cycles model setup (v0.9.4) for the Gambella region (Ethiopia) with adjustable parameters"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-ethiopia-weather",
       "label": [
-        "Cycles model (v0.9.4) set up for a single point in the Gambella region, with fixed planting dates and an adjustable weather file"
+        "Cycles model setup (v0.9.4) for a single point in the Gambella region, with fixed planting dates and an adjustable weather file"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-pongo-weather",
       "label": [
-        "Cycles configured model (v0.9.4) for the Pongo region with planting dates. Weather file (single point) can be selected"
+        "Cycles model setup (v0.9.4) for the Pongo region with planting dates. Weather file (single point) can be selected"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-simple-texas",
       "label": [
-        "Cycles model (v0.9.4) set up for the full Gambella region (Ethiopia) with adjustable planting dates"
+        "Cycles model setup (v0.9.4) for a single point (weather file) in Texas"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-ethiopia-multiple-points",
       "label": [
-        "Cycles model (v0.9.4) set up for a single point (weather file) in Texas"
+        "Cycles model setup (v0.9.4)for the full Gambella region (Ethiopia) with adjustable planting dates"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-pongo",
       "label": [
-        "Cycles configured model (v0.9.4) for the Pongo region (single point per weather file) with adjustable planting dates"
+        "Cycles model setup (v0.9.4) for the Pongo region (single point per weather file) with adjustable planting dates"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-pongo-multple-points",
       "label": [
-        "Cycles model (v0.9.4) set up for the Pongo region (South Sudan) with adjustable planting dates and for multiple points for weather (pre-selected)"
+        "Cycles model setup (v0.9.4) set up for the Pongo region (South Sudan) with adjustable planting dates and for multiple points for weather (pre-selected)"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-texas-weather",
       "label": [
-        "Cycles model (v0.9.4) set up for a single point in Texas, with fixed planting dates and adjustable weather file (single point)"
+        "Cycles model setup (v0.9.4) for a single point in Texas, with fixed planting dates and adjustable weather file (single point)"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-advanced-texas",
       "label": [
-        "Cycles model (v0.9.4) set up for a single point (weather file) in Texas with adjustable parameters"
+        "Cycles model setup (v0.9.4) for a single point (weather file) in Texas with adjustable parameters"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     },
     {
+      "id": "https://w3id.org/okn/i/mint/cycles-0.9.4-alpha-simple-pongo",
       "label": [
-        "Cycles configured model (v0.9.4) for the Pongo region-no file selection"
+        "Cycles model setup (v0.9.4) for the Pongo region-no file selection"
       ],
       "type": [
         "ConfigurationSetup",
-        "ModelConfigurationSetup",
-        "ModelConfiguration",
-        "Theory-GuidedModel"
+        "Theory-GuidedModel",
+        "ModelConfigurationSetup"
       ]
     }
   ],
   "hasSoftwareImage": [
     {
+      "id": "https://w3id.org/okn/i/mint/MINTPROJECT-CYCLES:0.9.4-ALPHA",
       "label": [
         "mintproject/cycles:0.9.4-alpha"
       ],
-      "type": ["SoftwareImage"]
+      "type": [
+        "SoftwareImage"
+      ]
     }
   ],
   "hasSourceCode": [
     {
+      "id": "https://w3id.org/okn/i/mint/source_cycles-0.9.4-alpha",
       "label": [
         "Cycles configuration component (v2)"
       ],
-      "type": ["SourceCode"]
+      "type": [
+        "SourceCode"
+      ]
     }
   ],
   "keywords": [

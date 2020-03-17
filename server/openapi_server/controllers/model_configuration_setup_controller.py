@@ -29,6 +29,30 @@ def custom_modelconfigurationsetups_id_get(id, username=None, custom_query_name=
         rdf_type_name=MODELCONFIGURATIONSETUP_TYPE_NAME, 
         kls=ModelConfigurationSetup)
 
+def custom_modelconfigurationsetups_variable_get(label, custom_query_name=None, username=None):  # noqa: E501
+    """Get a list  Model
+
+    Get model configurations by variable name # noqa: E501
+
+    :param label: variable to search
+    :type label: str
+    :param custom_query_name: Name of the custom query
+    :type custom_query_name: str
+    :param username: Username to query
+    :type username: str
+
+    :rtype: List[ModelConfigurationSetup]
+    """
+
+
+    return get_resource(
+        custom_query_name=custom_query_name,
+        username=username,
+        label=label,
+        rdf_type_uri=MODELCONFIGURATIONSETUP_TYPE_URI,
+        rdf_type_name=MODELCONFIGURATIONSETUP_TYPE_NAME, 
+        kls=ModelConfigurationSetup)
+
 def modelconfigurationsetups_get(username=None, label=None):  # noqa: E501
     """List all ModelConfigurationSetup entities
 

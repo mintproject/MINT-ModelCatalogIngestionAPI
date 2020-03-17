@@ -15,7 +15,7 @@ class Parameter(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, has_default_value=None, has_maximum_accepted_value=None, description=None, has_data_type=None, has_fixed_value=None, has_presentation=None, label=None, type=None, has_minimum_accepted_value=None, has_accepted_values=None, adjusts_variable=None, position=None, id=None, uses_unit=None, has_step_size=None):  # noqa: E501
+    def __init__(self, has_default_value=None, has_maximum_accepted_value=None, description=None, has_data_type=None, has_fixed_value=None, has_presentation=None, label=None, recommended_increment=None, type=None, has_minimum_accepted_value=None, has_accepted_values=None, adjusts_variable=None, relevant_for_intervention=None, position=None, id=None, uses_unit=None, has_step_size=None):  # noqa: E501
         """Parameter - a model defined in OpenAPI
 
         :param has_default_value: The has_default_value of this Parameter.  # noqa: E501
@@ -32,6 +32,8 @@ class Parameter(Model):
         :type has_presentation: List[VariablePresentation]
         :param label: The label of this Parameter.  # noqa: E501
         :type label: List[str]
+        :param recommended_increment: The recommended_increment of this Parameter.  # noqa: E501
+        :type recommended_increment: List[float]
         :param type: The type of this Parameter.  # noqa: E501
         :type type: List[str]
         :param has_minimum_accepted_value: The has_minimum_accepted_value of this Parameter.  # noqa: E501
@@ -40,6 +42,8 @@ class Parameter(Model):
         :type has_accepted_values: List[str]
         :param adjusts_variable: The adjusts_variable of this Parameter.  # noqa: E501
         :type adjusts_variable: List[Variable]
+        :param relevant_for_intervention: The relevant_for_intervention of this Parameter.  # noqa: E501
+        :type relevant_for_intervention: List[Intervention]
         :param position: The position of this Parameter.  # noqa: E501
         :type position: List[int]
         :param id: The id of this Parameter.  # noqa: E501
@@ -49,10 +53,12 @@ class Parameter(Model):
         :param has_step_size: The has_step_size of this Parameter.  # noqa: E501
         :type has_step_size: List[float]
         """
+        from openapi_server.models.intervention import Intervention
         from openapi_server.models.unit import Unit
         from openapi_server.models.variable import Variable
         from openapi_server.models.variable_presentation import VariablePresentation
 
+          # noqa: E501
           # noqa: E501
           # noqa: E501
           # noqa: E501
@@ -65,10 +71,12 @@ class Parameter(Model):
             'has_fixed_value': List[object],
             'has_presentation': List[VariablePresentation],
             'label': List[str],
+            'recommended_increment': List[float],
             'type': List[str],
             'has_minimum_accepted_value': List[object],
             'has_accepted_values': List[str],
             'adjusts_variable': List[Variable],
+            'relevant_for_intervention': List[Intervention],
             'position': List[int],
             'id': str,
             'uses_unit': List[Unit],
@@ -83,10 +91,12 @@ class Parameter(Model):
             'has_fixed_value': 'hasFixedValue',
             'has_presentation': 'hasPresentation',
             'label': 'label',
+            'recommended_increment': 'recommendedIncrement',
             'type': 'type',
             'has_minimum_accepted_value': 'hasMinimumAcceptedValue',
             'has_accepted_values': 'hasAcceptedValues',
             'adjusts_variable': 'adjustsVariable',
+            'relevant_for_intervention': 'relevantForIntervention',
             'position': 'position',
             'id': 'id',
             'uses_unit': 'usesUnit',
@@ -100,10 +110,12 @@ class Parameter(Model):
         self._has_fixed_value = has_fixed_value
         self._has_presentation = has_presentation
         self._label = label
+        self._recommended_increment = recommended_increment
         self._type = type
         self._has_minimum_accepted_value = has_minimum_accepted_value
         self._has_accepted_values = has_accepted_values
         self._adjusts_variable = adjusts_variable
+        self._relevant_for_intervention = relevant_for_intervention
         self._position = position
         self._id = id
         self._uses_unit = uses_unit
@@ -268,6 +280,27 @@ class Parameter(Model):
         self._label = label
 
     @property
+    def recommended_increment(self):
+        """Gets the recommended_increment of this Parameter.
+
+
+        :return: The recommended_increment of this Parameter.
+        :rtype: List[float]
+        """
+        return self._recommended_increment
+
+    @recommended_increment.setter
+    def recommended_increment(self, recommended_increment):
+        """Sets the recommended_increment of this Parameter.
+
+
+        :param recommended_increment: The recommended_increment of this Parameter.
+        :type recommended_increment: List[float]
+        """
+
+        self._recommended_increment = recommended_increment
+
+    @property
     def type(self):
         """Gets the type of this Parameter.
 
@@ -350,6 +383,27 @@ class Parameter(Model):
         """
 
         self._adjusts_variable = adjusts_variable
+
+    @property
+    def relevant_for_intervention(self):
+        """Gets the relevant_for_intervention of this Parameter.
+
+
+        :return: The relevant_for_intervention of this Parameter.
+        :rtype: List[Intervention]
+        """
+        return self._relevant_for_intervention
+
+    @relevant_for_intervention.setter
+    def relevant_for_intervention(self, relevant_for_intervention):
+        """Sets the relevant_for_intervention of this Parameter.
+
+
+        :param relevant_for_intervention: The relevant_for_intervention of this Parameter.
+        :type relevant_for_intervention: List[Intervention]
+        """
+
+        self._relevant_for_intervention = relevant_for_intervention
 
     @property
     def position(self):

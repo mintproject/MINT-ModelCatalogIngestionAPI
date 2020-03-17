@@ -15,7 +15,7 @@ class ModelConfigurationSetup(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, calibrated_variable=None, has_installation_instructions=None, compatible_visualization_software=None, calibration_method=None, has_region=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_explanation_diagram=None, has_example=None, calibration_interval=None, publisher=None, has_output=None, has_output_time_interval=None, parameter_assignment_method=None, has_funding=None, has_component_location=None, has_process=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, has_model_category=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_model_result_table=None, calibration_target_variable=None, has_purpose=None, has_sample_visualization=None, has_causal_diagram=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, valid_until=None, has_equation=None, useful_for_calculating_index=None, has_input=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, has_grid=None, has_implementation_script_location=None, software_requirements=None, has_download_url=None, type=None, calibrated_variable=None, has_installation_instructions=None, compatible_visualization_software=None, calibration_method=None, has_region=None, has_faq=None, logo=None, has_contact_person=None, tag=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_explanation_diagram=None, has_example=None, calibration_interval=None, publisher=None, has_output=None, has_output_time_interval=None, parameter_assignment_method=None, has_funding=None, has_component_location=None, has_process=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, has_model_category=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_model_result_table=None, calibration_target_variable=None, has_purpose=None, has_sample_visualization=None, has_causal_diagram=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, valid_until=None, has_equation=None, has_input=None, useful_for_calculating_index=None):  # noqa: E501
         """ModelConfigurationSetup - a model defined in OpenAPI
 
         :param keywords: The keywords of this ModelConfigurationSetup.  # noqa: E501
@@ -24,10 +24,10 @@ class ModelConfigurationSetup(Model):
         :type has_documentation: List[str]
         :param has_grid: The has_grid of this ModelConfigurationSetup.  # noqa: E501
         :type has_grid: List[Grid]
-        :param software_requirements: The software_requirements of this ModelConfigurationSetup.  # noqa: E501
-        :type software_requirements: List[str]
         :param has_implementation_script_location: The has_implementation_script_location of this ModelConfigurationSetup.  # noqa: E501
         :type has_implementation_script_location: List[str]
+        :param software_requirements: The software_requirements of this ModelConfigurationSetup.  # noqa: E501
+        :type software_requirements: List[str]
         :param has_download_url: The has_download_url of this ModelConfigurationSetup.  # noqa: E501
         :type has_download_url: List[str]
         :param type: The type of this ModelConfigurationSetup.  # noqa: E501
@@ -48,6 +48,8 @@ class ModelConfigurationSetup(Model):
         :type logo: List[Image]
         :param has_contact_person: The has_contact_person of this ModelConfigurationSetup.  # noqa: E501
         :type has_contact_person: List[object]
+        :param tag: The tag of this ModelConfigurationSetup.  # noqa: E501
+        :type tag: List[str]
         :param id: The id of this ModelConfigurationSetup.  # noqa: E501
         :type id: str
         :param identifier: The identifier of this ModelConfigurationSetup.  # noqa: E501
@@ -150,10 +152,10 @@ class ModelConfigurationSetup(Model):
         :type valid_until: List[str]
         :param has_equation: The has_equation of this ModelConfigurationSetup.  # noqa: E501
         :type has_equation: List[Equation]
-        :param useful_for_calculating_index: The useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
-        :type useful_for_calculating_index: List[NumericalIndex]
         :param has_input: The has_input of this ModelConfigurationSetup.  # noqa: E501
         :type has_input: List[DatasetSpecification]
+        :param useful_for_calculating_index: The useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
+        :type useful_for_calculating_index: List[NumericalIndex]
         """
         from openapi_server.models.causal_diagram import CausalDiagram
         from openapi_server.models.configuration_setup import ConfigurationSetup
@@ -203,8 +205,8 @@ class ModelConfigurationSetup(Model):
             'keywords': List[str],
             'has_documentation': List[str],
             'has_grid': List[Grid],
-            'software_requirements': List[str],
             'has_implementation_script_location': List[str],
+            'software_requirements': List[str],
             'has_download_url': List[str],
             'type': List[str],
             'calibrated_variable': List[VariablePresentation],
@@ -215,6 +217,7 @@ class ModelConfigurationSetup(Model):
             'has_faq': List[str],
             'logo': List[Image],
             'has_contact_person': List[object],
+            'tag': List[str],
             'id': str,
             'identifier': List[str],
             'has_sample_execution': List[SampleExecution],
@@ -266,16 +269,16 @@ class ModelConfigurationSetup(Model):
             'operating_systems': List[str],
             'valid_until': List[str],
             'has_equation': List[Equation],
-            'useful_for_calculating_index': List[NumericalIndex],
-            'has_input': List[DatasetSpecification]
+            'has_input': List[DatasetSpecification],
+            'useful_for_calculating_index': List[NumericalIndex]
         }
 
         self.attribute_map = {
             'keywords': 'keywords',
             'has_documentation': 'hasDocumentation',
             'has_grid': 'hasGrid',
-            'software_requirements': 'softwareRequirements',
             'has_implementation_script_location': 'hasImplementationScriptLocation',
+            'software_requirements': 'softwareRequirements',
             'has_download_url': 'hasDownloadURL',
             'type': 'type',
             'calibrated_variable': 'calibratedVariable',
@@ -286,6 +289,7 @@ class ModelConfigurationSetup(Model):
             'has_faq': 'hasFAQ',
             'logo': 'logo',
             'has_contact_person': 'hasContactPerson',
+            'tag': 'tag',
             'id': 'id',
             'identifier': 'identifier',
             'has_sample_execution': 'hasSampleExecution',
@@ -337,15 +341,15 @@ class ModelConfigurationSetup(Model):
             'operating_systems': 'operatingSystems',
             'valid_until': 'validUntil',
             'has_equation': 'hasEquation',
-            'useful_for_calculating_index': 'usefulForCalculatingIndex',
-            'has_input': 'hasInput'
+            'has_input': 'hasInput',
+            'useful_for_calculating_index': 'usefulForCalculatingIndex'
         }
 
         self._keywords = keywords
         self._has_documentation = has_documentation
         self._has_grid = has_grid
-        self._software_requirements = software_requirements
         self._has_implementation_script_location = has_implementation_script_location
+        self._software_requirements = software_requirements
         self._has_download_url = has_download_url
         self._type = type
         self._calibrated_variable = calibrated_variable
@@ -356,6 +360,7 @@ class ModelConfigurationSetup(Model):
         self._has_faq = has_faq
         self._logo = logo
         self._has_contact_person = has_contact_person
+        self._tag = tag
         self._id = id
         self._identifier = identifier
         self._has_sample_execution = has_sample_execution
@@ -407,8 +412,8 @@ class ModelConfigurationSetup(Model):
         self._operating_systems = operating_systems
         self._valid_until = valid_until
         self._has_equation = has_equation
-        self._useful_for_calculating_index = useful_for_calculating_index
         self._has_input = has_input
+        self._useful_for_calculating_index = useful_for_calculating_index
 
     @classmethod
     def from_dict(cls, dikt) -> 'ModelConfigurationSetup':
@@ -485,27 +490,6 @@ class ModelConfigurationSetup(Model):
         self._has_grid = has_grid
 
     @property
-    def software_requirements(self):
-        """Gets the software_requirements of this ModelConfigurationSetup.
-
-
-        :return: The software_requirements of this ModelConfigurationSetup.
-        :rtype: List[str]
-        """
-        return self._software_requirements
-
-    @software_requirements.setter
-    def software_requirements(self, software_requirements):
-        """Sets the software_requirements of this ModelConfigurationSetup.
-
-
-        :param software_requirements: The software_requirements of this ModelConfigurationSetup.
-        :type software_requirements: List[str]
-        """
-
-        self._software_requirements = software_requirements
-
-    @property
     def has_implementation_script_location(self):
         """Gets the has_implementation_script_location of this ModelConfigurationSetup.
 
@@ -525,6 +509,27 @@ class ModelConfigurationSetup(Model):
         """
 
         self._has_implementation_script_location = has_implementation_script_location
+
+    @property
+    def software_requirements(self):
+        """Gets the software_requirements of this ModelConfigurationSetup.
+
+
+        :return: The software_requirements of this ModelConfigurationSetup.
+        :rtype: List[str]
+        """
+        return self._software_requirements
+
+    @software_requirements.setter
+    def software_requirements(self, software_requirements):
+        """Sets the software_requirements of this ModelConfigurationSetup.
+
+
+        :param software_requirements: The software_requirements of this ModelConfigurationSetup.
+        :type software_requirements: List[str]
+        """
+
+        self._software_requirements = software_requirements
 
     @property
     def has_download_url(self):
@@ -735,6 +740,27 @@ class ModelConfigurationSetup(Model):
         """
 
         self._has_contact_person = has_contact_person
+
+    @property
+    def tag(self):
+        """Gets the tag of this ModelConfigurationSetup.
+
+
+        :return: The tag of this ModelConfigurationSetup.
+        :rtype: List[str]
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """Sets the tag of this ModelConfigurationSetup.
+
+
+        :param tag: The tag of this ModelConfigurationSetup.
+        :type tag: List[str]
+        """
+
+        self._tag = tag
 
     @property
     def id(self):
@@ -1808,27 +1834,6 @@ class ModelConfigurationSetup(Model):
         self._has_equation = has_equation
 
     @property
-    def useful_for_calculating_index(self):
-        """Gets the useful_for_calculating_index of this ModelConfigurationSetup.
-
-
-        :return: The useful_for_calculating_index of this ModelConfigurationSetup.
-        :rtype: List[NumericalIndex]
-        """
-        return self._useful_for_calculating_index
-
-    @useful_for_calculating_index.setter
-    def useful_for_calculating_index(self, useful_for_calculating_index):
-        """Sets the useful_for_calculating_index of this ModelConfigurationSetup.
-
-
-        :param useful_for_calculating_index: The useful_for_calculating_index of this ModelConfigurationSetup.
-        :type useful_for_calculating_index: List[NumericalIndex]
-        """
-
-        self._useful_for_calculating_index = useful_for_calculating_index
-
-    @property
     def has_input(self):
         """Gets the has_input of this ModelConfigurationSetup.
 
@@ -1848,3 +1853,24 @@ class ModelConfigurationSetup(Model):
         """
 
         self._has_input = has_input
+
+    @property
+    def useful_for_calculating_index(self):
+        """Gets the useful_for_calculating_index of this ModelConfigurationSetup.
+
+
+        :return: The useful_for_calculating_index of this ModelConfigurationSetup.
+        :rtype: List[NumericalIndex]
+        """
+        return self._useful_for_calculating_index
+
+    @useful_for_calculating_index.setter
+    def useful_for_calculating_index(self, useful_for_calculating_index):
+        """Sets the useful_for_calculating_index of this ModelConfigurationSetup.
+
+
+        :param useful_for_calculating_index: The useful_for_calculating_index of this ModelConfigurationSetup.
+        :type useful_for_calculating_index: List[NumericalIndex]
+        """
+
+        self._useful_for_calculating_index = useful_for_calculating_index

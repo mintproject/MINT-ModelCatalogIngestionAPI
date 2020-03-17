@@ -1,0 +1,21 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(funcName)20s() - %(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+loggers:
+  grlc:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+  openapi_server:
+    level: WARNING
+    handlers: [console]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console]
