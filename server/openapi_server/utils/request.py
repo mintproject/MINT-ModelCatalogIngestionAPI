@@ -253,10 +253,11 @@ def traverse_obj(body, username):
                         
                         if len(list_of_obj) != 0:
                             traverse_obj(inner_values, username)
-                        
-                        inner_values.id = generate_new_uri()
-                        insert_response = insert_all_resources(inner_values, username)
-
+                        if inner_values.id==None:
+                            inner_values.id = generate_new_uri()
+                            insert_response = insert_all_resources(inner_values, username)
+                        else:
+                            logger.warn("Resource already exists and will not create a new one.")
                         # print(inner_values)
             elif isinstance(value, dict):
                 pass
