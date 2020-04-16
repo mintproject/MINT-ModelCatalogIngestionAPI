@@ -30,7 +30,7 @@ class BaseTestCase(TestCase):
     logger = logging.getLogger(__name__)
     get_username = "mint@isi.edu"
     post_username = "mosorio@isi.edu"
-    post_password = "Cs0WgIQPWJ"
+    post_password = "jz2KNTg5XgFacX4"
 
     def login(self):
         query_string = [('username', self.post_username),

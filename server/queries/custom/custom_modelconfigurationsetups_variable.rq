@@ -39,10 +39,11 @@ WHERE {
             UNION {
                 ?setup sdm:hasRegion ?region .
                 ?region ?region_p ?region_o .
+                FILTER (?region_p != <https://w3id.org/okn/o/sdm#geo>) .
                 OPTIONAL {
-                    ?region_o ?sub_region_p ?sub_region_o
+                    ?region_o ?sub_region_p ?sub_region_o .
+                    FILTER (?sub_region_p != <https://w3id.org/okn/o/sdm#geo>)
                 }
-                FILTER (?region_p != <https://w3id.org/okn/o/sdm#geo>)
             }
       }
 }
