@@ -1,7 +1,5 @@
 {
   "@context": {
-    "id": "@id",
-    "type": "@type",
     "Activity": {
       "@id": "http://www.w3.org/ns/prov#Activity"
     },
@@ -66,16 +64,16 @@
       "@id": "https://w3id.org/okn/o/sdm#ModelConfigurationSetup"
     },
     "NumericalIndex": {
-      "@id": "https://w3id.org/okn/o/sdm#NumericalIndex"
+      "@id": "https://w3id.org/okn/o/sd#NumericalIndex"
     },
     "Organization": {
-      "@id": "https://w3id.org/okn/o/sd#Organization"
+      "@id": "http://schema.org/Organization"
     },
     "Parameter": {
       "@id": "https://w3id.org/okn/o/sd#Parameter"
     },
     "Person": {
-      "@id": "https://w3id.org/okn/o/sd#Person"
+      "@id": "http://schema.org/Person"
     },
     "Place": {
       "@id": "http://schema.org/Place"
@@ -171,7 +169,7 @@
     },
     "author": {
       "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sd#author",
+      "@id": "http://schema.org/author",
       "@type": "@id"
     },
     "box": {
@@ -602,7 +600,7 @@
     },
     "keywords": {
       "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sd#keywords"
+      "@id": "http://schema.org/keywords"
     },
     "label": {
       "@container": "@set",
@@ -688,7 +686,7 @@
     },
     "recommendedIncrement": {
       "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sdm#recommendedIncrement",
+      "@id": "https://w3id.org/okn/o/sd#recommendedIncrement",
       "@type": "http://www.w3.org/2001/XMLSchema#float"
     },
     "referencePublication": {
@@ -721,7 +719,7 @@
     },
     "tag": {
       "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sdm#tag",
+      "@id": "https://w3id.org/okn/o/sd#tag",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "title": {
@@ -741,7 +739,7 @@
     },
     "usefulForCalculatingIndex": {
       "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sdm#usefulForCalculatingIndex",
+      "@id": "https://w3id.org/okn/o/sd#usefulForCalculatingIndex",
       "@type": "@id"
     },
     "usesUnit": {
@@ -756,7 +754,7 @@
     },
     "value": {
       "@container": "@set",
-      "@id": "https://w3id.org/okn/o/sd#value"
+      "@id": "http://www.w3.org/ns/prov#value"
     },
     "versionInfo": {
       "@container": "@set",
