@@ -15,7 +15,7 @@ class Software(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, has_funding=None, keywords=None, has_documentation=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None):  # noqa: E501
+    def __init__(self, has_funding=None, keywords=None, has_documentation=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None, useful_for_calculating_index=None):  # noqa: E501
         """Software - a model defined in OpenAPI
 
         :param has_funding: The has_funding of this Software.  # noqa: E501
@@ -48,10 +48,10 @@ class Software(Model):
         :type had_primary_source: List[object]
         :param date_created: The date_created of this Software.  # noqa: E501
         :type date_created: List[str]
-        :param contributor: The contributor of this Software.  # noqa: E501
-        :type contributor: List[Person]
         :param compatible_visualization_software: The compatible_visualization_software of this Software.  # noqa: E501
         :type compatible_visualization_software: List[Software]
+        :param contributor: The contributor of this Software.  # noqa: E501
+        :type contributor: List[Person]
         :param has_faq: The has_faq of this Software.  # noqa: E501
         :type has_faq: List[str]
         :param logo: The logo of this Software.  # noqa: E501
@@ -96,14 +96,18 @@ class Software(Model):
         :type has_example: List[str]
         :param publisher: The publisher of this Software.  # noqa: E501
         :type publisher: List[object]
+        :param useful_for_calculating_index: The useful_for_calculating_index of this Software.  # noqa: E501
+        :type useful_for_calculating_index: List[NumericalIndex]
         """
         from openapi_server.models.funding_information import FundingInformation
         from openapi_server.models.image import Image
+        from openapi_server.models.numerical_index import NumericalIndex
         from openapi_server.models.person import Person
         from openapi_server.models.software_version import SoftwareVersion
         from openapi_server.models.source_code import SourceCode
         from openapi_server.models.visualization import Visualization
 
+          # noqa: E501
           # noqa: E501
           # noqa: E501
           # noqa: E501
@@ -127,8 +131,8 @@ class Software(Model):
             'has_installation_instructions': List[str],
             'had_primary_source': List[object],
             'date_created': List[str],
-            'contributor': List[Person],
             'compatible_visualization_software': List[Software],
+            'contributor': List[Person],
             'has_faq': List[str],
             'logo': List[Image],
             'has_contact_person': List[object],
@@ -150,7 +154,8 @@ class Software(Model):
             'license': List[str],
             'has_source_code': List[SourceCode],
             'has_example': List[str],
-            'publisher': List[object]
+            'publisher': List[object],
+            'useful_for_calculating_index': List[NumericalIndex]
         }
 
         self.attribute_map = {
@@ -169,8 +174,8 @@ class Software(Model):
             'has_installation_instructions': 'hasInstallationInstructions',
             'had_primary_source': 'hadPrimarySource',
             'date_created': 'dateCreated',
-            'contributor': 'contributor',
             'compatible_visualization_software': 'compatibleVisualizationSoftware',
+            'contributor': 'contributor',
             'has_faq': 'hasFAQ',
             'logo': 'logo',
             'has_contact_person': 'hasContactPerson',
@@ -192,7 +197,8 @@ class Software(Model):
             'license': 'license',
             'has_source_code': 'hasSourceCode',
             'has_example': 'hasExample',
-            'publisher': 'publisher'
+            'publisher': 'publisher',
+            'useful_for_calculating_index': 'usefulForCalculatingIndex'
         }
 
         self._has_funding = has_funding
@@ -210,8 +216,8 @@ class Software(Model):
         self._has_installation_instructions = has_installation_instructions
         self._had_primary_source = had_primary_source
         self._date_created = date_created
-        self._contributor = contributor
         self._compatible_visualization_software = compatible_visualization_software
+        self._contributor = contributor
         self._has_faq = has_faq
         self._logo = logo
         self._has_contact_person = has_contact_person
@@ -234,6 +240,7 @@ class Software(Model):
         self._has_source_code = has_source_code
         self._has_example = has_example
         self._publisher = publisher
+        self._useful_for_calculating_index = useful_for_calculating_index
 
     @classmethod
     def from_dict(cls, dikt) -> 'Software':
@@ -562,27 +569,6 @@ class Software(Model):
         self._date_created = date_created
 
     @property
-    def contributor(self):
-        """Gets the contributor of this Software.
-
-
-        :return: The contributor of this Software.
-        :rtype: List[Person]
-        """
-        return self._contributor
-
-    @contributor.setter
-    def contributor(self, contributor):
-        """Sets the contributor of this Software.
-
-
-        :param contributor: The contributor of this Software.
-        :type contributor: List[Person]
-        """
-
-        self._contributor = contributor
-
-    @property
     def compatible_visualization_software(self):
         """Gets the compatible_visualization_software of this Software.
 
@@ -602,6 +588,27 @@ class Software(Model):
         """
 
         self._compatible_visualization_software = compatible_visualization_software
+
+    @property
+    def contributor(self):
+        """Gets the contributor of this Software.
+
+
+        :return: The contributor of this Software.
+        :rtype: List[Person]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this Software.
+
+
+        :param contributor: The contributor of this Software.
+        :type contributor: List[Person]
+        """
+
+        self._contributor = contributor
 
     @property
     def has_faq(self):
@@ -1064,3 +1071,24 @@ class Software(Model):
         """
 
         self._publisher = publisher
+
+    @property
+    def useful_for_calculating_index(self):
+        """Gets the useful_for_calculating_index of this Software.
+
+
+        :return: The useful_for_calculating_index of this Software.
+        :rtype: List[NumericalIndex]
+        """
+        return self._useful_for_calculating_index
+
+    @useful_for_calculating_index.setter
+    def useful_for_calculating_index(self, useful_for_calculating_index):
+        """Sets the useful_for_calculating_index of this Software.
+
+
+        :param useful_for_calculating_index: The useful_for_calculating_index of this Software.
+        :type useful_for_calculating_index: List[NumericalIndex]
+        """
+
+        self._useful_for_calculating_index = useful_for_calculating_index

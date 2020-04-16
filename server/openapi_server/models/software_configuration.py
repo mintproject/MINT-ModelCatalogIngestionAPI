@@ -15,7 +15,7 @@ class SoftwareConfiguration(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, keywords=None, has_documentation=None, has_implementation_script_location=None, software_requirements=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, has_implementation_script_location=None, software_requirements=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, tag=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None, useful_for_calculating_index=None):  # noqa: E501
         """SoftwareConfiguration - a model defined in OpenAPI
 
         :param keywords: The keywords of this SoftwareConfiguration.  # noqa: E501
@@ -40,6 +40,8 @@ class SoftwareConfiguration(Model):
         :type logo: List[Image]
         :param has_contact_person: The has_contact_person of this SoftwareConfiguration.  # noqa: E501
         :type has_contact_person: List[object]
+        :param tag: The tag of this SoftwareConfiguration.  # noqa: E501
+        :type tag: List[str]
         :param id: The id of this SoftwareConfiguration.  # noqa: E501
         :type id: str
         :param identifier: The identifier of this SoftwareConfiguration.  # noqa: E501
@@ -120,11 +122,14 @@ class SoftwareConfiguration(Model):
         :type operating_systems: List[str]
         :param has_input: The has_input of this SoftwareConfiguration.  # noqa: E501
         :type has_input: List[DatasetSpecification]
+        :param useful_for_calculating_index: The useful_for_calculating_index of this SoftwareConfiguration.  # noqa: E501
+        :type useful_for_calculating_index: List[NumericalIndex]
         """
         from openapi_server.models.configuration_setup import ConfigurationSetup
         from openapi_server.models.dataset_specification import DatasetSpecification
         from openapi_server.models.funding_information import FundingInformation
         from openapi_server.models.image import Image
+        from openapi_server.models.numerical_index import NumericalIndex
         from openapi_server.models.parameter import Parameter
         from openapi_server.models.person import Person
         from openapi_server.models.sample_execution import SampleExecution
@@ -135,6 +140,7 @@ class SoftwareConfiguration(Model):
         from openapi_server.models.source_code import SourceCode
         from openapi_server.models.visualization import Visualization
 
+          # noqa: E501
           # noqa: E501
           # noqa: E501
           # noqa: E501
@@ -161,6 +167,7 @@ class SoftwareConfiguration(Model):
             'has_faq': List[str],
             'logo': List[Image],
             'has_contact_person': List[object],
+            'tag': List[str],
             'id': str,
             'identifier': List[str],
             'has_sample_execution': List[SampleExecution],
@@ -200,7 +207,8 @@ class SoftwareConfiguration(Model):
             'has_assumption': List[str],
             'has_parameter': List[Parameter],
             'operating_systems': List[str],
-            'has_input': List[DatasetSpecification]
+            'has_input': List[DatasetSpecification],
+            'useful_for_calculating_index': List[NumericalIndex]
         }
 
         self.attribute_map = {
@@ -215,6 +223,7 @@ class SoftwareConfiguration(Model):
             'has_faq': 'hasFAQ',
             'logo': 'logo',
             'has_contact_person': 'hasContactPerson',
+            'tag': 'tag',
             'id': 'id',
             'identifier': 'identifier',
             'has_sample_execution': 'hasSampleExecution',
@@ -254,7 +263,8 @@ class SoftwareConfiguration(Model):
             'has_assumption': 'hasAssumption',
             'has_parameter': 'hasParameter',
             'operating_systems': 'operatingSystems',
-            'has_input': 'hasInput'
+            'has_input': 'hasInput',
+            'useful_for_calculating_index': 'usefulForCalculatingIndex'
         }
 
         self._keywords = keywords
@@ -268,6 +278,7 @@ class SoftwareConfiguration(Model):
         self._has_faq = has_faq
         self._logo = logo
         self._has_contact_person = has_contact_person
+        self._tag = tag
         self._id = id
         self._identifier = identifier
         self._has_sample_execution = has_sample_execution
@@ -308,6 +319,7 @@ class SoftwareConfiguration(Model):
         self._has_parameter = has_parameter
         self._operating_systems = operating_systems
         self._has_input = has_input
+        self._useful_for_calculating_index = useful_for_calculating_index
 
     @classmethod
     def from_dict(cls, dikt) -> 'SoftwareConfiguration':
@@ -550,6 +562,27 @@ class SoftwareConfiguration(Model):
         """
 
         self._has_contact_person = has_contact_person
+
+    @property
+    def tag(self):
+        """Gets the tag of this SoftwareConfiguration.
+
+
+        :return: The tag of this SoftwareConfiguration.
+        :rtype: List[str]
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """Sets the tag of this SoftwareConfiguration.
+
+
+        :param tag: The tag of this SoftwareConfiguration.
+        :type tag: List[str]
+        """
+
+        self._tag = tag
 
     @property
     def id(self):
@@ -1390,3 +1423,24 @@ class SoftwareConfiguration(Model):
         """
 
         self._has_input = has_input
+
+    @property
+    def useful_for_calculating_index(self):
+        """Gets the useful_for_calculating_index of this SoftwareConfiguration.
+
+
+        :return: The useful_for_calculating_index of this SoftwareConfiguration.
+        :rtype: List[NumericalIndex]
+        """
+        return self._useful_for_calculating_index
+
+    @useful_for_calculating_index.setter
+    def useful_for_calculating_index(self, useful_for_calculating_index):
+        """Sets the useful_for_calculating_index of this SoftwareConfiguration.
+
+
+        :param useful_for_calculating_index: The useful_for_calculating_index of this SoftwareConfiguration.
+        :type useful_for_calculating_index: List[NumericalIndex]
+        """
+
+        self._useful_for_calculating_index = useful_for_calculating_index

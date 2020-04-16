@@ -15,7 +15,7 @@ class Emulator(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, has_funding=None, keywords=None, has_documentation=None, has_grid=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_explanation_diagram=None, has_example=None, publisher=None, has_equation=None, useful_for_calculating_index=None):  # noqa: E501
+    def __init__(self, has_funding=None, keywords=None, has_documentation=None, has_grid=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, had_primary_source=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_explanation_diagram=None, has_example=None, publisher=None, has_equation=None, useful_for_calculating_index=None):  # noqa: E501
         """Emulator - a model defined in OpenAPI
 
         :param has_funding: The has_funding of this Emulator.  # noqa: E501
@@ -52,10 +52,10 @@ class Emulator(Model):
         :type had_primary_source: List[object]
         :param date_created: The date_created of this Emulator.  # noqa: E501
         :type date_created: List[str]
-        :param contributor: The contributor of this Emulator.  # noqa: E501
-        :type contributor: List[Person]
         :param compatible_visualization_software: The compatible_visualization_software of this Emulator.  # noqa: E501
         :type compatible_visualization_software: List[Software]
+        :param contributor: The contributor of this Emulator.  # noqa: E501
+        :type contributor: List[Person]
         :param has_faq: The has_faq of this Emulator.  # noqa: E501
         :type has_faq: List[str]
         :param logo: The logo of this Emulator.  # noqa: E501
@@ -147,8 +147,8 @@ class Emulator(Model):
             'has_model_category': List[str],
             'had_primary_source': List[object],
             'date_created': List[str],
-            'contributor': List[Person],
             'compatible_visualization_software': List[Software],
+            'contributor': List[Person],
             'has_faq': List[str],
             'logo': List[Image],
             'has_contact_person': List[object],
@@ -194,8 +194,8 @@ class Emulator(Model):
             'has_model_category': 'hasModelCategory',
             'had_primary_source': 'hadPrimarySource',
             'date_created': 'dateCreated',
-            'contributor': 'contributor',
             'compatible_visualization_software': 'compatibleVisualizationSoftware',
+            'contributor': 'contributor',
             'has_faq': 'hasFAQ',
             'logo': 'logo',
             'has_contact_person': 'hasContactPerson',
@@ -240,8 +240,8 @@ class Emulator(Model):
         self._has_model_category = has_model_category
         self._had_primary_source = had_primary_source
         self._date_created = date_created
-        self._contributor = contributor
         self._compatible_visualization_software = compatible_visualization_software
+        self._contributor = contributor
         self._has_faq = has_faq
         self._logo = logo
         self._has_contact_person = has_contact_person
@@ -637,27 +637,6 @@ class Emulator(Model):
         self._date_created = date_created
 
     @property
-    def contributor(self):
-        """Gets the contributor of this Emulator.
-
-
-        :return: The contributor of this Emulator.
-        :rtype: List[Person]
-        """
-        return self._contributor
-
-    @contributor.setter
-    def contributor(self, contributor):
-        """Sets the contributor of this Emulator.
-
-
-        :param contributor: The contributor of this Emulator.
-        :type contributor: List[Person]
-        """
-
-        self._contributor = contributor
-
-    @property
     def compatible_visualization_software(self):
         """Gets the compatible_visualization_software of this Emulator.
 
@@ -677,6 +656,27 @@ class Emulator(Model):
         """
 
         self._compatible_visualization_software = compatible_visualization_software
+
+    @property
+    def contributor(self):
+        """Gets the contributor of this Emulator.
+
+
+        :return: The contributor of this Emulator.
+        :rtype: List[Person]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this Emulator.
+
+
+        :param contributor: The contributor of this Emulator.
+        :type contributor: List[Person]
+        """
+
+        self._contributor = contributor
 
     @property
     def has_faq(self):
