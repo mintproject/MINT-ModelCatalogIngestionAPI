@@ -1,3166 +1,16 @@
 openapi: 3.0.1
 info:
-  description: This is the API of the  Software Description Ontology at [https://w3id.org/okn/o/sdm](https://w3id.org/okn/o/sdm)
+  description: This is the API of the Software Description Ontology at [https://w3id.org/okn/o/sdm](https://w3id.org/okn/o/sdm)
   title: Model Catalog
-  version: v1.4.0
+  version: v1.5.0
 externalDocs:
   description: Model Catalog
   url: https://w3id.org/okn/o/sdm
 servers:
-- url: https://api.models.mint.isi.edu/v1.4.0
-- url: https://dev.api.models.mint.isi.edu/v1.4.0
-- url: http://localhost:8080/v1.4.0
+- url: https://api.models.mint.isi.edu/v1.5.0
+- url: https://dev.api.models.mint.isi.edu/v1.5.0
+- url: http://localhost:8080/v1.5.0
 paths:
-  /causaldiagrams:
-    get:
-      description: Gets a list of all CausalDiagram entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/CausalDiagram'
-                type: array
-          description: Successful response - returns an array of CausalDiagram entities.
-      summary: List all CausalDiagram entities
-      tags:
-      - CausalDiagram
-    post:
-      description: Create a new instance of a CausalDiagram
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CausalDiagram'
-        description: A new CausalDiagramto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CausalDiagram'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a CausalDiagram
-      tags:
-      - CausalDiagram
-  /causaldiagrams/{id}:
-    delete:
-      description: Delete an existing CausalDiagram
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a CausalDiagram
-      tags:
-      - CausalDiagram
-    get:
-      description: Gets the details of a single instance of a CausalDiagram
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CausalDiagram'
-          description: Gets the details of a single instance of  CausalDiagram
-      summary: Get a CausalDiagram
-      tags:
-      - CausalDiagram
-    put:
-      description: Updates an existing CausalDiagram
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CausalDiagram'
-        description: An old CausalDiagramto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CausalDiagram'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a CausalDiagram
-      tags:
-      - CausalDiagram
-  /empiricalmodels:
-    get:
-      description: Gets a list of all EmpiricalModel entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/EmpiricalModel'
-                type: array
-          description: Successful response - returns an array of EmpiricalModel entities.
-      summary: List all EmpiricalModel entities
-      tags:
-      - EmpiricalModel
-    post:
-      description: Create a new instance of a EmpiricalModel
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/EmpiricalModel'
-        description: A new EmpiricalModelto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EmpiricalModel'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a EmpiricalModel
-      tags:
-      - EmpiricalModel
-  /empiricalmodels/{id}:
-    delete:
-      description: Delete an existing EmpiricalModel
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a EmpiricalModel
-      tags:
-      - EmpiricalModel
-    get:
-      description: Gets the details of a single instance of a EmpiricalModel
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EmpiricalModel'
-          description: Gets the details of a single instance of  EmpiricalModel
-      summary: Get a EmpiricalModel
-      tags:
-      - EmpiricalModel
-    put:
-      description: Updates an existing EmpiricalModel
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/EmpiricalModel'
-        description: An old EmpiricalModelto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EmpiricalModel'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a EmpiricalModel
-      tags:
-      - EmpiricalModel
-  /emulators:
-    get:
-      description: Gets a list of all Emulator entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Emulator'
-                type: array
-          description: Successful response - returns an array of Emulator entities.
-      summary: List all Emulator entities
-      tags:
-      - Emulator
-    post:
-      description: Create a new instance of a Emulator
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Emulator'
-        description: A new Emulatorto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Emulator'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Emulator
-      tags:
-      - Emulator
-  /emulators/{id}:
-    delete:
-      description: Delete an existing Emulator
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Emulator
-      tags:
-      - Emulator
-    get:
-      description: Gets the details of a single instance of a Emulator
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Emulator'
-          description: Gets the details of a single instance of  Emulator
-      summary: Get a Emulator
-      tags:
-      - Emulator
-    put:
-      description: Updates an existing Emulator
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Emulator'
-        description: An old Emulatorto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Emulator'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Emulator
-      tags:
-      - Emulator
-  /equations:
-    get:
-      description: Gets a list of all Equation entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Equation'
-                type: array
-          description: Successful response - returns an array of Equation entities.
-      summary: List all Equation entities
-      tags:
-      - Equation
-    post:
-      description: Create a new instance of a Equation
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Equation'
-        description: A new Equationto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Equation'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Equation
-      tags:
-      - Equation
-  /equations/{id}:
-    delete:
-      description: Delete an existing Equation
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Equation
-      tags:
-      - Equation
-    get:
-      description: Gets the details of a single instance of a Equation
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Equation'
-          description: Gets the details of a single instance of  Equation
-      summary: Get a Equation
-      tags:
-      - Equation
-    put:
-      description: Updates an existing Equation
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Equation'
-        description: An old Equationto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Equation'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Equation
-      tags:
-      - Equation
-  /farmingpracticess:
-    get:
-      description: Gets a list of all FarmingPractices entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/FarmingPractices'
-                type: array
-          description: Successful response - returns an array of FarmingPractices
-            entities.
-      summary: List all FarmingPractices entities
-      tags:
-      - FarmingPractices
-    post:
-      description: Create a new instance of a FarmingPractices
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/FarmingPractices'
-        description: A new FarmingPracticesto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/FarmingPractices'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a FarmingPractices
-      tags:
-      - FarmingPractices
-  /farmingpracticess/{id}:
-    delete:
-      description: Delete an existing FarmingPractices
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a FarmingPractices
-      tags:
-      - FarmingPractices
-    get:
-      description: Gets the details of a single instance of a FarmingPractices
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/FarmingPractices'
-          description: Gets the details of a single instance of  FarmingPractices
-      summary: Get a FarmingPractices
-      tags:
-      - FarmingPractices
-    put:
-      description: Updates an existing FarmingPractices
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/FarmingPractices'
-        description: An old FarmingPracticesto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/FarmingPractices'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a FarmingPractices
-      tags:
-      - FarmingPractices
-  /geocoordinatess:
-    get:
-      description: Gets a list of all GeoCoordinates entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/GeoCoordinates'
-                type: array
-          description: Successful response - returns an array of GeoCoordinates entities.
-      summary: List all GeoCoordinates entities
-      tags:
-      - GeoCoordinates
-    post:
-      description: Create a new instance of a GeoCoordinates
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GeoCoordinates'
-        description: A new GeoCoordinatesto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoCoordinates'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a GeoCoordinates
-      tags:
-      - GeoCoordinates
-  /geocoordinatess/{id}:
-    delete:
-      description: Delete an existing GeoCoordinates
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a GeoCoordinates
-      tags:
-      - GeoCoordinates
-    get:
-      description: Gets the details of a single instance of a GeoCoordinates
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoCoordinates'
-          description: Gets the details of a single instance of  GeoCoordinates
-      summary: Get a GeoCoordinates
-      tags:
-      - GeoCoordinates
-    put:
-      description: Updates an existing GeoCoordinates
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GeoCoordinates'
-        description: An old GeoCoordinatesto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoCoordinates'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a GeoCoordinates
-      tags:
-      - GeoCoordinates
-  /geoshapes:
-    get:
-      description: Gets a list of all GeoShape entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/GeoShape'
-                type: array
-          description: Successful response - returns an array of GeoShape entities.
-      summary: List all GeoShape entities
-      tags:
-      - GeoShape
-    post:
-      description: Create a new instance of a GeoShape
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GeoShape'
-        description: A new GeoShapeto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoShape'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a GeoShape
-      tags:
-      - GeoShape
-  /geoshapes/{id}:
-    delete:
-      description: Delete an existing GeoShape
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a GeoShape
-      tags:
-      - GeoShape
-    get:
-      description: Gets the details of a single instance of a GeoShape
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoShape'
-          description: Gets the details of a single instance of  GeoShape
-      summary: Get a GeoShape
-      tags:
-      - GeoShape
-    put:
-      description: Updates an existing GeoShape
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GeoShape'
-        description: An old GeoShapeto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GeoShape'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a GeoShape
-      tags:
-      - GeoShape
-  /grids:
-    get:
-      description: Gets a list of all Grid entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Grid'
-                type: array
-          description: Successful response - returns an array of Grid entities.
-      summary: List all Grid entities
-      tags:
-      - Grid
-    post:
-      description: Create a new instance of a Grid
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Grid'
-        description: A new Gridto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Grid'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Grid
-      tags:
-      - Grid
-  /grids/{id}:
-    delete:
-      description: Delete an existing Grid
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Grid
-      tags:
-      - Grid
-    get:
-      description: Gets the details of a single instance of a Grid
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Grid'
-          description: Gets the details of a single instance of  Grid
-      summary: Get a Grid
-      tags:
-      - Grid
-    put:
-      description: Updates an existing Grid
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Grid'
-        description: An old Gridto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Grid'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Grid
-      tags:
-      - Grid
-  /hybridmodels:
-    get:
-      description: Gets a list of all HybridModel entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/HybridModel'
-                type: array
-          description: Successful response - returns an array of HybridModel entities.
-      summary: List all HybridModel entities
-      tags:
-      - HybridModel
-    post:
-      description: Create a new instance of a HybridModel
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/HybridModel'
-        description: A new HybridModelto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HybridModel'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a HybridModel
-      tags:
-      - HybridModel
-  /hybridmodels/{id}:
-    delete:
-      description: Delete an existing HybridModel
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a HybridModel
-      tags:
-      - HybridModel
-    get:
-      description: Gets the details of a single instance of a HybridModel
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HybridModel'
-          description: Gets the details of a single instance of  HybridModel
-      summary: Get a HybridModel
-      tags:
-      - HybridModel
-    put:
-      description: Updates an existing HybridModel
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/HybridModel'
-        description: An old HybridModelto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HybridModel'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a HybridModel
-      tags:
-      - HybridModel
-  /interventions:
-    get:
-      description: Gets a list of all Intervention entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Intervention'
-                type: array
-          description: Successful response - returns an array of Intervention entities.
-      summary: List all Intervention entities
-      tags:
-      - Intervention
-    post:
-      description: Create a new instance of a Intervention
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Intervention'
-        description: A new Interventionto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Intervention'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Intervention
-      tags:
-      - Intervention
-  /interventions/{id}:
-    delete:
-      description: Delete an existing Intervention
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Intervention
-      tags:
-      - Intervention
-    get:
-      description: Gets the details of a single instance of a Intervention
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Intervention'
-          description: Gets the details of a single instance of  Intervention
-      summary: Get a Intervention
-      tags:
-      - Intervention
-    put:
-      description: Updates an existing Intervention
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Intervention'
-        description: An old Interventionto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Intervention'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Intervention
-      tags:
-      - Intervention
-  /models:
-    get:
-      description: Gets a list of all Model entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Model'
-                type: array
-          description: Successful response - returns an array of Model entities.
-      summary: List all Model entities
-      tags:
-      - Model
-    post:
-      description: Create a new instance of a Model
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Model'
-        description: A new Modelto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Model'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Model
-      tags:
-      - Model
-  /models/{id}:
-    delete:
-      description: Delete an existing Model
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Model
-      tags:
-      - Model
-    get:
-      description: Gets the details of a single instance of a Model
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Model'
-          description: Gets the details of a single instance of  Model
-      summary: Get a Model
-      tags:
-      - Model
-    put:
-      description: Updates an existing Model
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Model'
-        description: An old Modelto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Model'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Model
-      tags:
-      - Model
-  /modelconfigurations:
-    get:
-      description: Gets a list of all ModelConfiguration entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/ModelConfiguration'
-                type: array
-          description: Successful response - returns an array of ModelConfiguration
-            entities.
-      summary: List all ModelConfiguration entities
-      tags:
-      - ModelConfiguration
-    post:
-      description: Create a new instance of a ModelConfiguration
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ModelConfiguration'
-        description: A new ModelConfigurationto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelConfiguration'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a ModelConfiguration
-      tags:
-      - ModelConfiguration
-  /modelconfigurations/{id}:
-    delete:
-      description: Delete an existing ModelConfiguration
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a ModelConfiguration
-      tags:
-      - ModelConfiguration
-    get:
-      description: Gets the details of a single instance of a ModelConfiguration
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelConfiguration'
-          description: Gets the details of a single instance of  ModelConfiguration
-      summary: Get a ModelConfiguration
-      tags:
-      - ModelConfiguration
-    put:
-      description: Updates an existing ModelConfiguration
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ModelConfiguration'
-        description: An old ModelConfigurationto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelConfiguration'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a ModelConfiguration
-      tags:
-      - ModelConfiguration
-  /modelconfigurationsetups:
-    get:
-      description: Gets a list of all ModelConfigurationSetup entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/ModelConfigurationSetup'
-                type: array
-          description: Successful response - returns an array of ModelConfigurationSetup
-            entities.
-      summary: List all ModelConfigurationSetup entities
-      tags:
-      - ModelConfigurationSetup
-    post:
-      description: Create a new instance of a ModelConfigurationSetup
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ModelConfigurationSetup'
-        description: A new ModelConfigurationSetupto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelConfigurationSetup'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a ModelConfigurationSetup
-      tags:
-      - ModelConfigurationSetup
-  /modelconfigurationsetups/{id}:
-    delete:
-      description: Delete an existing ModelConfigurationSetup
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a ModelConfigurationSetup
-      tags:
-      - ModelConfigurationSetup
-    get:
-      description: Gets the details of a single instance of a ModelConfigurationSetup
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelConfigurationSetup'
-          description: Gets the details of a single instance of  ModelConfigurationSetup
-      summary: Get a ModelConfigurationSetup
-      tags:
-      - ModelConfigurationSetup
-    put:
-      description: Updates an existing ModelConfigurationSetup
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ModelConfigurationSetup'
-        description: An old ModelConfigurationSetupto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ModelConfigurationSetup'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a ModelConfigurationSetup
-      tags:
-      - ModelConfigurationSetup
-  /numericalindexs:
-    get:
-      description: Gets a list of all NumericalIndex entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/NumericalIndex'
-                type: array
-          description: Successful response - returns an array of NumericalIndex entities.
-      summary: List all NumericalIndex entities
-      tags:
-      - NumericalIndex
-    post:
-      description: Create a new instance of a NumericalIndex
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/NumericalIndex'
-        description: A new NumericalIndexto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NumericalIndex'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a NumericalIndex
-      tags:
-      - NumericalIndex
-  /numericalindexs/{id}:
-    delete:
-      description: Delete an existing NumericalIndex
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a NumericalIndex
-      tags:
-      - NumericalIndex
-    get:
-      description: Gets the details of a single instance of a NumericalIndex
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NumericalIndex'
-          description: Gets the details of a single instance of  NumericalIndex
-      summary: Get a NumericalIndex
-      tags:
-      - NumericalIndex
-    put:
-      description: Updates an existing NumericalIndex
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/NumericalIndex'
-        description: An old NumericalIndexto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NumericalIndex'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a NumericalIndex
-      tags:
-      - NumericalIndex
-  /pointbasedgrids:
-    get:
-      description: Gets a list of all PointBasedGrid entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/PointBasedGrid'
-                type: array
-          description: Successful response - returns an array of PointBasedGrid entities.
-      summary: List all PointBasedGrid entities
-      tags:
-      - PointBasedGrid
-    post:
-      description: Create a new instance of a PointBasedGrid
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PointBasedGrid'
-        description: A new PointBasedGridto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PointBasedGrid'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a PointBasedGrid
-      tags:
-      - PointBasedGrid
-  /pointbasedgrids/{id}:
-    delete:
-      description: Delete an existing PointBasedGrid
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a PointBasedGrid
-      tags:
-      - PointBasedGrid
-    get:
-      description: Gets the details of a single instance of a PointBasedGrid
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PointBasedGrid'
-          description: Gets the details of a single instance of  PointBasedGrid
-      summary: Get a PointBasedGrid
-      tags:
-      - PointBasedGrid
-    put:
-      description: Updates an existing PointBasedGrid
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/PointBasedGrid'
-        description: An old PointBasedGridto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PointBasedGrid'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a PointBasedGrid
-      tags:
-      - PointBasedGrid
-  /processs:
-    get:
-      description: Gets a list of all Process entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Process'
-                type: array
-          description: Successful response - returns an array of Process entities.
-      summary: List all Process entities
-      tags:
-      - Process
-    post:
-      description: Create a new instance of a Process
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Process'
-        description: A new Processto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Process'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Process
-      tags:
-      - Process
-  /processs/{id}:
-    delete:
-      description: Delete an existing Process
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Process
-      tags:
-      - Process
-    get:
-      description: Gets the details of a single instance of a Process
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Process'
-          description: Gets the details of a single instance of  Process
-      summary: Get a Process
-      tags:
-      - Process
-    put:
-      description: Updates an existing Process
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Process'
-        description: An old Processto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Process'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Process
-      tags:
-      - Process
-  /regions:
-    get:
-      description: Gets a list of all Region entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Region'
-                type: array
-          description: Successful response - returns an array of Region entities.
-      summary: List all Region entities
-      tags:
-      - Region
-    post:
-      description: Create a new instance of a Region
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Region'
-        description: A new Regionto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Region'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Region
-      tags:
-      - Region
-  /regions/{id}:
-    delete:
-      description: Delete an existing Region
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Region
-      tags:
-      - Region
-    get:
-      description: Gets the details of a single instance of a Region
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Region'
-          description: Gets the details of a single instance of  Region
-      summary: Get a Region
-      tags:
-      - Region
-    put:
-      description: Updates an existing Region
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Region'
-        description: An old Regionto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Region'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Region
-      tags:
-      - Region
-  /spatialresolutions:
-    get:
-      description: Gets a list of all SpatialResolution entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/SpatialResolution'
-                type: array
-          description: Successful response - returns an array of SpatialResolution
-            entities.
-      summary: List all SpatialResolution entities
-      tags:
-      - SpatialResolution
-    post:
-      description: Create a new instance of a SpatialResolution
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SpatialResolution'
-        description: A new SpatialResolutionto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpatialResolution'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a SpatialResolution
-      tags:
-      - SpatialResolution
-  /spatialresolutions/{id}:
-    delete:
-      description: Delete an existing SpatialResolution
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a SpatialResolution
-      tags:
-      - SpatialResolution
-    get:
-      description: Gets the details of a single instance of a SpatialResolution
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpatialResolution'
-          description: Gets the details of a single instance of  SpatialResolution
-      summary: Get a SpatialResolution
-      tags:
-      - SpatialResolution
-    put:
-      description: Updates an existing SpatialResolution
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SpatialResolution'
-        description: An old SpatialResolutionto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpatialResolution'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a SpatialResolution
-      tags:
-      - SpatialResolution
-  /spatiallydistributedgrids:
-    get:
-      description: Gets a list of all SpatiallyDistributedGrid entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/SpatiallyDistributedGrid'
-                type: array
-          description: Successful response - returns an array of SpatiallyDistributedGrid
-            entities.
-      summary: List all SpatiallyDistributedGrid entities
-      tags:
-      - SpatiallyDistributedGrid
-    post:
-      description: Create a new instance of a SpatiallyDistributedGrid
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SpatiallyDistributedGrid'
-        description: A new SpatiallyDistributedGridto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpatiallyDistributedGrid'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a SpatiallyDistributedGrid
-      tags:
-      - SpatiallyDistributedGrid
-  /spatiallydistributedgrids/{id}:
-    delete:
-      description: Delete an existing SpatiallyDistributedGrid
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a SpatiallyDistributedGrid
-      tags:
-      - SpatiallyDistributedGrid
-    get:
-      description: Gets the details of a single instance of a SpatiallyDistributedGrid
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpatiallyDistributedGrid'
-          description: Gets the details of a single instance of  SpatiallyDistributedGrid
-      summary: Get a SpatiallyDistributedGrid
-      tags:
-      - SpatiallyDistributedGrid
-    put:
-      description: Updates an existing SpatiallyDistributedGrid
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SpatiallyDistributedGrid'
-        description: An old SpatiallyDistributedGridto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SpatiallyDistributedGrid'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a SpatiallyDistributedGrid
-      tags:
-      - SpatiallyDistributedGrid
-  /subsidys:
-    get:
-      description: Gets a list of all Subsidy entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Subsidy'
-                type: array
-          description: Successful response - returns an array of Subsidy entities.
-      summary: List all Subsidy entities
-      tags:
-      - Subsidy
-    post:
-      description: Create a new instance of a Subsidy
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Subsidy'
-        description: A new Subsidyto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Subsidy'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Subsidy
-      tags:
-      - Subsidy
-  /subsidys/{id}:
-    delete:
-      description: Delete an existing Subsidy
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Subsidy
-      tags:
-      - Subsidy
-    get:
-      description: Gets the details of a single instance of a Subsidy
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Subsidy'
-          description: Gets the details of a single instance of  Subsidy
-      summary: Get a Subsidy
-      tags:
-      - Subsidy
-    put:
-      description: Updates an existing Subsidy
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Subsidy'
-        description: An old Subsidyto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Subsidy'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Subsidy
-      tags:
-      - Subsidy
-  /theory-guidedmodels:
-    get:
-      description: Gets a list of all Theory-GuidedModel entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Theory-GuidedModel'
-                type: array
-          description: Successful response - returns an array of Theory-GuidedModel
-            entities.
-      summary: List all Theory-GuidedModel entities
-      tags:
-      - Theory-GuidedModel
-    post:
-      description: Create a new instance of a Theory-GuidedModel
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Theory-GuidedModel'
-        description: A new Theory-GuidedModelto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Theory-GuidedModel'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a Theory-GuidedModel
-      tags:
-      - Theory-GuidedModel
-  /theory-guidedmodels/{id}:
-    delete:
-      description: Delete an existing Theory-GuidedModel
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a Theory-GuidedModel
-      tags:
-      - Theory-GuidedModel
-    get:
-      description: Gets the details of a single instance of a Theory-GuidedModel
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Theory-GuidedModel'
-          description: Gets the details of a single instance of  Theory-GuidedModel
-      summary: Get a Theory-GuidedModel
-      tags:
-      - Theory-GuidedModel
-    put:
-      description: Updates an existing Theory-GuidedModel
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Theory-GuidedModel'
-        description: An old Theory-GuidedModelto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Theory-GuidedModel'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a Theory-GuidedModel
-      tags:
-      - Theory-GuidedModel
-  /timeintervals:
-    get:
-      description: Gets a list of all TimeInterval entities
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: Filter by label
-        in: query
-        name: label
-        required: false
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/TimeInterval'
-                type: array
-          description: Successful response - returns an array of TimeInterval entities.
-      summary: List all TimeInterval entities
-      tags:
-      - TimeInterval
-    post:
-      description: Create a new instance of a TimeInterval
-      parameters:
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TimeInterval'
-        description: A new TimeIntervalto be created
-      responses:
-        201:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TimeInterval'
-          description: Created
-      security:
-      - BearerAuth: []
-      summary: Create a TimeInterval
-      tags:
-      - TimeInterval
-  /timeintervals/{id}:
-    delete:
-      description: Delete an existing TimeInterval
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      responses:
-        202:
-          description: Deleted
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Delete a TimeInterval
-      tags:
-      - TimeInterval
-    get:
-      description: Gets the details of a single instance of a TimeInterval
-      parameters:
-      - description: Username to query
-        in: query
-        name: username
-        required: false
-        schema:
-          type: string
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TimeInterval'
-          description: Gets the details of a single instance of  TimeInterval
-      summary: Get a TimeInterval
-      tags:
-      - TimeInterval
-    put:
-      description: Updates an existing TimeInterval
-      parameters:
-      - description: The ID of the resource
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      - description: Username
-        in: path
-        name: user
-        required: false
-        schema:
-          type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TimeInterval'
-        description: An old TimeIntervalto be updated
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TimeInterval'
-          description: Updated
-        404:
-          description: Not Found
-      security:
-      - BearerAuth: []
-      summary: Update a TimeInterval
-      tags:
-      - TimeInterval
-  /user/login:
-    get:
-      description: Login the user
-      operationId: user_login_get
-      parameters:
-      - description: The user name for login
-        in: query
-        name: username
-        required: true
-        schema:
-          type: string
-      - description: The password for login in clear text
-        in: query
-        name: password
-        required: true
-        schema:
-          type: string
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                type: object
-          description: successful operation
-          headers:
-            X-Rate-Limit:
-              description: calls per hour allowed by the user
-              schema:
-                format: int32
-                type: integer
-            X-Expires-After:
-              description: date in UTC when token expires
-              schema:
-                format: date-time
-                type: string
-        400:
-          content:
-            application/json:
-              schema:
-                type: string
-          description: unsuccessful operation
-      x-openapi-router-controller: openapi_server.controllers.user_controller
   /configurationsetups:
     get:
       description: Gets a list of all ConfigurationSetup entities
@@ -3869,6 +719,147 @@ paths:
       summary: Update a Image
       tags:
       - Image
+  /numericalindexs:
+    get:
+      description: Gets a list of all NumericalIndex entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/NumericalIndex'
+                type: array
+          description: Successful response - returns an array of NumericalIndex entities.
+      summary: List all NumericalIndex entities
+      tags:
+      - NumericalIndex
+    post:
+      description: Create a new instance of a NumericalIndex
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NumericalIndex'
+        description: A new NumericalIndexto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NumericalIndex'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a NumericalIndex
+      tags:
+      - NumericalIndex
+  /numericalindexs/{id}:
+    delete:
+      description: Delete an existing NumericalIndex
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a NumericalIndex
+      tags:
+      - NumericalIndex
+    get:
+      description: Gets the details of a single instance of a NumericalIndex
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NumericalIndex'
+          description: Gets the details of a single instance of  NumericalIndex
+      summary: Get a NumericalIndex
+      tags:
+      - NumericalIndex
+    put:
+      description: Updates an existing NumericalIndex
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NumericalIndex'
+        description: An old NumericalIndexto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NumericalIndex'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a NumericalIndex
+      tags:
+      - NumericalIndex
   /organizations:
     get:
       description: Gets a list of all Organization entities
@@ -6270,6 +3261,3015 @@ paths:
       summary: Update a Visualization
       tags:
       - Visualization
+  /causaldiagrams:
+    get:
+      description: Gets a list of all CausalDiagram entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CausalDiagram'
+                type: array
+          description: Successful response - returns an array of CausalDiagram entities.
+      summary: List all CausalDiagram entities
+      tags:
+      - CausalDiagram
+    post:
+      description: Create a new instance of a CausalDiagram
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CausalDiagram'
+        description: A new CausalDiagramto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CausalDiagram'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a CausalDiagram
+      tags:
+      - CausalDiagram
+  /causaldiagrams/{id}:
+    delete:
+      description: Delete an existing CausalDiagram
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a CausalDiagram
+      tags:
+      - CausalDiagram
+    get:
+      description: Gets the details of a single instance of a CausalDiagram
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CausalDiagram'
+          description: Gets the details of a single instance of  CausalDiagram
+      summary: Get a CausalDiagram
+      tags:
+      - CausalDiagram
+    put:
+      description: Updates an existing CausalDiagram
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CausalDiagram'
+        description: An old CausalDiagramto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CausalDiagram'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a CausalDiagram
+      tags:
+      - CausalDiagram
+  /empiricalmodels:
+    get:
+      description: Gets a list of all EmpiricalModel entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EmpiricalModel'
+                type: array
+          description: Successful response - returns an array of EmpiricalModel entities.
+      summary: List all EmpiricalModel entities
+      tags:
+      - EmpiricalModel
+    post:
+      description: Create a new instance of a EmpiricalModel
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmpiricalModel'
+        description: A new EmpiricalModelto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmpiricalModel'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a EmpiricalModel
+      tags:
+      - EmpiricalModel
+  /empiricalmodels/{id}:
+    delete:
+      description: Delete an existing EmpiricalModel
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a EmpiricalModel
+      tags:
+      - EmpiricalModel
+    get:
+      description: Gets the details of a single instance of a EmpiricalModel
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmpiricalModel'
+          description: Gets the details of a single instance of  EmpiricalModel
+      summary: Get a EmpiricalModel
+      tags:
+      - EmpiricalModel
+    put:
+      description: Updates an existing EmpiricalModel
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmpiricalModel'
+        description: An old EmpiricalModelto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmpiricalModel'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a EmpiricalModel
+      tags:
+      - EmpiricalModel
+  /emulators:
+    get:
+      description: Gets a list of all Emulator entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Emulator'
+                type: array
+          description: Successful response - returns an array of Emulator entities.
+      summary: List all Emulator entities
+      tags:
+      - Emulator
+    post:
+      description: Create a new instance of a Emulator
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Emulator'
+        description: A new Emulatorto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Emulator'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Emulator
+      tags:
+      - Emulator
+  /emulators/{id}:
+    delete:
+      description: Delete an existing Emulator
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Emulator
+      tags:
+      - Emulator
+    get:
+      description: Gets the details of a single instance of a Emulator
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Emulator'
+          description: Gets the details of a single instance of  Emulator
+      summary: Get a Emulator
+      tags:
+      - Emulator
+    put:
+      description: Updates an existing Emulator
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Emulator'
+        description: An old Emulatorto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Emulator'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Emulator
+      tags:
+      - Emulator
+  /equations:
+    get:
+      description: Gets a list of all Equation entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Equation'
+                type: array
+          description: Successful response - returns an array of Equation entities.
+      summary: List all Equation entities
+      tags:
+      - Equation
+    post:
+      description: Create a new instance of a Equation
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equation'
+        description: A new Equationto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equation'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Equation
+      tags:
+      - Equation
+  /equations/{id}:
+    delete:
+      description: Delete an existing Equation
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Equation
+      tags:
+      - Equation
+    get:
+      description: Gets the details of a single instance of a Equation
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equation'
+          description: Gets the details of a single instance of  Equation
+      summary: Get a Equation
+      tags:
+      - Equation
+    put:
+      description: Updates an existing Equation
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Equation'
+        description: An old Equationto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equation'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Equation
+      tags:
+      - Equation
+  /farmingpracticess:
+    get:
+      description: Gets a list of all FarmingPractices entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FarmingPractices'
+                type: array
+          description: Successful response - returns an array of FarmingPractices
+            entities.
+      summary: List all FarmingPractices entities
+      tags:
+      - FarmingPractices
+    post:
+      description: Create a new instance of a FarmingPractices
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FarmingPractices'
+        description: A new FarmingPracticesto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FarmingPractices'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a FarmingPractices
+      tags:
+      - FarmingPractices
+  /farmingpracticess/{id}:
+    delete:
+      description: Delete an existing FarmingPractices
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a FarmingPractices
+      tags:
+      - FarmingPractices
+    get:
+      description: Gets the details of a single instance of a FarmingPractices
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FarmingPractices'
+          description: Gets the details of a single instance of  FarmingPractices
+      summary: Get a FarmingPractices
+      tags:
+      - FarmingPractices
+    put:
+      description: Updates an existing FarmingPractices
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FarmingPractices'
+        description: An old FarmingPracticesto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FarmingPractices'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a FarmingPractices
+      tags:
+      - FarmingPractices
+  /geocoordinatess:
+    get:
+      description: Gets a list of all GeoCoordinates entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/GeoCoordinates'
+                type: array
+          description: Successful response - returns an array of GeoCoordinates entities.
+      summary: List all GeoCoordinates entities
+      tags:
+      - GeoCoordinates
+    post:
+      description: Create a new instance of a GeoCoordinates
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoCoordinates'
+        description: A new GeoCoordinatesto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoCoordinates'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a GeoCoordinates
+      tags:
+      - GeoCoordinates
+  /geocoordinatess/{id}:
+    delete:
+      description: Delete an existing GeoCoordinates
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a GeoCoordinates
+      tags:
+      - GeoCoordinates
+    get:
+      description: Gets the details of a single instance of a GeoCoordinates
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoCoordinates'
+          description: Gets the details of a single instance of  GeoCoordinates
+      summary: Get a GeoCoordinates
+      tags:
+      - GeoCoordinates
+    put:
+      description: Updates an existing GeoCoordinates
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoCoordinates'
+        description: An old GeoCoordinatesto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoCoordinates'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a GeoCoordinates
+      tags:
+      - GeoCoordinates
+  /geoshapes:
+    get:
+      description: Gets a list of all GeoShape entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/GeoShape'
+                type: array
+          description: Successful response - returns an array of GeoShape entities.
+      summary: List all GeoShape entities
+      tags:
+      - GeoShape
+    post:
+      description: Create a new instance of a GeoShape
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoShape'
+        description: A new GeoShapeto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoShape'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a GeoShape
+      tags:
+      - GeoShape
+  /geoshapes/{id}:
+    delete:
+      description: Delete an existing GeoShape
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a GeoShape
+      tags:
+      - GeoShape
+    get:
+      description: Gets the details of a single instance of a GeoShape
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoShape'
+          description: Gets the details of a single instance of  GeoShape
+      summary: Get a GeoShape
+      tags:
+      - GeoShape
+    put:
+      description: Updates an existing GeoShape
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GeoShape'
+        description: An old GeoShapeto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoShape'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a GeoShape
+      tags:
+      - GeoShape
+  /grids:
+    get:
+      description: Gets a list of all Grid entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Grid'
+                type: array
+          description: Successful response - returns an array of Grid entities.
+      summary: List all Grid entities
+      tags:
+      - Grid
+    post:
+      description: Create a new instance of a Grid
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Grid'
+        description: A new Gridto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Grid'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Grid
+      tags:
+      - Grid
+  /grids/{id}:
+    delete:
+      description: Delete an existing Grid
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Grid
+      tags:
+      - Grid
+    get:
+      description: Gets the details of a single instance of a Grid
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Grid'
+          description: Gets the details of a single instance of  Grid
+      summary: Get a Grid
+      tags:
+      - Grid
+    put:
+      description: Updates an existing Grid
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Grid'
+        description: An old Gridto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Grid'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Grid
+      tags:
+      - Grid
+  /hybridmodels:
+    get:
+      description: Gets a list of all HybridModel entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/HybridModel'
+                type: array
+          description: Successful response - returns an array of HybridModel entities.
+      summary: List all HybridModel entities
+      tags:
+      - HybridModel
+    post:
+      description: Create a new instance of a HybridModel
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HybridModel'
+        description: A new HybridModelto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HybridModel'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a HybridModel
+      tags:
+      - HybridModel
+  /hybridmodels/{id}:
+    delete:
+      description: Delete an existing HybridModel
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a HybridModel
+      tags:
+      - HybridModel
+    get:
+      description: Gets the details of a single instance of a HybridModel
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HybridModel'
+          description: Gets the details of a single instance of  HybridModel
+      summary: Get a HybridModel
+      tags:
+      - HybridModel
+    put:
+      description: Updates an existing HybridModel
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HybridModel'
+        description: An old HybridModelto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HybridModel'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a HybridModel
+      tags:
+      - HybridModel
+  /interventions:
+    get:
+      description: Gets a list of all Intervention entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Intervention'
+                type: array
+          description: Successful response - returns an array of Intervention entities.
+      summary: List all Intervention entities
+      tags:
+      - Intervention
+    post:
+      description: Create a new instance of a Intervention
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Intervention'
+        description: A new Interventionto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Intervention'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Intervention
+      tags:
+      - Intervention
+  /interventions/{id}:
+    delete:
+      description: Delete an existing Intervention
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Intervention
+      tags:
+      - Intervention
+    get:
+      description: Gets the details of a single instance of a Intervention
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Intervention'
+          description: Gets the details of a single instance of  Intervention
+      summary: Get a Intervention
+      tags:
+      - Intervention
+    put:
+      description: Updates an existing Intervention
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Intervention'
+        description: An old Interventionto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Intervention'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Intervention
+      tags:
+      - Intervention
+  /models:
+    get:
+      description: Gets a list of all Model entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Model'
+                type: array
+          description: Successful response - returns an array of Model entities.
+      summary: List all Model entities
+      tags:
+      - Model
+    post:
+      description: Create a new instance of a Model
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Model'
+        description: A new Modelto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Model'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Model
+      tags:
+      - Model
+  /models/{id}:
+    delete:
+      description: Delete an existing Model
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Model
+      tags:
+      - Model
+    get:
+      description: Gets the details of a single instance of a Model
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Model'
+          description: Gets the details of a single instance of  Model
+      summary: Get a Model
+      tags:
+      - Model
+    put:
+      description: Updates an existing Model
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Model'
+        description: An old Modelto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Model'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Model
+      tags:
+      - Model
+  /modelconfigurations:
+    get:
+      description: Gets a list of all ModelConfiguration entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ModelConfiguration'
+                type: array
+          description: Successful response - returns an array of ModelConfiguration
+            entities.
+      summary: List all ModelConfiguration entities
+      tags:
+      - ModelConfiguration
+    post:
+      description: Create a new instance of a ModelConfiguration
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelConfiguration'
+        description: A new ModelConfigurationto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConfiguration'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a ModelConfiguration
+      tags:
+      - ModelConfiguration
+  /modelconfigurations/{id}:
+    delete:
+      description: Delete an existing ModelConfiguration
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a ModelConfiguration
+      tags:
+      - ModelConfiguration
+    get:
+      description: Gets the details of a single instance of a ModelConfiguration
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConfiguration'
+          description: Gets the details of a single instance of  ModelConfiguration
+      summary: Get a ModelConfiguration
+      tags:
+      - ModelConfiguration
+    put:
+      description: Updates an existing ModelConfiguration
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelConfiguration'
+        description: An old ModelConfigurationto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConfiguration'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a ModelConfiguration
+      tags:
+      - ModelConfiguration
+  /modelconfigurationsetups:
+    get:
+      description: Gets a list of all ModelConfigurationSetup entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ModelConfigurationSetup'
+                type: array
+          description: Successful response - returns an array of ModelConfigurationSetup
+            entities.
+      summary: List all ModelConfigurationSetup entities
+      tags:
+      - ModelConfigurationSetup
+    post:
+      description: Create a new instance of a ModelConfigurationSetup
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelConfigurationSetup'
+        description: A new ModelConfigurationSetupto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConfigurationSetup'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a ModelConfigurationSetup
+      tags:
+      - ModelConfigurationSetup
+  /modelconfigurationsetups/{id}:
+    delete:
+      description: Delete an existing ModelConfigurationSetup
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a ModelConfigurationSetup
+      tags:
+      - ModelConfigurationSetup
+    get:
+      description: Gets the details of a single instance of a ModelConfigurationSetup
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConfigurationSetup'
+          description: Gets the details of a single instance of  ModelConfigurationSetup
+      summary: Get a ModelConfigurationSetup
+      tags:
+      - ModelConfigurationSetup
+    put:
+      description: Updates an existing ModelConfigurationSetup
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelConfigurationSetup'
+        description: An old ModelConfigurationSetupto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConfigurationSetup'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a ModelConfigurationSetup
+      tags:
+      - ModelConfigurationSetup
+  /pointbasedgrids:
+    get:
+      description: Gets a list of all PointBasedGrid entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PointBasedGrid'
+                type: array
+          description: Successful response - returns an array of PointBasedGrid entities.
+      summary: List all PointBasedGrid entities
+      tags:
+      - PointBasedGrid
+    post:
+      description: Create a new instance of a PointBasedGrid
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PointBasedGrid'
+        description: A new PointBasedGridto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PointBasedGrid'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a PointBasedGrid
+      tags:
+      - PointBasedGrid
+  /pointbasedgrids/{id}:
+    delete:
+      description: Delete an existing PointBasedGrid
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a PointBasedGrid
+      tags:
+      - PointBasedGrid
+    get:
+      description: Gets the details of a single instance of a PointBasedGrid
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PointBasedGrid'
+          description: Gets the details of a single instance of  PointBasedGrid
+      summary: Get a PointBasedGrid
+      tags:
+      - PointBasedGrid
+    put:
+      description: Updates an existing PointBasedGrid
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PointBasedGrid'
+        description: An old PointBasedGridto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PointBasedGrid'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a PointBasedGrid
+      tags:
+      - PointBasedGrid
+  /processs:
+    get:
+      description: Gets a list of all Process entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Process'
+                type: array
+          description: Successful response - returns an array of Process entities.
+      summary: List all Process entities
+      tags:
+      - Process
+    post:
+      description: Create a new instance of a Process
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Process'
+        description: A new Processto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Process
+      tags:
+      - Process
+  /processs/{id}:
+    delete:
+      description: Delete an existing Process
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Process
+      tags:
+      - Process
+    get:
+      description: Gets the details of a single instance of a Process
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'
+          description: Gets the details of a single instance of  Process
+      summary: Get a Process
+      tags:
+      - Process
+    put:
+      description: Updates an existing Process
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Process'
+        description: An old Processto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Process
+      tags:
+      - Process
+  /regions:
+    get:
+      description: Gets a list of all Region entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Region'
+                type: array
+          description: Successful response - returns an array of Region entities.
+      summary: List all Region entities
+      tags:
+      - Region
+    post:
+      description: Create a new instance of a Region
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Region'
+        description: A new Regionto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Region'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Region
+      tags:
+      - Region
+  /regions/{id}:
+    delete:
+      description: Delete an existing Region
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Region
+      tags:
+      - Region
+    get:
+      description: Gets the details of a single instance of a Region
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Region'
+          description: Gets the details of a single instance of  Region
+      summary: Get a Region
+      tags:
+      - Region
+    put:
+      description: Updates an existing Region
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Region'
+        description: An old Regionto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Region'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Region
+      tags:
+      - Region
+  /spatialresolutions:
+    get:
+      description: Gets a list of all SpatialResolution entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SpatialResolution'
+                type: array
+          description: Successful response - returns an array of SpatialResolution
+            entities.
+      summary: List all SpatialResolution entities
+      tags:
+      - SpatialResolution
+    post:
+      description: Create a new instance of a SpatialResolution
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpatialResolution'
+        description: A new SpatialResolutionto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpatialResolution'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a SpatialResolution
+      tags:
+      - SpatialResolution
+  /spatialresolutions/{id}:
+    delete:
+      description: Delete an existing SpatialResolution
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a SpatialResolution
+      tags:
+      - SpatialResolution
+    get:
+      description: Gets the details of a single instance of a SpatialResolution
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpatialResolution'
+          description: Gets the details of a single instance of  SpatialResolution
+      summary: Get a SpatialResolution
+      tags:
+      - SpatialResolution
+    put:
+      description: Updates an existing SpatialResolution
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpatialResolution'
+        description: An old SpatialResolutionto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpatialResolution'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a SpatialResolution
+      tags:
+      - SpatialResolution
+  /spatiallydistributedgrids:
+    get:
+      description: Gets a list of all SpatiallyDistributedGrid entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SpatiallyDistributedGrid'
+                type: array
+          description: Successful response - returns an array of SpatiallyDistributedGrid
+            entities.
+      summary: List all SpatiallyDistributedGrid entities
+      tags:
+      - SpatiallyDistributedGrid
+    post:
+      description: Create a new instance of a SpatiallyDistributedGrid
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpatiallyDistributedGrid'
+        description: A new SpatiallyDistributedGridto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpatiallyDistributedGrid'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a SpatiallyDistributedGrid
+      tags:
+      - SpatiallyDistributedGrid
+  /spatiallydistributedgrids/{id}:
+    delete:
+      description: Delete an existing SpatiallyDistributedGrid
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a SpatiallyDistributedGrid
+      tags:
+      - SpatiallyDistributedGrid
+    get:
+      description: Gets the details of a single instance of a SpatiallyDistributedGrid
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpatiallyDistributedGrid'
+          description: Gets the details of a single instance of  SpatiallyDistributedGrid
+      summary: Get a SpatiallyDistributedGrid
+      tags:
+      - SpatiallyDistributedGrid
+    put:
+      description: Updates an existing SpatiallyDistributedGrid
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpatiallyDistributedGrid'
+        description: An old SpatiallyDistributedGridto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpatiallyDistributedGrid'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a SpatiallyDistributedGrid
+      tags:
+      - SpatiallyDistributedGrid
+  /subsidys:
+    get:
+      description: Gets a list of all Subsidy entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Subsidy'
+                type: array
+          description: Successful response - returns an array of Subsidy entities.
+      summary: List all Subsidy entities
+      tags:
+      - Subsidy
+    post:
+      description: Create a new instance of a Subsidy
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subsidy'
+        description: A new Subsidyto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subsidy'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Subsidy
+      tags:
+      - Subsidy
+  /subsidys/{id}:
+    delete:
+      description: Delete an existing Subsidy
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Subsidy
+      tags:
+      - Subsidy
+    get:
+      description: Gets the details of a single instance of a Subsidy
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subsidy'
+          description: Gets the details of a single instance of  Subsidy
+      summary: Get a Subsidy
+      tags:
+      - Subsidy
+    put:
+      description: Updates an existing Subsidy
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subsidy'
+        description: An old Subsidyto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subsidy'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Subsidy
+      tags:
+      - Subsidy
+  /theory-guidedmodels:
+    get:
+      description: Gets a list of all Theory-GuidedModel entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Theory-GuidedModel'
+                type: array
+          description: Successful response - returns an array of Theory-GuidedModel
+            entities.
+      summary: List all Theory-GuidedModel entities
+      tags:
+      - Theory-GuidedModel
+    post:
+      description: Create a new instance of a Theory-GuidedModel
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Theory-GuidedModel'
+        description: A new Theory-GuidedModelto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Theory-GuidedModel'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a Theory-GuidedModel
+      tags:
+      - Theory-GuidedModel
+  /theory-guidedmodels/{id}:
+    delete:
+      description: Delete an existing Theory-GuidedModel
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a Theory-GuidedModel
+      tags:
+      - Theory-GuidedModel
+    get:
+      description: Gets the details of a single instance of a Theory-GuidedModel
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Theory-GuidedModel'
+          description: Gets the details of a single instance of  Theory-GuidedModel
+      summary: Get a Theory-GuidedModel
+      tags:
+      - Theory-GuidedModel
+    put:
+      description: Updates an existing Theory-GuidedModel
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Theory-GuidedModel'
+        description: An old Theory-GuidedModelto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Theory-GuidedModel'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a Theory-GuidedModel
+      tags:
+      - Theory-GuidedModel
+  /timeintervals:
+    get:
+      description: Gets a list of all TimeInterval entities
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: Filter by label
+        in: query
+        name: label
+        required: false
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/TimeInterval'
+                type: array
+          description: Successful response - returns an array of TimeInterval entities.
+      summary: List all TimeInterval entities
+      tags:
+      - TimeInterval
+    post:
+      description: Create a new instance of a TimeInterval
+      parameters:
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TimeInterval'
+        description: A new TimeIntervalto be created
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimeInterval'
+          description: Created
+      security:
+      - BearerAuth: []
+      summary: Create a TimeInterval
+      tags:
+      - TimeInterval
+  /timeintervals/{id}:
+    delete:
+      description: Delete an existing TimeInterval
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      responses:
+        202:
+          description: Deleted
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Delete a TimeInterval
+      tags:
+      - TimeInterval
+    get:
+      description: Gets the details of a single instance of a TimeInterval
+      parameters:
+      - description: Username to query
+        in: query
+        name: username
+        required: false
+        schema:
+          type: string
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimeInterval'
+          description: Gets the details of a single instance of  TimeInterval
+      summary: Get a TimeInterval
+      tags:
+      - TimeInterval
+    put:
+      description: Updates an existing TimeInterval
+      parameters:
+      - description: The ID of the resource
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Username
+        in: path
+        name: user
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TimeInterval'
+        description: An old TimeIntervalto be updated
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimeInterval'
+          description: Updated
+        404:
+          description: Not Found
+      security:
+      - BearerAuth: []
+      summary: Update a TimeInterval
+      tags:
+      - TimeInterval
+  /user/login:
+    get:
+      description: Login the user
+      operationId: user_login_get
+      parameters:
+      - description: The user name for login
+        in: query
+        name: username
+        required: true
+        schema:
+          type: string
+      - description: The password for login in clear text
+        in: query
+        name: password
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: string
+          description: successful operation
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                format: int32
+                type: integer
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                format: date-time
+                type: string
+        400:
+          content:
+            application/json:
+              schema:
+                type: string
+          description: unsuccessful operation
+      x-openapi-router-controller: openapi_server.controllers.user_controller
   /custom/model/index:
     get:
       description: Gets the details of a single instance of a Model
@@ -6681,15 +6681,6 @@ components:
           nullable: true
           type: array
       type: object
-    User:
-      properties:
-        password:
-          type: string
-        username:
-          type: string
-      type: object
-      xml:
-        name: User
     Organization:
       properties:
         identifier:
@@ -6742,6 +6733,15 @@ components:
           nullable: true
           type: array
       type: object
+    User:
+      properties:
+        password:
+          type: string
+        username:
+          type: string
+      type: object
+      xml:
+        name: User
     GeoShape:
       properties:
         elevation:
@@ -6877,6 +6877,32 @@ components:
           nullable: false
           type: string
       type: object
+    Process:
+      properties:
+        description:
+          items:
+            type: string
+          nullable: true
+          type: array
+        id:
+          nullable: false
+          type: string
+        label:
+          items:
+            type: string
+          nullable: true
+          type: array
+        type:
+          items:
+            type: string
+          nullable: true
+          type: array
+        influences:
+          items:
+            $ref: '#/components/schemas/Process'
+          nullable: true
+          type: array
+      type: object
     Emulator:
       properties:
         hasFunding:
@@ -6964,14 +6990,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -7095,32 +7121,6 @@ components:
         usefulForCalculatingIndex:
           items:
             $ref: '#/components/schemas/NumericalIndex'
-          nullable: true
-          type: array
-      type: object
-    Process:
-      properties:
-        description:
-          items:
-            type: string
-          nullable: true
-          type: array
-        id:
-          nullable: false
-          type: string
-        label:
-          items:
-            type: string
-          nullable: true
-          type: array
-        type:
-          items:
-            type: string
-          nullable: true
-          type: array
-        influences:
-          items:
-            $ref: '#/components/schemas/Process'
           nullable: true
           type: array
       type: object
@@ -7661,14 +7661,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -7882,14 +7882,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -8513,6 +8513,11 @@ components:
             type: object
           nullable: true
           type: array
+        tag:
+          items:
+            type: string
+          nullable: true
+          type: array
         id:
           nullable: false
           type: string
@@ -8716,6 +8721,11 @@ components:
             $ref: '#/components/schemas/DatasetSpecification'
           nullable: true
           type: array
+        usefulForCalculatingIndex:
+          items:
+            $ref: '#/components/schemas/NumericalIndex'
+          nullable: true
+          type: array
       type: object
     SVOVariable:
       properties:
@@ -8733,6 +8743,90 @@ components:
           nullable: true
           type: array
         type:
+          items:
+            type: string
+          nullable: true
+          type: array
+      type: object
+    DatasetSpecification:
+      properties:
+        hasDimensionality:
+          items:
+            format: int32
+            type: integer
+          nullable: true
+          type: array
+        hasFormat:
+          items:
+            type: string
+          nullable: true
+          type: array
+        hasFileStructure:
+          items:
+            type: object
+          nullable: true
+          type: array
+        description:
+          items:
+            type: string
+          nullable: true
+          type: array
+        hasPresentation:
+          items:
+            $ref: '#/components/schemas/VariablePresentation'
+          nullable: true
+          type: array
+        position:
+          items:
+            format: int32
+            type: integer
+          nullable: true
+          type: array
+        id:
+          nullable: false
+          type: string
+        label:
+          items:
+            type: string
+          nullable: true
+          type: array
+        type:
+          items:
+            type: string
+          nullable: true
+          type: array
+        hasFixedResource:
+          items:
+            $ref: '#/components/schemas/SampleResource'
+          nullable: true
+          type: array
+      type: object
+    FundingInformation:
+      properties:
+        description:
+          items:
+            type: string
+          nullable: true
+          type: array
+        id:
+          nullable: false
+          type: string
+        label:
+          items:
+            type: string
+          nullable: true
+          type: array
+        type:
+          items:
+            type: string
+          nullable: true
+          type: array
+        fundingSource:
+          items:
+            $ref: '#/components/schemas/Organization'
+          nullable: true
+          type: array
+        fundingGrant:
           items:
             type: string
           nullable: true
@@ -8825,14 +8919,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -8959,91 +9053,28 @@ components:
           nullable: true
           type: array
       type: object
-    DatasetSpecification:
-      properties:
-        hasDimensionality:
-          items:
-            format: int32
-            type: integer
-          nullable: true
-          type: array
-        hasFormat:
-          items:
-            type: string
-          nullable: true
-          type: array
-        hasFileStructure:
-          items:
-            type: object
-          nullable: true
-          type: array
-        description:
-          items:
-            type: string
-          nullable: true
-          type: array
-        hasPresentation:
-          items:
-            $ref: '#/components/schemas/VariablePresentation'
-          nullable: true
-          type: array
-        position:
-          items:
-            format: int32
-            type: integer
-          nullable: true
-          type: array
-        id:
-          nullable: false
-          type: string
-        label:
-          items:
-            type: string
-          nullable: true
-          type: array
-        type:
-          items:
-            type: string
-          nullable: true
-          type: array
-        hasFixedResource:
-          items:
-            $ref: '#/components/schemas/SampleResource'
-          nullable: true
-          type: array
-      type: object
-    FundingInformation:
-      properties:
-        description:
-          items:
-            type: string
-          nullable: true
-          type: array
-        id:
-          nullable: false
-          type: string
-        label:
-          items:
-            type: string
-          nullable: true
-          type: array
-        type:
-          items:
-            type: string
-          nullable: true
-          type: array
-        fundingSource:
-          items:
-            $ref: '#/components/schemas/Organization'
-          nullable: true
-          type: array
-        fundingGrant:
-          items:
-            type: string
-          nullable: true
-          type: array
-      type: object
     Equation:
+      properties:
+        description:
+          items:
+            type: string
+          nullable: true
+          type: array
+        id:
+          nullable: false
+          type: string
+        label:
+          items:
+            type: string
+          nullable: true
+          type: array
+        type:
+          items:
+            type: string
+          nullable: true
+          type: array
+      type: object
+    ICASAVariable:
       properties:
         description:
           items:
@@ -9087,62 +9118,6 @@ components:
         hasPart:
           items:
             type: object
-          nullable: true
-          type: array
-      type: object
-    ICASAVariable:
-      properties:
-        description:
-          items:
-            type: string
-          nullable: true
-          type: array
-        id:
-          nullable: false
-          type: string
-        label:
-          items:
-            type: string
-          nullable: true
-          type: array
-        type:
-          items:
-            type: string
-          nullable: true
-          type: array
-      type: object
-    SampleCollection:
-      properties:
-        dataCatalogIdentifier:
-          items:
-            type: string
-          nullable: true
-          type: array
-        hasPart:
-          items:
-            $ref: '#/components/schemas/SampleResource'
-          nullable: true
-          type: array
-        description:
-          items:
-            type: string
-          nullable: true
-          type: array
-        id:
-          nullable: false
-          type: string
-        label:
-          items:
-            type: string
-          nullable: true
-          type: array
-        type:
-          items:
-            type: string
-          nullable: true
-          type: array
-        value:
-          items: {}
           nullable: true
           type: array
       type: object
@@ -9201,6 +9176,11 @@ components:
         hasContactPerson:
           items:
             type: object
+          nullable: true
+          type: array
+        tag:
+          items:
+            type: string
           nullable: true
           type: array
         id:
@@ -9399,6 +9379,46 @@ components:
         hasInput:
           items:
             $ref: '#/components/schemas/DatasetSpecification'
+          nullable: true
+          type: array
+        usefulForCalculatingIndex:
+          items:
+            $ref: '#/components/schemas/NumericalIndex'
+          nullable: true
+          type: array
+      type: object
+    SampleCollection:
+      properties:
+        dataCatalogIdentifier:
+          items:
+            type: string
+          nullable: true
+          type: array
+        hasPart:
+          items:
+            $ref: '#/components/schemas/SampleResource'
+          nullable: true
+          type: array
+        description:
+          items:
+            type: string
+          nullable: true
+          type: array
+        id:
+          nullable: false
+          type: string
+        label:
+          items:
+            type: string
+          nullable: true
+          type: array
+        type:
+          items:
+            type: string
+          nullable: true
+          type: array
+        value:
+          items: {}
           nullable: true
           type: array
       type: object
@@ -9630,14 +9650,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -9758,6 +9778,11 @@ components:
             type: object
           nullable: true
           type: array
+        usefulForCalculatingIndex:
+          items:
+            $ref: '#/components/schemas/NumericalIndex'
+          nullable: true
+          type: array
         hasVersionId:
           items:
             type: string
@@ -9841,14 +9866,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -9964,6 +9989,11 @@ components:
             type: object
           nullable: true
           type: array
+        usefulForCalculatingIndex:
+          items:
+            $ref: '#/components/schemas/NumericalIndex'
+          nullable: true
+          type: array
       type: object
     NumericalIndex:
       properties:
@@ -9983,6 +10013,11 @@ components:
         type:
           items:
             type: string
+          nullable: true
+          type: array
+        hasStandardVariable:
+          items:
+            $ref: '#/components/schemas/StandardVariable'
           nullable: true
           type: array
       type: object
@@ -10073,14 +10108,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -10207,21 +10242,16 @@ components:
           nullable: true
           type: array
       type: object
-    Region:
+    SampleResource:
       properties:
-        geo:
+        dataCatalogIdentifier:
           items:
-            type: object
+            type: string
           nullable: true
           type: array
         description:
           items:
             type: string
-          nullable: true
-          type: array
-        partOf:
-          items:
-            $ref: '#/components/schemas/Region'
           nullable: true
           type: array
         id:
@@ -10235,6 +10265,10 @@ components:
         type:
           items:
             type: string
+          nullable: true
+          type: array
+        value:
+          items: {}
           nullable: true
           type: array
       type: object
@@ -10321,16 +10355,21 @@ components:
           nullable: true
           type: array
       type: object
-    SampleResource:
+    Region:
       properties:
-        dataCatalogIdentifier:
+        geo:
           items:
-            type: string
+            type: object
           nullable: true
           type: array
         description:
           items:
             type: string
+          nullable: true
+          type: array
+        partOf:
+          items:
+            $ref: '#/components/schemas/Region'
           nullable: true
           type: array
         id:
@@ -10344,10 +10383,6 @@ components:
         type:
           items:
             type: string
-          nullable: true
-          type: array
-        value:
-          items: {}
           nullable: true
           type: array
       type: object
@@ -10428,14 +10463,14 @@ components:
             type: string
           nullable: true
           type: array
-        contributor:
-          items:
-            $ref: '#/components/schemas/Person'
-          nullable: true
-          type: array
         compatibleVisualizationSoftware:
           items:
             $ref: '#/components/schemas/Software'
+          nullable: true
+          type: array
+        contributor:
+          items:
+            $ref: '#/components/schemas/Person'
           nullable: true
           type: array
         hasFAQ:
@@ -10544,6 +10579,11 @@ components:
         publisher:
           items:
             type: object
+          nullable: true
+          type: array
+        usefulForCalculatingIndex:
+          items:
+            $ref: '#/components/schemas/NumericalIndex'
           nullable: true
           type: array
       type: object
