@@ -1,38 +1,44 @@
 import connexion
 import six
-from openapi_server.utils.request import get_resource, get_all_resource, put_resource, post_resource, delete_resource
+from openapi_server import query_manager
 from openapi_server.utils.vars import SUBSIDY_TYPE_NAME, SUBSIDY_TYPE_URI
 
 from openapi_server.models.subsidy import Subsidy  # noqa: E501
 from openapi_server import util
 
-def subsidys_get(username=None, label=None):  # noqa: E501
-    """List all Subsidy entities
+def subsidys_get(username=None, label=None, page=None, per_page=None):  # noqa: E501
+    """List all instances of Subsidy
 
-    Gets a list of all Subsidy entities # noqa: E501
+    Gets a list of all instances of Subsidy (more information in https://w3id.org/okn/o/sdm#Subsidy) # noqa: E501
 
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
     :param label: Filter by label
     :type label: str
+    :param page: Page number
+    :type page: int
+    :param per_page: Items per page
+    :type per_page: int
 
     :rtype: List[Subsidy]
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         username=username,
         label=label,
+        page=page,
+        per_page=per_page,
         rdf_type_uri=SUBSIDY_TYPE_URI,
         rdf_type_name=SUBSIDY_TYPE_NAME, 
         kls=Subsidy)
 
 def subsidys_id_delete(id, user):  # noqa: E501
-    """Delete a Subsidy
+    """Delete an existing Subsidy
 
-    Delete an existing Subsidy # noqa: E501
+    Delete an existing Subsidy (more information in https://w3id.org/okn/o/sdm#Subsidy) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the Subsidy to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -41,37 +47,37 @@ def subsidys_id_delete(id, user):  # noqa: E501
     """
 
 
-    return delete_resource(id=id,user=user,
+    return query_manager.delete_resource(id=id,user=user,
         rdf_type_uri=SUBSIDY_TYPE_URI,
         rdf_type_name=SUBSIDY_TYPE_NAME, 
         kls=Subsidy)
 
 def subsidys_id_get(id, username=None):  # noqa: E501
-    """Get a Subsidy
+    """Get a single Subsidy by its id
 
-    Gets the details of a single instance of a Subsidy # noqa: E501
+    Gets the details of a given Subsidy (more information in https://w3id.org/okn/o/sdm#Subsidy) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the Subsidy to be retrieved
     :type id: str
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
 
     :rtype: Subsidy
     """
 
 
-    return get_resource(id=id,
+    return query_manager.get_resource(id=id,
         username=username,
         rdf_type_uri=SUBSIDY_TYPE_URI,
         rdf_type_name=SUBSIDY_TYPE_NAME, 
         kls=Subsidy)
 
 def subsidys_id_put(id, user, subsidy=None):  # noqa: E501
-    """Update a Subsidy
+    """Update an existing Subsidy
 
-    Updates an existing Subsidy # noqa: E501
+    Updates an existing Subsidy (more information in https://w3id.org/okn/o/sdm#Subsidy) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the Subsidy to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -84,20 +90,20 @@ def subsidys_id_put(id, user, subsidy=None):  # noqa: E501
     if connexion.request.is_json:
         subsidy = Subsidy.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return put_resource(id=id,user=user,
+    return query_manager.put_resource(id=id,user=user,
         body=subsidy,
         rdf_type_uri=SUBSIDY_TYPE_URI,
         rdf_type_name=SUBSIDY_TYPE_NAME, 
         kls=Subsidy)
 
 def subsidys_post(user, subsidy=None):  # noqa: E501
-    """Create a Subsidy
+    """Create one Subsidy
 
-    Create a new instance of a Subsidy # noqa: E501
+    Create a new instance of Subsidy (more information in https://w3id.org/okn/o/sdm#Subsidy) # noqa: E501
 
     :param user: Username
     :type user: str
-    :param subsidy: A new Subsidyto be created
+    :param subsidy: Information about the Subsidyto be created
     :type subsidy: dict | bytes
 
     :rtype: Subsidy
@@ -106,7 +112,7 @@ def subsidys_post(user, subsidy=None):  # noqa: E501
     if connexion.request.is_json:
         subsidy = Subsidy.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return post_resource(user=user,
+    return query_manager.post_resource(user=user,
         body=subsidy,
         rdf_type_uri=SUBSIDY_TYPE_URI,
         rdf_type_name=SUBSIDY_TYPE_NAME, 

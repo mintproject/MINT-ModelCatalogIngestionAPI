@@ -3,8 +3,8 @@
 import sys
 from setuptools import setup, find_packages
 
-NAME = "model catalog"
-VERSION = "1.4.0"
+NAME = "openapi_server"
+VERSION = "1.0.0"
 
 # To install the library, run the following
 #
@@ -33,7 +33,7 @@ setup(
     entry_points={
         'console_scripts': ['openapi_server=openapi_server.__main__:main']},
     long_description="""\
-    This is the API of the  Software Description Ontology at [https://mintproject.github.io/Mint-ModelCatalog-Ontology/release/1.3.0/index-en.html](https://w3id.org/okn/o/sdm)
+    This is the API of the Software Description Ontology at [https://w3id.org/okn/o/sdm](https://w3id.org/okn/o/sdm)
     """
 )
 

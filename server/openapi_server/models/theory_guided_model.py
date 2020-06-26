@@ -283,6 +283,7 @@ class TheoryGuidedModel(Model):
     def has_funding(self):
         """Gets the has_funding of this TheoryGuidedModel.
 
+        Property that links a software project to its funding information  # noqa: E501
 
         :return: The has_funding of this TheoryGuidedModel.
         :rtype: List[FundingInformation]
@@ -293,6 +294,7 @@ class TheoryGuidedModel(Model):
     def has_funding(self, has_funding):
         """Sets the has_funding of this TheoryGuidedModel.
 
+        Property that links a software project to its funding information  # noqa: E501
 
         :param has_funding: The has_funding of this TheoryGuidedModel.
         :type has_funding: List[FundingInformation]
@@ -304,6 +306,7 @@ class TheoryGuidedModel(Model):
     def keywords(self):
         """Gets the keywords of this TheoryGuidedModel.
 
+        Keywords associated with a software component  # noqa: E501
 
         :return: The keywords of this TheoryGuidedModel.
         :rtype: List[str]
@@ -314,6 +317,7 @@ class TheoryGuidedModel(Model):
     def keywords(self, keywords):
         """Sets the keywords of this TheoryGuidedModel.
 
+        Keywords associated with a software component  # noqa: E501
 
         :param keywords: The keywords of this TheoryGuidedModel.
         :type keywords: List[str]
@@ -325,6 +329,7 @@ class TheoryGuidedModel(Model):
     def has_documentation(self):
         """Gets the has_documentation of this TheoryGuidedModel.
 
+        Pointer to the documentation of the model  # noqa: E501
 
         :return: The has_documentation of this TheoryGuidedModel.
         :rtype: List[str]
@@ -335,6 +340,7 @@ class TheoryGuidedModel(Model):
     def has_documentation(self, has_documentation):
         """Sets the has_documentation of this TheoryGuidedModel.
 
+        Pointer to the documentation of the model  # noqa: E501
 
         :param has_documentation: The has_documentation of this TheoryGuidedModel.
         :type has_documentation: List[str]
@@ -346,6 +352,7 @@ class TheoryGuidedModel(Model):
     def has_grid(self):
         """Gets the has_grid of this TheoryGuidedModel.
 
+        Grid information about the model  # noqa: E501
 
         :return: The has_grid of this TheoryGuidedModel.
         :rtype: List[Grid]
@@ -356,6 +363,7 @@ class TheoryGuidedModel(Model):
     def has_grid(self, has_grid):
         """Sets the has_grid of this TheoryGuidedModel.
 
+        Grid information about the model  # noqa: E501
 
         :param has_grid: The has_grid of this TheoryGuidedModel.
         :type has_grid: List[Grid]
@@ -367,6 +375,7 @@ class TheoryGuidedModel(Model):
     def support_details(self):
         """Gets the support_details of this TheoryGuidedModel.
 
+        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
 
         :return: The support_details of this TheoryGuidedModel.
         :rtype: List[str]
@@ -377,6 +386,7 @@ class TheoryGuidedModel(Model):
     def support_details(self, support_details):
         """Sets the support_details of this TheoryGuidedModel.
 
+        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
 
         :param support_details: The support_details of this TheoryGuidedModel.
         :type support_details: List[str]
@@ -388,6 +398,7 @@ class TheoryGuidedModel(Model):
     def software_requirements(self):
         """Gets the software_requirements of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The software_requirements of this TheoryGuidedModel.
         :rtype: List[str]
@@ -398,6 +409,7 @@ class TheoryGuidedModel(Model):
     def software_requirements(self, software_requirements):
         """Sets the software_requirements of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param software_requirements: The software_requirements of this TheoryGuidedModel.
         :type software_requirements: List[str]
@@ -409,6 +421,7 @@ class TheoryGuidedModel(Model):
     def has_version(self):
         """Gets the has_version of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The has_version of this TheoryGuidedModel.
         :rtype: List[SoftwareVersion]
@@ -419,6 +432,7 @@ class TheoryGuidedModel(Model):
     def has_version(self, has_version):
         """Sets the has_version of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param has_version: The has_version of this TheoryGuidedModel.
         :type has_version: List[SoftwareVersion]
@@ -430,6 +444,7 @@ class TheoryGuidedModel(Model):
     def has_typical_data_source(self):
         """Gets the has_typical_data_source of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The has_typical_data_source of this TheoryGuidedModel.
         :rtype: List[str]
@@ -440,6 +455,7 @@ class TheoryGuidedModel(Model):
     def has_typical_data_source(self, has_typical_data_source):
         """Sets the has_typical_data_source of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param has_typical_data_source: The has_typical_data_source of this TheoryGuidedModel.
         :type has_typical_data_source: List[str]
@@ -451,6 +467,7 @@ class TheoryGuidedModel(Model):
     def has_download_url(self):
         """Gets the has_download_url of this TheoryGuidedModel.
 
+        Download URL where to obtain the source/executable of the software  # noqa: E501
 
         :return: The has_download_url of this TheoryGuidedModel.
         :rtype: List[str]
@@ -461,6 +478,7 @@ class TheoryGuidedModel(Model):
     def has_download_url(self, has_download_url):
         """Sets the has_download_url of this TheoryGuidedModel.
 
+        Download URL where to obtain the source/executable of the software  # noqa: E501
 
         :param has_download_url: The has_download_url of this TheoryGuidedModel.
         :type has_download_url: List[str]
@@ -472,6 +490,7 @@ class TheoryGuidedModel(Model):
     def description(self):
         """Gets the description of this TheoryGuidedModel.
 
+        small description  # noqa: E501
 
         :return: The description of this TheoryGuidedModel.
         :rtype: List[str]
@@ -482,6 +501,7 @@ class TheoryGuidedModel(Model):
     def description(self, description):
         """Sets the description of this TheoryGuidedModel.
 
+        small description  # noqa: E501
 
         :param description: The description of this TheoryGuidedModel.
         :type description: List[str]
@@ -493,6 +513,7 @@ class TheoryGuidedModel(Model):
     def reference_publication(self):
         """Gets the reference_publication of this TheoryGuidedModel.
 
+        Main publication to cite in this software  # noqa: E501
 
         :return: The reference_publication of this TheoryGuidedModel.
         :rtype: List[str]
@@ -503,6 +524,7 @@ class TheoryGuidedModel(Model):
     def reference_publication(self, reference_publication):
         """Sets the reference_publication of this TheoryGuidedModel.
 
+        Main publication to cite in this software  # noqa: E501
 
         :param reference_publication: The reference_publication of this TheoryGuidedModel.
         :type reference_publication: List[str]
@@ -514,6 +536,7 @@ class TheoryGuidedModel(Model):
     def screenshot(self):
         """Gets the screenshot of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The screenshot of this TheoryGuidedModel.
         :rtype: List[Image]
@@ -524,6 +547,7 @@ class TheoryGuidedModel(Model):
     def screenshot(self, screenshot):
         """Sets the screenshot of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param screenshot: The screenshot of this TheoryGuidedModel.
         :type screenshot: List[Image]
@@ -535,6 +559,7 @@ class TheoryGuidedModel(Model):
     def type(self):
         """Gets the type of this TheoryGuidedModel.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this TheoryGuidedModel.
         :rtype: List[str]
@@ -545,6 +570,7 @@ class TheoryGuidedModel(Model):
     def type(self, type):
         """Sets the type of this TheoryGuidedModel.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this TheoryGuidedModel.
         :type type: List[str]
@@ -556,6 +582,7 @@ class TheoryGuidedModel(Model):
     def has_installation_instructions(self):
         """Gets the has_installation_instructions of this TheoryGuidedModel.
 
+        Instructions requires to install this particular piece of software.  # noqa: E501
 
         :return: The has_installation_instructions of this TheoryGuidedModel.
         :rtype: List[str]
@@ -566,6 +593,7 @@ class TheoryGuidedModel(Model):
     def has_installation_instructions(self, has_installation_instructions):
         """Sets the has_installation_instructions of this TheoryGuidedModel.
 
+        Instructions requires to install this particular piece of software.  # noqa: E501
 
         :param has_installation_instructions: The has_installation_instructions of this TheoryGuidedModel.
         :type has_installation_instructions: List[str]
@@ -577,6 +605,7 @@ class TheoryGuidedModel(Model):
     def has_model_category(self):
         """Gets the has_model_category of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The has_model_category of this TheoryGuidedModel.
         :rtype: List[str]
@@ -587,6 +616,7 @@ class TheoryGuidedModel(Model):
     def has_model_category(self, has_model_category):
         """Sets the has_model_category of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param has_model_category: The has_model_category of this TheoryGuidedModel.
         :type has_model_category: List[str]
@@ -598,6 +628,7 @@ class TheoryGuidedModel(Model):
     def had_primary_source(self):
         """Gets the had_primary_source of this TheoryGuidedModel.
 
+        Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc.  # noqa: E501
 
         :return: The had_primary_source of this TheoryGuidedModel.
         :rtype: List[object]
@@ -608,6 +639,7 @@ class TheoryGuidedModel(Model):
     def had_primary_source(self, had_primary_source):
         """Sets the had_primary_source of this TheoryGuidedModel.
 
+        Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc.  # noqa: E501
 
         :param had_primary_source: The had_primary_source of this TheoryGuidedModel.
         :type had_primary_source: List[object]
@@ -619,6 +651,7 @@ class TheoryGuidedModel(Model):
     def date_created(self):
         """Gets the date_created of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The date_created of this TheoryGuidedModel.
         :rtype: List[str]
@@ -629,6 +662,7 @@ class TheoryGuidedModel(Model):
     def date_created(self, date_created):
         """Sets the date_created of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param date_created: The date_created of this TheoryGuidedModel.
         :type date_created: List[str]
@@ -640,6 +674,7 @@ class TheoryGuidedModel(Model):
     def contributor(self):
         """Gets the contributor of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The contributor of this TheoryGuidedModel.
         :rtype: List[Person]
@@ -650,6 +685,7 @@ class TheoryGuidedModel(Model):
     def contributor(self, contributor):
         """Sets the contributor of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param contributor: The contributor of this TheoryGuidedModel.
         :type contributor: List[Person]
@@ -661,6 +697,7 @@ class TheoryGuidedModel(Model):
     def compatible_visualization_software(self):
         """Gets the compatible_visualization_software of this TheoryGuidedModel.
 
+        Property that links a software component to other useful software that canbe used to visualize its outputs  # noqa: E501
 
         :return: The compatible_visualization_software of this TheoryGuidedModel.
         :rtype: List[Software]
@@ -671,6 +708,7 @@ class TheoryGuidedModel(Model):
     def compatible_visualization_software(self, compatible_visualization_software):
         """Sets the compatible_visualization_software of this TheoryGuidedModel.
 
+        Property that links a software component to other useful software that canbe used to visualize its outputs  # noqa: E501
 
         :param compatible_visualization_software: The compatible_visualization_software of this TheoryGuidedModel.
         :type compatible_visualization_software: List[Software]
@@ -682,6 +720,7 @@ class TheoryGuidedModel(Model):
     def has_faq(self):
         """Gets the has_faq of this TheoryGuidedModel.
 
+        Frequently asked questions about a software  # noqa: E501
 
         :return: The has_faq of this TheoryGuidedModel.
         :rtype: List[str]
@@ -692,6 +731,7 @@ class TheoryGuidedModel(Model):
     def has_faq(self, has_faq):
         """Sets the has_faq of this TheoryGuidedModel.
 
+        Frequently asked questions about a software  # noqa: E501
 
         :param has_faq: The has_faq of this TheoryGuidedModel.
         :type has_faq: List[str]
@@ -703,6 +743,7 @@ class TheoryGuidedModel(Model):
     def logo(self):
         """Gets the logo of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The logo of this TheoryGuidedModel.
         :rtype: List[Image]
@@ -713,6 +754,7 @@ class TheoryGuidedModel(Model):
     def logo(self, logo):
         """Sets the logo of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param logo: The logo of this TheoryGuidedModel.
         :type logo: List[Image]
@@ -724,6 +766,7 @@ class TheoryGuidedModel(Model):
     def has_contact_person(self):
         """Gets the has_contact_person of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The has_contact_person of this TheoryGuidedModel.
         :rtype: List[object]
@@ -734,6 +777,7 @@ class TheoryGuidedModel(Model):
     def has_contact_person(self, has_contact_person):
         """Sets the has_contact_person of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param has_contact_person: The has_contact_person of this TheoryGuidedModel.
         :type has_contact_person: List[object]
@@ -745,6 +789,7 @@ class TheoryGuidedModel(Model):
     def has_purpose(self):
         """Gets the has_purpose of this TheoryGuidedModel.
 
+        Objective or main functionality that can be achieved by running this software  # noqa: E501
 
         :return: The has_purpose of this TheoryGuidedModel.
         :rtype: List[str]
@@ -755,6 +800,7 @@ class TheoryGuidedModel(Model):
     def has_purpose(self, has_purpose):
         """Sets the has_purpose of this TheoryGuidedModel.
 
+        Objective or main functionality that can be achieved by running this software  # noqa: E501
 
         :param has_purpose: The has_purpose of this TheoryGuidedModel.
         :type has_purpose: List[str]
@@ -766,6 +812,7 @@ class TheoryGuidedModel(Model):
     def id(self):
         """Gets the id of this TheoryGuidedModel.
 
+        identifier  # noqa: E501
 
         :return: The id of this TheoryGuidedModel.
         :rtype: str
@@ -776,6 +823,7 @@ class TheoryGuidedModel(Model):
     def id(self, id):
         """Sets the id of this TheoryGuidedModel.
 
+        identifier  # noqa: E501
 
         :param id: The id of this TheoryGuidedModel.
         :type id: str
@@ -787,6 +835,7 @@ class TheoryGuidedModel(Model):
     def has_sample_visualization(self):
         """Gets the has_sample_visualization of this TheoryGuidedModel.
 
+        A typical sample visualization of the softwware outputs  # noqa: E501
 
         :return: The has_sample_visualization of this TheoryGuidedModel.
         :rtype: List[Visualization]
@@ -797,6 +846,7 @@ class TheoryGuidedModel(Model):
     def has_sample_visualization(self, has_sample_visualization):
         """Sets the has_sample_visualization of this TheoryGuidedModel.
 
+        A typical sample visualization of the softwware outputs  # noqa: E501
 
         :param has_sample_visualization: The has_sample_visualization of this TheoryGuidedModel.
         :type has_sample_visualization: List[Visualization]
@@ -808,6 +858,7 @@ class TheoryGuidedModel(Model):
     def identifier(self):
         """Gets the identifier of this TheoryGuidedModel.
 
+        Identifier of the resource being described  # noqa: E501
 
         :return: The identifier of this TheoryGuidedModel.
         :rtype: List[str]
@@ -818,6 +869,7 @@ class TheoryGuidedModel(Model):
     def identifier(self, identifier):
         """Sets the identifier of this TheoryGuidedModel.
 
+        Identifier of the resource being described  # noqa: E501
 
         :param identifier: The identifier of this TheoryGuidedModel.
         :type identifier: List[str]
@@ -829,6 +881,7 @@ class TheoryGuidedModel(Model):
     def memory_requirements(self):
         """Gets the memory_requirements of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The memory_requirements of this TheoryGuidedModel.
         :rtype: List[str]
@@ -839,6 +892,7 @@ class TheoryGuidedModel(Model):
     def memory_requirements(self, memory_requirements):
         """Sets the memory_requirements of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param memory_requirements: The memory_requirements of this TheoryGuidedModel.
         :type memory_requirements: List[str]
@@ -850,6 +904,7 @@ class TheoryGuidedModel(Model):
     def website(self):
         """Gets the website of this TheoryGuidedModel.
 
+        Website of the software  # noqa: E501
 
         :return: The website of this TheoryGuidedModel.
         :rtype: List[str]
@@ -860,6 +915,7 @@ class TheoryGuidedModel(Model):
     def website(self, website):
         """Sets the website of this TheoryGuidedModel.
 
+        Website of the software  # noqa: E501
 
         :param website: The website of this TheoryGuidedModel.
         :type website: List[str]
@@ -871,6 +927,7 @@ class TheoryGuidedModel(Model):
     def citation(self):
         """Gets the citation of this TheoryGuidedModel.
 
+        How to cite this software  # noqa: E501
 
         :return: The citation of this TheoryGuidedModel.
         :rtype: List[str]
@@ -881,6 +938,7 @@ class TheoryGuidedModel(Model):
     def citation(self, citation):
         """Sets the citation of this TheoryGuidedModel.
 
+        How to cite this software  # noqa: E501
 
         :param citation: The citation of this TheoryGuidedModel.
         :type citation: List[str]
@@ -892,6 +950,7 @@ class TheoryGuidedModel(Model):
     def author(self):
         """Gets the author of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The author of this TheoryGuidedModel.
         :rtype: List[object]
@@ -902,6 +961,7 @@ class TheoryGuidedModel(Model):
     def author(self, author):
         """Sets the author of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param author: The author of this TheoryGuidedModel.
         :type author: List[object]
@@ -913,6 +973,7 @@ class TheoryGuidedModel(Model):
     def processor_requirements(self):
         """Gets the processor_requirements of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The processor_requirements of this TheoryGuidedModel.
         :rtype: List[str]
@@ -923,6 +984,7 @@ class TheoryGuidedModel(Model):
     def processor_requirements(self, processor_requirements):
         """Sets the processor_requirements of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param processor_requirements: The processor_requirements of this TheoryGuidedModel.
         :type processor_requirements: List[str]
@@ -934,6 +996,7 @@ class TheoryGuidedModel(Model):
     def has_usage_notes(self):
         """Gets the has_usage_notes of this TheoryGuidedModel.
 
+        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
 
         :return: The has_usage_notes of this TheoryGuidedModel.
         :rtype: List[str]
@@ -944,6 +1007,7 @@ class TheoryGuidedModel(Model):
     def has_usage_notes(self, has_usage_notes):
         """Sets the has_usage_notes of this TheoryGuidedModel.
 
+        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
 
         :param has_usage_notes: The has_usage_notes of this TheoryGuidedModel.
         :type has_usage_notes: List[str]
@@ -955,6 +1019,7 @@ class TheoryGuidedModel(Model):
     def short_description(self):
         """Gets the short_description of this TheoryGuidedModel.
 
+        A summarized description of the resource  # noqa: E501
 
         :return: The short_description of this TheoryGuidedModel.
         :rtype: List[str]
@@ -965,6 +1030,7 @@ class TheoryGuidedModel(Model):
     def short_description(self, short_description):
         """Sets the short_description of this TheoryGuidedModel.
 
+        A summarized description of the resource  # noqa: E501
 
         :param short_description: The short_description of this TheoryGuidedModel.
         :type short_description: List[str]
@@ -976,6 +1042,7 @@ class TheoryGuidedModel(Model):
     def label(self):
         """Gets the label of this TheoryGuidedModel.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this TheoryGuidedModel.
         :rtype: List[str]
@@ -986,6 +1053,7 @@ class TheoryGuidedModel(Model):
     def label(self, label):
         """Sets the label of this TheoryGuidedModel.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this TheoryGuidedModel.
         :type label: List[str]
@@ -997,6 +1065,7 @@ class TheoryGuidedModel(Model):
     def has_assumption(self):
         """Gets the has_assumption of this TheoryGuidedModel.
 
+        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
 
         :return: The has_assumption of this TheoryGuidedModel.
         :rtype: List[str]
@@ -1007,6 +1076,7 @@ class TheoryGuidedModel(Model):
     def has_assumption(self, has_assumption):
         """Sets the has_assumption of this TheoryGuidedModel.
 
+        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
 
         :param has_assumption: The has_assumption of this TheoryGuidedModel.
         :type has_assumption: List[str]
@@ -1018,6 +1088,7 @@ class TheoryGuidedModel(Model):
     def date_published(self):
         """Gets the date_published of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The date_published of this TheoryGuidedModel.
         :rtype: List[str]
@@ -1028,6 +1099,7 @@ class TheoryGuidedModel(Model):
     def date_published(self, date_published):
         """Sets the date_published of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param date_published: The date_published of this TheoryGuidedModel.
         :type date_published: List[str]
@@ -1039,6 +1111,7 @@ class TheoryGuidedModel(Model):
     def operating_systems(self):
         """Gets the operating_systems of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The operating_systems of this TheoryGuidedModel.
         :rtype: List[str]
@@ -1049,6 +1122,7 @@ class TheoryGuidedModel(Model):
     def operating_systems(self, operating_systems):
         """Sets the operating_systems of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param operating_systems: The operating_systems of this TheoryGuidedModel.
         :type operating_systems: List[str]
@@ -1060,6 +1134,7 @@ class TheoryGuidedModel(Model):
     def license(self):
         """Gets the license of this TheoryGuidedModel.
 
+        License of a software component or its source code  # noqa: E501
 
         :return: The license of this TheoryGuidedModel.
         :rtype: List[str]
@@ -1070,6 +1145,7 @@ class TheoryGuidedModel(Model):
     def license(self, license):
         """Sets the license of this TheoryGuidedModel.
 
+        License of a software component or its source code  # noqa: E501
 
         :param license: The license of this TheoryGuidedModel.
         :type license: List[str]
@@ -1081,6 +1157,7 @@ class TheoryGuidedModel(Model):
     def has_source_code(self):
         """Gets the has_source_code of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The has_source_code of this TheoryGuidedModel.
         :rtype: List[SourceCode]
@@ -1091,6 +1168,7 @@ class TheoryGuidedModel(Model):
     def has_source_code(self, has_source_code):
         """Sets the has_source_code of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param has_source_code: The has_source_code of this TheoryGuidedModel.
         :type has_source_code: List[SourceCode]
@@ -1102,6 +1180,7 @@ class TheoryGuidedModel(Model):
     def has_explanation_diagram(self):
         """Gets the has_explanation_diagram of this TheoryGuidedModel.
 
+        Diagram used to explain the behavior of the model  # noqa: E501
 
         :return: The has_explanation_diagram of this TheoryGuidedModel.
         :rtype: List[Image]
@@ -1112,6 +1191,7 @@ class TheoryGuidedModel(Model):
     def has_explanation_diagram(self, has_explanation_diagram):
         """Sets the has_explanation_diagram of this TheoryGuidedModel.
 
+        Diagram used to explain the behavior of the model  # noqa: E501
 
         :param has_explanation_diagram: The has_explanation_diagram of this TheoryGuidedModel.
         :type has_explanation_diagram: List[Image]
@@ -1123,6 +1203,7 @@ class TheoryGuidedModel(Model):
     def has_example(self):
         """Gets the has_example of this TheoryGuidedModel.
 
+        An example explaining a scenario where the model was used in plain language.  # noqa: E501
 
         :return: The has_example of this TheoryGuidedModel.
         :rtype: List[str]
@@ -1133,6 +1214,7 @@ class TheoryGuidedModel(Model):
     def has_example(self, has_example):
         """Sets the has_example of this TheoryGuidedModel.
 
+        An example explaining a scenario where the model was used in plain language.  # noqa: E501
 
         :param has_example: The has_example of this TheoryGuidedModel.
         :type has_example: List[str]
@@ -1144,6 +1226,7 @@ class TheoryGuidedModel(Model):
     def publisher(self):
         """Gets the publisher of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :return: The publisher of this TheoryGuidedModel.
         :rtype: List[object]
@@ -1154,6 +1237,7 @@ class TheoryGuidedModel(Model):
     def publisher(self, publisher):
         """Sets the publisher of this TheoryGuidedModel.
 
+        Description not available  # noqa: E501
 
         :param publisher: The publisher of this TheoryGuidedModel.
         :type publisher: List[object]
@@ -1165,6 +1249,7 @@ class TheoryGuidedModel(Model):
     def has_equation(self):
         """Gets the has_equation of this TheoryGuidedModel.
 
+        Equations used in the model  # noqa: E501
 
         :return: The has_equation of this TheoryGuidedModel.
         :rtype: List[Equation]
@@ -1175,6 +1260,7 @@ class TheoryGuidedModel(Model):
     def has_equation(self, has_equation):
         """Sets the has_equation of this TheoryGuidedModel.
 
+        Equations used in the model  # noqa: E501
 
         :param has_equation: The has_equation of this TheoryGuidedModel.
         :type has_equation: List[Equation]
@@ -1186,6 +1272,7 @@ class TheoryGuidedModel(Model):
     def useful_for_calculating_index(self):
         """Gets the useful_for_calculating_index of this TheoryGuidedModel.
 
+        Property that indicates that a software component (or any of its outputs) can be used to calculate a particular index. The rationale for this property is that indices are usually calculated by applying post-processing steps to the outputs of a software component.  # noqa: E501
 
         :return: The useful_for_calculating_index of this TheoryGuidedModel.
         :rtype: List[NumericalIndex]
@@ -1196,6 +1283,7 @@ class TheoryGuidedModel(Model):
     def useful_for_calculating_index(self, useful_for_calculating_index):
         """Sets the useful_for_calculating_index of this TheoryGuidedModel.
 
+        Property that indicates that a software component (or any of its outputs) can be used to calculate a particular index. The rationale for this property is that indices are usually calculated by applying post-processing steps to the outputs of a software component.  # noqa: E501
 
         :param useful_for_calculating_index: The useful_for_calculating_index of this TheoryGuidedModel.
         :type useful_for_calculating_index: List[NumericalIndex]

@@ -24,7 +24,7 @@ class TestHybridModelController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/hybridmodels',
+            '/v1.5.0/hybridmodels',
             method='GET',
             headers=headers,
             query_string=query_string)

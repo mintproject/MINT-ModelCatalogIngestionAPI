@@ -63,6 +63,7 @@ class Intervention(Model):
     def description(self):
         """Gets the description of this Intervention.
 
+        small description  # noqa: E501
 
         :return: The description of this Intervention.
         :rtype: List[str]
@@ -73,6 +74,7 @@ class Intervention(Model):
     def description(self, description):
         """Sets the description of this Intervention.
 
+        small description  # noqa: E501
 
         :param description: The description of this Intervention.
         :type description: List[str]
@@ -84,6 +86,7 @@ class Intervention(Model):
     def id(self):
         """Gets the id of this Intervention.
 
+        identifier  # noqa: E501
 
         :return: The id of this Intervention.
         :rtype: str
@@ -94,6 +97,7 @@ class Intervention(Model):
     def id(self, id):
         """Sets the id of this Intervention.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Intervention.
         :type id: str
@@ -105,6 +109,7 @@ class Intervention(Model):
     def label(self):
         """Gets the label of this Intervention.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Intervention.
         :rtype: List[str]
@@ -115,6 +120,7 @@ class Intervention(Model):
     def label(self, label):
         """Sets the label of this Intervention.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Intervention.
         :type label: List[str]
@@ -126,6 +132,7 @@ class Intervention(Model):
     def type(self):
         """Gets the type of this Intervention.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Intervention.
         :rtype: List[str]
@@ -136,6 +143,7 @@ class Intervention(Model):
     def type(self, type):
         """Sets the type of this Intervention.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Intervention.
         :type type: List[str]

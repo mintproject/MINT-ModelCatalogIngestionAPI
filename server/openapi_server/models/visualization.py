@@ -85,6 +85,7 @@ class Visualization(Model):
     def has_format(self):
         """Gets the has_format of this Visualization.
 
+        Format followed by a file. For example, txt, nc, etc.  # noqa: E501
 
         :return: The has_format of this Visualization.
         :rtype: List[str]
@@ -95,6 +96,7 @@ class Visualization(Model):
     def has_format(self, has_format):
         """Sets the has_format of this Visualization.
 
+        Format followed by a file. For example, txt, nc, etc.  # noqa: E501
 
         :param has_format: The has_format of this Visualization.
         :type has_format: List[str]
@@ -106,6 +108,7 @@ class Visualization(Model):
     def had_primary_source(self):
         """Gets the had_primary_source of this Visualization.
 
+        had primary source  # noqa: E501
 
         :return: The had_primary_source of this Visualization.
         :rtype: List[object]
@@ -116,6 +119,7 @@ class Visualization(Model):
     def had_primary_source(self, had_primary_source):
         """Sets the had_primary_source of this Visualization.
 
+        had primary source  # noqa: E501
 
         :param had_primary_source: The had_primary_source of this Visualization.
         :type had_primary_source: List[object]
@@ -127,6 +131,7 @@ class Visualization(Model):
     def was_derived_from_software(self):
         """Gets the was_derived_from_software of this Visualization.
 
+        Description not available  # noqa: E501
 
         :return: The was_derived_from_software of this Visualization.
         :rtype: List[Software]
@@ -137,6 +142,7 @@ class Visualization(Model):
     def was_derived_from_software(self, was_derived_from_software):
         """Sets the was_derived_from_software of this Visualization.
 
+        Description not available  # noqa: E501
 
         :param was_derived_from_software: The was_derived_from_software of this Visualization.
         :type was_derived_from_software: List[Software]
@@ -148,6 +154,7 @@ class Visualization(Model):
     def description(self):
         """Gets the description of this Visualization.
 
+        small description  # noqa: E501
 
         :return: The description of this Visualization.
         :rtype: List[str]
@@ -158,6 +165,7 @@ class Visualization(Model):
     def description(self, description):
         """Sets the description of this Visualization.
 
+        small description  # noqa: E501
 
         :param description: The description of this Visualization.
         :type description: List[str]
@@ -169,6 +177,7 @@ class Visualization(Model):
     def id(self):
         """Gets the id of this Visualization.
 
+        identifier  # noqa: E501
 
         :return: The id of this Visualization.
         :rtype: str
@@ -179,6 +188,7 @@ class Visualization(Model):
     def id(self, id):
         """Sets the id of this Visualization.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Visualization.
         :type id: str
@@ -190,6 +200,7 @@ class Visualization(Model):
     def label(self):
         """Gets the label of this Visualization.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Visualization.
         :rtype: List[str]
@@ -200,6 +211,7 @@ class Visualization(Model):
     def label(self, label):
         """Sets the label of this Visualization.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Visualization.
         :type label: List[str]
@@ -211,6 +223,7 @@ class Visualization(Model):
     def type(self):
         """Gets the type of this Visualization.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Visualization.
         :rtype: List[str]
@@ -221,6 +234,7 @@ class Visualization(Model):
     def type(self, type):
         """Sets the type of this Visualization.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Visualization.
         :type type: List[str]
@@ -232,6 +246,7 @@ class Visualization(Model):
     def value(self):
         """Gets the value of this Visualization.
 
+        Value associated to the described entity  # noqa: E501
 
         :return: The value of this Visualization.
         :rtype: List[object]
@@ -242,6 +257,7 @@ class Visualization(Model):
     def value(self, value):
         """Sets the value of this Visualization.
 
+        Value associated to the described entity  # noqa: E501
 
         :param value: The value of this Visualization.
         :type value: List[object]

@@ -83,6 +83,7 @@ class GeoShape(Model):
     def elevation(self):
         """Gets the elevation of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :return: The elevation of this GeoShape.
         :rtype: List[str]
@@ -93,6 +94,7 @@ class GeoShape(Model):
     def elevation(self, elevation):
         """Sets the elevation of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :param elevation: The elevation of this GeoShape.
         :type elevation: List[str]
@@ -104,6 +106,7 @@ class GeoShape(Model):
     def latitude(self):
         """Gets the latitude of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :return: The latitude of this GeoShape.
         :rtype: List[str]
@@ -114,6 +117,7 @@ class GeoShape(Model):
     def latitude(self, latitude):
         """Sets the latitude of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :param latitude: The latitude of this GeoShape.
         :type latitude: List[str]
@@ -125,6 +129,7 @@ class GeoShape(Model):
     def description(self):
         """Gets the description of this GeoShape.
 
+        small description  # noqa: E501
 
         :return: The description of this GeoShape.
         :rtype: List[str]
@@ -135,6 +140,7 @@ class GeoShape(Model):
     def description(self, description):
         """Sets the description of this GeoShape.
 
+        small description  # noqa: E501
 
         :param description: The description of this GeoShape.
         :type description: List[str]
@@ -146,6 +152,7 @@ class GeoShape(Model):
     def box(self):
         """Gets the box of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :return: The box of this GeoShape.
         :rtype: List[str]
@@ -156,6 +163,7 @@ class GeoShape(Model):
     def box(self, box):
         """Sets the box of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :param box: The box of this GeoShape.
         :type box: List[str]
@@ -167,6 +175,7 @@ class GeoShape(Model):
     def id(self):
         """Gets the id of this GeoShape.
 
+        identifier  # noqa: E501
 
         :return: The id of this GeoShape.
         :rtype: str
@@ -177,6 +186,7 @@ class GeoShape(Model):
     def id(self, id):
         """Sets the id of this GeoShape.
 
+        identifier  # noqa: E501
 
         :param id: The id of this GeoShape.
         :type id: str
@@ -188,6 +198,7 @@ class GeoShape(Model):
     def label(self):
         """Gets the label of this GeoShape.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this GeoShape.
         :rtype: List[str]
@@ -198,6 +209,7 @@ class GeoShape(Model):
     def label(self, label):
         """Sets the label of this GeoShape.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this GeoShape.
         :type label: List[str]
@@ -209,6 +221,7 @@ class GeoShape(Model):
     def type(self):
         """Gets the type of this GeoShape.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this GeoShape.
         :rtype: List[str]
@@ -219,6 +232,7 @@ class GeoShape(Model):
     def type(self, type):
         """Sets the type of this GeoShape.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this GeoShape.
         :type type: List[str]
@@ -230,6 +244,7 @@ class GeoShape(Model):
     def longitude(self):
         """Gets the longitude of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :return: The longitude of this GeoShape.
         :rtype: List[str]
@@ -240,6 +255,7 @@ class GeoShape(Model):
     def longitude(self, longitude):
         """Sets the longitude of this GeoShape.
 
+        Description not available  # noqa: E501
 
         :param longitude: The longitude of this GeoShape.
         :type longitude: List[str]

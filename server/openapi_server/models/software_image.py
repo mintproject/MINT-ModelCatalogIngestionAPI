@@ -15,7 +15,7 @@ class SoftwareImage(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, has_funding=None, keywords=None, has_documentation=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_execution_command=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None):  # noqa: E501
+    def __init__(self, has_funding=None, keywords=None, has_documentation=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_execution_command=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None, useful_for_calculating_index=None):  # noqa: E501
         """SoftwareImage - a model defined in OpenAPI
 
         :param has_funding: The has_funding of this SoftwareImage.  # noqa: E501
@@ -98,15 +98,19 @@ class SoftwareImage(Model):
         :type has_example: List[str]
         :param publisher: The publisher of this SoftwareImage.  # noqa: E501
         :type publisher: List[object]
+        :param useful_for_calculating_index: The useful_for_calculating_index of this SoftwareImage.  # noqa: E501
+        :type useful_for_calculating_index: List[NumericalIndex]
         """
         from openapi_server.models.funding_information import FundingInformation
         from openapi_server.models.image import Image
+        from openapi_server.models.numerical_index import NumericalIndex
         from openapi_server.models.person import Person
         from openapi_server.models.software import Software
         from openapi_server.models.software_version import SoftwareVersion
         from openapi_server.models.source_code import SourceCode
         from openapi_server.models.visualization import Visualization
 
+          # noqa: E501
           # noqa: E501
           # noqa: E501
           # noqa: E501
@@ -155,7 +159,8 @@ class SoftwareImage(Model):
             'license': List[str],
             'has_source_code': List[SourceCode],
             'has_example': List[str],
-            'publisher': List[object]
+            'publisher': List[object],
+            'useful_for_calculating_index': List[NumericalIndex]
         }
 
         self.attribute_map = {
@@ -198,7 +203,8 @@ class SoftwareImage(Model):
             'license': 'license',
             'has_source_code': 'hasSourceCode',
             'has_example': 'hasExample',
-            'publisher': 'publisher'
+            'publisher': 'publisher',
+            'useful_for_calculating_index': 'usefulForCalculatingIndex'
         }
 
         self._has_funding = has_funding
@@ -241,6 +247,7 @@ class SoftwareImage(Model):
         self._has_source_code = has_source_code
         self._has_example = has_example
         self._publisher = publisher
+        self._useful_for_calculating_index = useful_for_calculating_index
 
     @classmethod
     def from_dict(cls, dikt) -> 'SoftwareImage':
@@ -257,6 +264,7 @@ class SoftwareImage(Model):
     def has_funding(self):
         """Gets the has_funding of this SoftwareImage.
 
+        Property that links a software project to its funding information  # noqa: E501
 
         :return: The has_funding of this SoftwareImage.
         :rtype: List[FundingInformation]
@@ -267,6 +275,7 @@ class SoftwareImage(Model):
     def has_funding(self, has_funding):
         """Sets the has_funding of this SoftwareImage.
 
+        Property that links a software project to its funding information  # noqa: E501
 
         :param has_funding: The has_funding of this SoftwareImage.
         :type has_funding: List[FundingInformation]
@@ -278,6 +287,7 @@ class SoftwareImage(Model):
     def keywords(self):
         """Gets the keywords of this SoftwareImage.
 
+        Keywords associated with a software component  # noqa: E501
 
         :return: The keywords of this SoftwareImage.
         :rtype: List[str]
@@ -288,6 +298,7 @@ class SoftwareImage(Model):
     def keywords(self, keywords):
         """Sets the keywords of this SoftwareImage.
 
+        Keywords associated with a software component  # noqa: E501
 
         :param keywords: The keywords of this SoftwareImage.
         :type keywords: List[str]
@@ -299,6 +310,7 @@ class SoftwareImage(Model):
     def has_documentation(self):
         """Gets the has_documentation of this SoftwareImage.
 
+        Pointer to the documentation of the model  # noqa: E501
 
         :return: The has_documentation of this SoftwareImage.
         :rtype: List[str]
@@ -309,6 +321,7 @@ class SoftwareImage(Model):
     def has_documentation(self, has_documentation):
         """Sets the has_documentation of this SoftwareImage.
 
+        Pointer to the documentation of the model  # noqa: E501
 
         :param has_documentation: The has_documentation of this SoftwareImage.
         :type has_documentation: List[str]
@@ -320,6 +333,7 @@ class SoftwareImage(Model):
     def support_details(self):
         """Gets the support_details of this SoftwareImage.
 
+        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
 
         :return: The support_details of this SoftwareImage.
         :rtype: List[str]
@@ -330,6 +344,7 @@ class SoftwareImage(Model):
     def support_details(self, support_details):
         """Sets the support_details of this SoftwareImage.
 
+        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
 
         :param support_details: The support_details of this SoftwareImage.
         :type support_details: List[str]
@@ -341,6 +356,7 @@ class SoftwareImage(Model):
     def software_requirements(self):
         """Gets the software_requirements of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The software_requirements of this SoftwareImage.
         :rtype: List[str]
@@ -351,6 +367,7 @@ class SoftwareImage(Model):
     def software_requirements(self, software_requirements):
         """Sets the software_requirements of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param software_requirements: The software_requirements of this SoftwareImage.
         :type software_requirements: List[str]
@@ -362,6 +379,7 @@ class SoftwareImage(Model):
     def has_version(self):
         """Gets the has_version of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The has_version of this SoftwareImage.
         :rtype: List[SoftwareVersion]
@@ -372,6 +390,7 @@ class SoftwareImage(Model):
     def has_version(self, has_version):
         """Sets the has_version of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param has_version: The has_version of this SoftwareImage.
         :type has_version: List[SoftwareVersion]
@@ -383,6 +402,7 @@ class SoftwareImage(Model):
     def has_typical_data_source(self):
         """Gets the has_typical_data_source of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The has_typical_data_source of this SoftwareImage.
         :rtype: List[str]
@@ -393,6 +413,7 @@ class SoftwareImage(Model):
     def has_typical_data_source(self, has_typical_data_source):
         """Sets the has_typical_data_source of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param has_typical_data_source: The has_typical_data_source of this SoftwareImage.
         :type has_typical_data_source: List[str]
@@ -404,6 +425,7 @@ class SoftwareImage(Model):
     def has_download_url(self):
         """Gets the has_download_url of this SoftwareImage.
 
+        Download URL where to obtain the source/executable of the software  # noqa: E501
 
         :return: The has_download_url of this SoftwareImage.
         :rtype: List[str]
@@ -414,6 +436,7 @@ class SoftwareImage(Model):
     def has_download_url(self, has_download_url):
         """Sets the has_download_url of this SoftwareImage.
 
+        Download URL where to obtain the source/executable of the software  # noqa: E501
 
         :param has_download_url: The has_download_url of this SoftwareImage.
         :type has_download_url: List[str]
@@ -425,6 +448,7 @@ class SoftwareImage(Model):
     def description(self):
         """Gets the description of this SoftwareImage.
 
+        small description  # noqa: E501
 
         :return: The description of this SoftwareImage.
         :rtype: List[str]
@@ -435,6 +459,7 @@ class SoftwareImage(Model):
     def description(self, description):
         """Sets the description of this SoftwareImage.
 
+        small description  # noqa: E501
 
         :param description: The description of this SoftwareImage.
         :type description: List[str]
@@ -446,6 +471,7 @@ class SoftwareImage(Model):
     def reference_publication(self):
         """Gets the reference_publication of this SoftwareImage.
 
+        Main publication to cite in this software  # noqa: E501
 
         :return: The reference_publication of this SoftwareImage.
         :rtype: List[str]
@@ -456,6 +482,7 @@ class SoftwareImage(Model):
     def reference_publication(self, reference_publication):
         """Sets the reference_publication of this SoftwareImage.
 
+        Main publication to cite in this software  # noqa: E501
 
         :param reference_publication: The reference_publication of this SoftwareImage.
         :type reference_publication: List[str]
@@ -467,6 +494,7 @@ class SoftwareImage(Model):
     def screenshot(self):
         """Gets the screenshot of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The screenshot of this SoftwareImage.
         :rtype: List[Image]
@@ -477,6 +505,7 @@ class SoftwareImage(Model):
     def screenshot(self, screenshot):
         """Sets the screenshot of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param screenshot: The screenshot of this SoftwareImage.
         :type screenshot: List[Image]
@@ -488,6 +517,7 @@ class SoftwareImage(Model):
     def type(self):
         """Gets the type of this SoftwareImage.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this SoftwareImage.
         :rtype: List[str]
@@ -498,6 +528,7 @@ class SoftwareImage(Model):
     def type(self, type):
         """Sets the type of this SoftwareImage.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this SoftwareImage.
         :type type: List[str]
@@ -509,6 +540,7 @@ class SoftwareImage(Model):
     def has_installation_instructions(self):
         """Gets the has_installation_instructions of this SoftwareImage.
 
+        Instructions requires to install this particular piece of software.  # noqa: E501
 
         :return: The has_installation_instructions of this SoftwareImage.
         :rtype: List[str]
@@ -519,6 +551,7 @@ class SoftwareImage(Model):
     def has_installation_instructions(self, has_installation_instructions):
         """Sets the has_installation_instructions of this SoftwareImage.
 
+        Instructions requires to install this particular piece of software.  # noqa: E501
 
         :param has_installation_instructions: The has_installation_instructions of this SoftwareImage.
         :type has_installation_instructions: List[str]
@@ -530,6 +563,7 @@ class SoftwareImage(Model):
     def had_primary_source(self):
         """Gets the had_primary_source of this SoftwareImage.
 
+        had primary source  # noqa: E501
 
         :return: The had_primary_source of this SoftwareImage.
         :rtype: List[object]
@@ -540,6 +574,7 @@ class SoftwareImage(Model):
     def had_primary_source(self, had_primary_source):
         """Sets the had_primary_source of this SoftwareImage.
 
+        had primary source  # noqa: E501
 
         :param had_primary_source: The had_primary_source of this SoftwareImage.
         :type had_primary_source: List[object]
@@ -551,6 +586,7 @@ class SoftwareImage(Model):
     def date_created(self):
         """Gets the date_created of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The date_created of this SoftwareImage.
         :rtype: List[str]
@@ -561,6 +597,7 @@ class SoftwareImage(Model):
     def date_created(self, date_created):
         """Sets the date_created of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param date_created: The date_created of this SoftwareImage.
         :type date_created: List[str]
@@ -572,6 +609,7 @@ class SoftwareImage(Model):
     def contributor(self):
         """Gets the contributor of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The contributor of this SoftwareImage.
         :rtype: List[Person]
@@ -582,6 +620,7 @@ class SoftwareImage(Model):
     def contributor(self, contributor):
         """Sets the contributor of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param contributor: The contributor of this SoftwareImage.
         :type contributor: List[Person]
@@ -593,6 +632,7 @@ class SoftwareImage(Model):
     def compatible_visualization_software(self):
         """Gets the compatible_visualization_software of this SoftwareImage.
 
+        Property that links a software component to other useful software that canbe used to visualize its outputs  # noqa: E501
 
         :return: The compatible_visualization_software of this SoftwareImage.
         :rtype: List[Software]
@@ -603,6 +643,7 @@ class SoftwareImage(Model):
     def compatible_visualization_software(self, compatible_visualization_software):
         """Sets the compatible_visualization_software of this SoftwareImage.
 
+        Property that links a software component to other useful software that canbe used to visualize its outputs  # noqa: E501
 
         :param compatible_visualization_software: The compatible_visualization_software of this SoftwareImage.
         :type compatible_visualization_software: List[Software]
@@ -614,6 +655,7 @@ class SoftwareImage(Model):
     def has_faq(self):
         """Gets the has_faq of this SoftwareImage.
 
+        Frequently asked questions about a software  # noqa: E501
 
         :return: The has_faq of this SoftwareImage.
         :rtype: List[str]
@@ -624,6 +666,7 @@ class SoftwareImage(Model):
     def has_faq(self, has_faq):
         """Sets the has_faq of this SoftwareImage.
 
+        Frequently asked questions about a software  # noqa: E501
 
         :param has_faq: The has_faq of this SoftwareImage.
         :type has_faq: List[str]
@@ -635,6 +678,7 @@ class SoftwareImage(Model):
     def logo(self):
         """Gets the logo of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The logo of this SoftwareImage.
         :rtype: List[Image]
@@ -645,6 +689,7 @@ class SoftwareImage(Model):
     def logo(self, logo):
         """Sets the logo of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param logo: The logo of this SoftwareImage.
         :type logo: List[Image]
@@ -656,6 +701,7 @@ class SoftwareImage(Model):
     def has_contact_person(self):
         """Gets the has_contact_person of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The has_contact_person of this SoftwareImage.
         :rtype: List[object]
@@ -666,6 +712,7 @@ class SoftwareImage(Model):
     def has_contact_person(self, has_contact_person):
         """Sets the has_contact_person of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param has_contact_person: The has_contact_person of this SoftwareImage.
         :type has_contact_person: List[object]
@@ -677,6 +724,7 @@ class SoftwareImage(Model):
     def has_purpose(self):
         """Gets the has_purpose of this SoftwareImage.
 
+        Objective or main functionality that can be achieved by running this software  # noqa: E501
 
         :return: The has_purpose of this SoftwareImage.
         :rtype: List[str]
@@ -687,6 +735,7 @@ class SoftwareImage(Model):
     def has_purpose(self, has_purpose):
         """Sets the has_purpose of this SoftwareImage.
 
+        Objective or main functionality that can be achieved by running this software  # noqa: E501
 
         :param has_purpose: The has_purpose of this SoftwareImage.
         :type has_purpose: List[str]
@@ -698,6 +747,7 @@ class SoftwareImage(Model):
     def id(self):
         """Gets the id of this SoftwareImage.
 
+        identifier  # noqa: E501
 
         :return: The id of this SoftwareImage.
         :rtype: str
@@ -708,6 +758,7 @@ class SoftwareImage(Model):
     def id(self, id):
         """Sets the id of this SoftwareImage.
 
+        identifier  # noqa: E501
 
         :param id: The id of this SoftwareImage.
         :type id: str
@@ -719,6 +770,7 @@ class SoftwareImage(Model):
     def has_sample_visualization(self):
         """Gets the has_sample_visualization of this SoftwareImage.
 
+        A typical sample visualization of the softwware outputs  # noqa: E501
 
         :return: The has_sample_visualization of this SoftwareImage.
         :rtype: List[Visualization]
@@ -729,6 +781,7 @@ class SoftwareImage(Model):
     def has_sample_visualization(self, has_sample_visualization):
         """Sets the has_sample_visualization of this SoftwareImage.
 
+        A typical sample visualization of the softwware outputs  # noqa: E501
 
         :param has_sample_visualization: The has_sample_visualization of this SoftwareImage.
         :type has_sample_visualization: List[Visualization]
@@ -740,6 +793,7 @@ class SoftwareImage(Model):
     def identifier(self):
         """Gets the identifier of this SoftwareImage.
 
+        Identifier of the resource being described  # noqa: E501
 
         :return: The identifier of this SoftwareImage.
         :rtype: List[str]
@@ -750,6 +804,7 @@ class SoftwareImage(Model):
     def identifier(self, identifier):
         """Sets the identifier of this SoftwareImage.
 
+        Identifier of the resource being described  # noqa: E501
 
         :param identifier: The identifier of this SoftwareImage.
         :type identifier: List[str]
@@ -761,6 +816,7 @@ class SoftwareImage(Model):
     def memory_requirements(self):
         """Gets the memory_requirements of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The memory_requirements of this SoftwareImage.
         :rtype: List[str]
@@ -771,6 +827,7 @@ class SoftwareImage(Model):
     def memory_requirements(self, memory_requirements):
         """Sets the memory_requirements of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param memory_requirements: The memory_requirements of this SoftwareImage.
         :type memory_requirements: List[str]
@@ -782,6 +839,7 @@ class SoftwareImage(Model):
     def website(self):
         """Gets the website of this SoftwareImage.
 
+        Website of the software  # noqa: E501
 
         :return: The website of this SoftwareImage.
         :rtype: List[str]
@@ -792,6 +850,7 @@ class SoftwareImage(Model):
     def website(self, website):
         """Sets the website of this SoftwareImage.
 
+        Website of the software  # noqa: E501
 
         :param website: The website of this SoftwareImage.
         :type website: List[str]
@@ -803,6 +862,7 @@ class SoftwareImage(Model):
     def citation(self):
         """Gets the citation of this SoftwareImage.
 
+        How to cite this software  # noqa: E501
 
         :return: The citation of this SoftwareImage.
         :rtype: List[str]
@@ -813,6 +873,7 @@ class SoftwareImage(Model):
     def citation(self, citation):
         """Sets the citation of this SoftwareImage.
 
+        How to cite this software  # noqa: E501
 
         :param citation: The citation of this SoftwareImage.
         :type citation: List[str]
@@ -824,6 +885,7 @@ class SoftwareImage(Model):
     def author(self):
         """Gets the author of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The author of this SoftwareImage.
         :rtype: List[object]
@@ -834,6 +896,7 @@ class SoftwareImage(Model):
     def author(self, author):
         """Sets the author of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param author: The author of this SoftwareImage.
         :type author: List[object]
@@ -845,6 +908,7 @@ class SoftwareImage(Model):
     def processor_requirements(self):
         """Gets the processor_requirements of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The processor_requirements of this SoftwareImage.
         :rtype: List[str]
@@ -855,6 +919,7 @@ class SoftwareImage(Model):
     def processor_requirements(self, processor_requirements):
         """Sets the processor_requirements of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param processor_requirements: The processor_requirements of this SoftwareImage.
         :type processor_requirements: List[str]
@@ -866,6 +931,7 @@ class SoftwareImage(Model):
     def has_usage_notes(self):
         """Gets the has_usage_notes of this SoftwareImage.
 
+        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
 
         :return: The has_usage_notes of this SoftwareImage.
         :rtype: List[str]
@@ -876,6 +942,7 @@ class SoftwareImage(Model):
     def has_usage_notes(self, has_usage_notes):
         """Sets the has_usage_notes of this SoftwareImage.
 
+        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
 
         :param has_usage_notes: The has_usage_notes of this SoftwareImage.
         :type has_usage_notes: List[str]
@@ -887,6 +954,7 @@ class SoftwareImage(Model):
     def short_description(self):
         """Gets the short_description of this SoftwareImage.
 
+        A summarized description of the resource  # noqa: E501
 
         :return: The short_description of this SoftwareImage.
         :rtype: List[str]
@@ -897,6 +965,7 @@ class SoftwareImage(Model):
     def short_description(self, short_description):
         """Sets the short_description of this SoftwareImage.
 
+        A summarized description of the resource  # noqa: E501
 
         :param short_description: The short_description of this SoftwareImage.
         :type short_description: List[str]
@@ -908,6 +977,7 @@ class SoftwareImage(Model):
     def label(self):
         """Gets the label of this SoftwareImage.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this SoftwareImage.
         :rtype: List[str]
@@ -918,6 +988,7 @@ class SoftwareImage(Model):
     def label(self, label):
         """Sets the label of this SoftwareImage.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this SoftwareImage.
         :type label: List[str]
@@ -929,6 +1000,7 @@ class SoftwareImage(Model):
     def has_execution_command(self):
         """Gets the has_execution_command of this SoftwareImage.
 
+        Execution instructions on how to run the image  # noqa: E501
 
         :return: The has_execution_command of this SoftwareImage.
         :rtype: List[str]
@@ -939,6 +1011,7 @@ class SoftwareImage(Model):
     def has_execution_command(self, has_execution_command):
         """Sets the has_execution_command of this SoftwareImage.
 
+        Execution instructions on how to run the image  # noqa: E501
 
         :param has_execution_command: The has_execution_command of this SoftwareImage.
         :type has_execution_command: List[str]
@@ -950,6 +1023,7 @@ class SoftwareImage(Model):
     def has_assumption(self):
         """Gets the has_assumption of this SoftwareImage.
 
+        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
 
         :return: The has_assumption of this SoftwareImage.
         :rtype: List[str]
@@ -960,6 +1034,7 @@ class SoftwareImage(Model):
     def has_assumption(self, has_assumption):
         """Sets the has_assumption of this SoftwareImage.
 
+        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
 
         :param has_assumption: The has_assumption of this SoftwareImage.
         :type has_assumption: List[str]
@@ -971,6 +1046,7 @@ class SoftwareImage(Model):
     def date_published(self):
         """Gets the date_published of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The date_published of this SoftwareImage.
         :rtype: List[str]
@@ -981,6 +1057,7 @@ class SoftwareImage(Model):
     def date_published(self, date_published):
         """Sets the date_published of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param date_published: The date_published of this SoftwareImage.
         :type date_published: List[str]
@@ -992,6 +1069,7 @@ class SoftwareImage(Model):
     def operating_systems(self):
         """Gets the operating_systems of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The operating_systems of this SoftwareImage.
         :rtype: List[str]
@@ -1002,6 +1080,7 @@ class SoftwareImage(Model):
     def operating_systems(self, operating_systems):
         """Sets the operating_systems of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param operating_systems: The operating_systems of this SoftwareImage.
         :type operating_systems: List[str]
@@ -1013,6 +1092,7 @@ class SoftwareImage(Model):
     def license(self):
         """Gets the license of this SoftwareImage.
 
+        License of a software component or its source code  # noqa: E501
 
         :return: The license of this SoftwareImage.
         :rtype: List[str]
@@ -1023,6 +1103,7 @@ class SoftwareImage(Model):
     def license(self, license):
         """Sets the license of this SoftwareImage.
 
+        License of a software component or its source code  # noqa: E501
 
         :param license: The license of this SoftwareImage.
         :type license: List[str]
@@ -1034,6 +1115,7 @@ class SoftwareImage(Model):
     def has_source_code(self):
         """Gets the has_source_code of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The has_source_code of this SoftwareImage.
         :rtype: List[SourceCode]
@@ -1044,6 +1126,7 @@ class SoftwareImage(Model):
     def has_source_code(self, has_source_code):
         """Sets the has_source_code of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param has_source_code: The has_source_code of this SoftwareImage.
         :type has_source_code: List[SourceCode]
@@ -1055,6 +1138,7 @@ class SoftwareImage(Model):
     def has_example(self):
         """Gets the has_example of this SoftwareImage.
 
+        An example explaining a scenario where the model was used in plain language.  # noqa: E501
 
         :return: The has_example of this SoftwareImage.
         :rtype: List[str]
@@ -1065,6 +1149,7 @@ class SoftwareImage(Model):
     def has_example(self, has_example):
         """Sets the has_example of this SoftwareImage.
 
+        An example explaining a scenario where the model was used in plain language.  # noqa: E501
 
         :param has_example: The has_example of this SoftwareImage.
         :type has_example: List[str]
@@ -1076,6 +1161,7 @@ class SoftwareImage(Model):
     def publisher(self):
         """Gets the publisher of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :return: The publisher of this SoftwareImage.
         :rtype: List[object]
@@ -1086,9 +1172,33 @@ class SoftwareImage(Model):
     def publisher(self, publisher):
         """Sets the publisher of this SoftwareImage.
 
+        Description not available  # noqa: E501
 
         :param publisher: The publisher of this SoftwareImage.
         :type publisher: List[object]
         """
 
         self._publisher = publisher
+
+    @property
+    def useful_for_calculating_index(self):
+        """Gets the useful_for_calculating_index of this SoftwareImage.
+
+        Property that indicates that a software component (or any of its outputs) can be used to calculate a particular index. The rationale for this property is that indices are usually calculated by applying post-processing steps to the outputs of a software component.  # noqa: E501
+
+        :return: The useful_for_calculating_index of this SoftwareImage.
+        :rtype: List[NumericalIndex]
+        """
+        return self._useful_for_calculating_index
+
+    @useful_for_calculating_index.setter
+    def useful_for_calculating_index(self, useful_for_calculating_index):
+        """Sets the useful_for_calculating_index of this SoftwareImage.
+
+        Property that indicates that a software component (or any of its outputs) can be used to calculate a particular index. The rationale for this property is that indices are usually calculated by applying post-processing steps to the outputs of a software component.  # noqa: E501
+
+        :param useful_for_calculating_index: The useful_for_calculating_index of this SoftwareImage.
+        :type useful_for_calculating_index: List[NumericalIndex]
+        """
+
+        self._useful_for_calculating_index = useful_for_calculating_index

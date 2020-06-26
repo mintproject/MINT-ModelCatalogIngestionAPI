@@ -7,3 +7,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - ${PORT}:8080
+    volumes:
+      - ./openapi_server/openapi/:/usr/src/app/openapi_server/openapi/

@@ -26,7 +26,7 @@ class TestModel(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/models/{}'.format("CYCLES"),
+            '/v1.5.0/models/{}'.format("CYCLES"),
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -34,6 +34,7 @@ class TestModel(BaseTestCase):
         self.assertIsInstance(Model.from_dict(response.json), Model)
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
+        self.assertTrue(response.json)
 
 
     def test_model_custom_index_get(self):
@@ -47,7 +48,7 @@ class TestModel(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/custom/models/variable',
+            '/v1.5.0/custom/models/variable',
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -68,7 +69,7 @@ class TestModel(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/custom/model/intervention',
+            '/v1.5.0/custom/model/intervention',
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -89,7 +90,7 @@ class TestModel(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/custom/model/region',
+            '/v1.5.0/custom/model/region',
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -110,7 +111,7 @@ class TestModel(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/custom/models/variable',
+            '/v1.5.0/custom/models/variable',
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -131,7 +132,7 @@ class TestModel(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/custom/models/standard_variable',
+            '/v1.5.0/custom/models/standard_variable',
             method='GET',
             headers=headers,
             query_string=query_string)

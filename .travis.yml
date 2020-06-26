@@ -1,29 +1,20 @@
 language: python
 python:
     3.7
-env:
-  matrix:
-  - DOCKER_COMPOSE_VERSION=1.23.2
-  global:
 services:
 - docker
-before_install:
-- echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
-- curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-- sudo apt-get install nodejs
-- npm install --global release-it
 install:
-    - cd server
-    - pip install tox
+  - pip install -U pip
+  - pip install coverage
+  - pip install codecov
+  - pip install -U pytest
+  - pip install -U pytest-cov
+  - pip install --upgrade setuptools wheel
 script:
-    - tox
-before_deploy:
-    - cd $TRAVIS_BUILD_DIR
-deploy:
-  provider: script
-  script: bash .deploy
-  on:
-    tags: true
-    all_branches: true
-  skip_cleanup: true
+  - cd server
+  - pip install -r requirements.txt 
+  - pip install -r test-requirements.txt 
+  - pytest
+after_success:
+- codecov
 

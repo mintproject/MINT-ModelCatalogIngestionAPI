@@ -80,6 +80,7 @@ class SampleCollection(Model):
     def data_catalog_identifier(self):
         """Gets the data_catalog_identifier of this SampleCollection.
 
+        An identifier for resources with metadata entries in a data catalog  # noqa: E501
 
         :return: The data_catalog_identifier of this SampleCollection.
         :rtype: List[str]
@@ -90,6 +91,7 @@ class SampleCollection(Model):
     def data_catalog_identifier(self, data_catalog_identifier):
         """Sets the data_catalog_identifier of this SampleCollection.
 
+        An identifier for resources with metadata entries in a data catalog  # noqa: E501
 
         :param data_catalog_identifier: The data_catalog_identifier of this SampleCollection.
         :type data_catalog_identifier: List[str]
@@ -101,6 +103,7 @@ class SampleCollection(Model):
     def has_part(self):
         """Gets the has_part of this SampleCollection.
 
+        Property designed to reference the elements included in a sample collection.  # noqa: E501
 
         :return: The has_part of this SampleCollection.
         :rtype: List[SampleResource]
@@ -111,6 +114,7 @@ class SampleCollection(Model):
     def has_part(self, has_part):
         """Sets the has_part of this SampleCollection.
 
+        Property designed to reference the elements included in a sample collection.  # noqa: E501
 
         :param has_part: The has_part of this SampleCollection.
         :type has_part: List[SampleResource]
@@ -122,6 +126,7 @@ class SampleCollection(Model):
     def description(self):
         """Gets the description of this SampleCollection.
 
+        small description  # noqa: E501
 
         :return: The description of this SampleCollection.
         :rtype: List[str]
@@ -132,6 +137,7 @@ class SampleCollection(Model):
     def description(self, description):
         """Sets the description of this SampleCollection.
 
+        small description  # noqa: E501
 
         :param description: The description of this SampleCollection.
         :type description: List[str]
@@ -143,6 +149,7 @@ class SampleCollection(Model):
     def id(self):
         """Gets the id of this SampleCollection.
 
+        identifier  # noqa: E501
 
         :return: The id of this SampleCollection.
         :rtype: str
@@ -153,6 +160,7 @@ class SampleCollection(Model):
     def id(self, id):
         """Sets the id of this SampleCollection.
 
+        identifier  # noqa: E501
 
         :param id: The id of this SampleCollection.
         :type id: str
@@ -164,6 +172,7 @@ class SampleCollection(Model):
     def label(self):
         """Gets the label of this SampleCollection.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this SampleCollection.
         :rtype: List[str]
@@ -174,6 +183,7 @@ class SampleCollection(Model):
     def label(self, label):
         """Sets the label of this SampleCollection.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this SampleCollection.
         :type label: List[str]
@@ -185,6 +195,7 @@ class SampleCollection(Model):
     def type(self):
         """Gets the type of this SampleCollection.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this SampleCollection.
         :rtype: List[str]
@@ -195,6 +206,7 @@ class SampleCollection(Model):
     def type(self, type):
         """Sets the type of this SampleCollection.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this SampleCollection.
         :type type: List[str]
@@ -206,6 +218,7 @@ class SampleCollection(Model):
     def value(self):
         """Gets the value of this SampleCollection.
 
+        Value associated to the described entity  # noqa: E501
 
         :return: The value of this SampleCollection.
         :rtype: List[object]
@@ -216,6 +229,7 @@ class SampleCollection(Model):
     def value(self, value):
         """Sets the value of this SampleCollection.
 
+        Value associated to the described entity  # noqa: E501
 
         :param value: The value of this SampleCollection.
         :type value: List[object]

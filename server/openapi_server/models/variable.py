@@ -63,6 +63,7 @@ class Variable(Model):
     def description(self):
         """Gets the description of this Variable.
 
+        small description  # noqa: E501
 
         :return: The description of this Variable.
         :rtype: List[str]
@@ -73,6 +74,7 @@ class Variable(Model):
     def description(self, description):
         """Sets the description of this Variable.
 
+        small description  # noqa: E501
 
         :param description: The description of this Variable.
         :type description: List[str]
@@ -84,6 +86,7 @@ class Variable(Model):
     def id(self):
         """Gets the id of this Variable.
 
+        identifier  # noqa: E501
 
         :return: The id of this Variable.
         :rtype: str
@@ -94,6 +97,7 @@ class Variable(Model):
     def id(self, id):
         """Sets the id of this Variable.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Variable.
         :type id: str
@@ -105,6 +109,7 @@ class Variable(Model):
     def label(self):
         """Gets the label of this Variable.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Variable.
         :rtype: List[str]
@@ -115,6 +120,7 @@ class Variable(Model):
     def label(self, label):
         """Sets the label of this Variable.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Variable.
         :type label: List[str]
@@ -126,6 +132,7 @@ class Variable(Model):
     def type(self):
         """Gets the type of this Variable.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Variable.
         :rtype: List[str]
@@ -136,6 +143,7 @@ class Variable(Model):
     def type(self, type):
         """Sets the type of this Variable.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Variable.
         :type type: List[str]

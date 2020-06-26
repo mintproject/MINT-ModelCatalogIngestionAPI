@@ -1,6 +1,6 @@
 import connexion
 import six
-from openapi_server.utils.request import get_resource, get_all_resource, put_resource, post_resource, delete_resource
+from openapi_server import query_manager
 from openapi_server.utils.vars import MODEL_TYPE_NAME, MODEL_TYPE_URI
 
 from openapi_server.models.model import Model  # noqa: E501
@@ -22,7 +22,7 @@ def custom_model_index_get(label, custom_query_name=None, username=None):  # noq
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         custom_query_name=custom_query_name,
         username=username,
         label=label,
@@ -46,7 +46,7 @@ def custom_model_intervention_get(label, custom_query_name=None, username=None):
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         custom_query_name=custom_query_name,
         username=username,
         label=label,
@@ -70,7 +70,7 @@ def custom_model_region_get(label, custom_query_name=None, username=None):  # no
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         custom_query_name=custom_query_name,
         username=username,
         label=label,
@@ -94,7 +94,7 @@ def custom_models_standard_variable_get(label, custom_query_name=None, username=
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         custom_query_name=custom_query_name,
         username=username,
         label=label,
@@ -118,7 +118,7 @@ def custom_models_variable_get(label, custom_query_name=None, username=None):  #
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         custom_query_name=custom_query_name,
         username=username,
         label=label,
@@ -126,33 +126,39 @@ def custom_models_variable_get(label, custom_query_name=None, username=None):  #
         rdf_type_name=MODEL_TYPE_NAME, 
         kls=Model)
 
-def models_get(username=None, label=None):  # noqa: E501
-    """List all Model entities
+def models_get(username=None, label=None, page=None, per_page=None):  # noqa: E501
+    """List all instances of Model
 
-    Gets a list of all Model entities # noqa: E501
+    Gets a list of all instances of Model (more information in https://w3id.org/okn/o/sdm#Model) # noqa: E501
 
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
     :param label: Filter by label
     :type label: str
+    :param page: Page number
+    :type page: int
+    :param per_page: Items per page
+    :type per_page: int
 
     :rtype: List[Model]
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         username=username,
         label=label,
+        page=page,
+        per_page=per_page,
         rdf_type_uri=MODEL_TYPE_URI,
         rdf_type_name=MODEL_TYPE_NAME, 
         kls=Model)
 
 def models_id_delete(id, user):  # noqa: E501
-    """Delete a Model
+    """Delete an existing Model
 
-    Delete an existing Model # noqa: E501
+    Delete an existing Model (more information in https://w3id.org/okn/o/sdm#Model) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the Model to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -161,37 +167,37 @@ def models_id_delete(id, user):  # noqa: E501
     """
 
 
-    return delete_resource(id=id,user=user,
+    return query_manager.delete_resource(id=id,user=user,
         rdf_type_uri=MODEL_TYPE_URI,
         rdf_type_name=MODEL_TYPE_NAME, 
         kls=Model)
 
 def models_id_get(id, username=None):  # noqa: E501
-    """Get a Model
+    """Get a single Model by its id
 
-    Gets the details of a single instance of a Model # noqa: E501
+    Gets the details of a given Model (more information in https://w3id.org/okn/o/sdm#Model) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the Model to be retrieved
     :type id: str
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
 
     :rtype: Model
     """
 
 
-    return get_resource(id=id,
+    return query_manager.get_resource(id=id,
         username=username,
         rdf_type_uri=MODEL_TYPE_URI,
         rdf_type_name=MODEL_TYPE_NAME, 
         kls=Model)
 
 def models_id_put(id, user, model=None):  # noqa: E501
-    """Update a Model
+    """Update an existing Model
 
-    Updates an existing Model # noqa: E501
+    Updates an existing Model (more information in https://w3id.org/okn/o/sdm#Model) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the Model to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -204,20 +210,20 @@ def models_id_put(id, user, model=None):  # noqa: E501
     if connexion.request.is_json:
         model = Model.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return put_resource(id=id,user=user,
+    return query_manager.put_resource(id=id,user=user,
         body=model,
         rdf_type_uri=MODEL_TYPE_URI,
         rdf_type_name=MODEL_TYPE_NAME, 
         kls=Model)
 
 def models_post(user, model=None):  # noqa: E501
-    """Create a Model
+    """Create one Model
 
-    Create a new instance of a Model # noqa: E501
+    Create a new instance of Model (more information in https://w3id.org/okn/o/sdm#Model) # noqa: E501
 
     :param user: Username
     :type user: str
-    :param model: A new Modelto be created
+    :param model: Information about the Modelto be created
     :type model: dict | bytes
 
     :rtype: Model
@@ -226,7 +232,7 @@ def models_post(user, model=None):  # noqa: E501
     if connexion.request.is_json:
         model = Model.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return post_resource(user=user,
+    return query_manager.post_resource(user=user,
         body=model,
         rdf_type_uri=MODEL_TYPE_URI,
         rdf_type_name=MODEL_TYPE_NAME, 

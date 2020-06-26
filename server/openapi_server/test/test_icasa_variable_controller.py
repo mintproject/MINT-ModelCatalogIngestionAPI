@@ -24,7 +24,7 @@ class TestICASAVariableController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/icasavariables',
+            '/v1.5.0/icasavariables',
             method='GET',
             headers=headers,
             query_string=query_string)

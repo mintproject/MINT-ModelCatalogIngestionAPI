@@ -1,5 +1,12 @@
-SERVER=https://api.models.mint.isi.edu/v1.4.0
-#SERVER=http://localhost:8080/v1.4.0
-USERNAME=mosorio@isi.edu
+#SERVER=https://api.models.mint.isi.edu/v1.5.0
+SERVER=http://localhost:8080/v1.5.0
+USERNAME="mosorio@isi.edu"
 PASSWORD=jz2KNTg5XgFacX4
-TOKEN=$(curl -s -X GET "$SERVER/user/login?username=$USERNAME&password=$PASSWORD" -H "accept: application/json" | jq -r '.access_token')
+
+JSON_STRING=$( jq -n \
+                  --arg u "$USERNAME" \
+                  --arg p "$PASSWORD" \
+                  '{username: $u, password: $p}' )
+echo ${JSON_STRING} > credentials.txt
+
+TOKEN=$(curl -s  -H "Content-Type: application/json" -X POST "$SERVER/user/login" -H "accept: application/json" -d @credentials.txt | jq -r '.access_token')

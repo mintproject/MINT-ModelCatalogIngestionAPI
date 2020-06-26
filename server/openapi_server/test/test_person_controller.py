@@ -27,13 +27,14 @@ class TestPersonController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/persons',
+            '/v1.5.0/persons',
             method='GET',
             headers=headers,
             query_string=query_string)
         self.logger.info("Response length {}".format(len(response.json)))
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
+        self.assertTrue(response.json)
 
     def test_persons_get_id_mint(self):
         """Test case for persons_get
@@ -46,7 +47,7 @@ class TestPersonController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/persons/{}'.format("khider_deborah"),
+            '/v1.5.0/persons/{}'.format("khider_deborah"),
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -65,7 +66,7 @@ class TestPersonController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/persons/{}'.format("khider_deborah"),
+            '/v1.5.0/persons/{}'.format("khider_deborah"),
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -84,7 +85,7 @@ class TestPersonController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/persons/{}'.format("b0b454fc-d77d-4778-9d37-6e327c00b0c2"),
+            '/v1.5.0/persons/{}'.format("b0b454fc-d77d-4778-9d37-6e327c00b0c2"),
             method='GET',
             headers=headers,
             query_string=query_string)

@@ -24,7 +24,7 @@ class TestGeoCoordinatesController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/geocoordinatess',
+            '/v1.5.0/geocoordinatess',
             method='GET',
             headers=headers,
             query_string=query_string)

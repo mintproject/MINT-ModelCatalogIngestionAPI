@@ -78,6 +78,7 @@ class SourceCode(Model):
     def license(self):
         """Gets the license of this SourceCode.
 
+        License of a software component or its source code  # noqa: E501
 
         :return: The license of this SourceCode.
         :rtype: List[str]
@@ -88,6 +89,7 @@ class SourceCode(Model):
     def license(self, license):
         """Sets the license of this SourceCode.
 
+        License of a software component or its source code  # noqa: E501
 
         :param license: The license of this SourceCode.
         :type license: List[str]
@@ -99,6 +101,7 @@ class SourceCode(Model):
     def programming_language(self):
         """Gets the programming_language of this SourceCode.
 
+        Description not available  # noqa: E501
 
         :return: The programming_language of this SourceCode.
         :rtype: List[str]
@@ -109,6 +112,7 @@ class SourceCode(Model):
     def programming_language(self, programming_language):
         """Sets the programming_language of this SourceCode.
 
+        Description not available  # noqa: E501
 
         :param programming_language: The programming_language of this SourceCode.
         :type programming_language: List[str]
@@ -120,6 +124,7 @@ class SourceCode(Model):
     def description(self):
         """Gets the description of this SourceCode.
 
+        small description  # noqa: E501
 
         :return: The description of this SourceCode.
         :rtype: List[str]
@@ -130,6 +135,7 @@ class SourceCode(Model):
     def description(self, description):
         """Sets the description of this SourceCode.
 
+        small description  # noqa: E501
 
         :param description: The description of this SourceCode.
         :type description: List[str]
@@ -141,6 +147,7 @@ class SourceCode(Model):
     def code_repository(self):
         """Gets the code_repository of this SourceCode.
 
+        URL to the code repository of a software component  # noqa: E501
 
         :return: The code_repository of this SourceCode.
         :rtype: List[str]
@@ -151,6 +158,7 @@ class SourceCode(Model):
     def code_repository(self, code_repository):
         """Sets the code_repository of this SourceCode.
 
+        URL to the code repository of a software component  # noqa: E501
 
         :param code_repository: The code_repository of this SourceCode.
         :type code_repository: List[str]
@@ -162,6 +170,7 @@ class SourceCode(Model):
     def id(self):
         """Gets the id of this SourceCode.
 
+        identifier  # noqa: E501
 
         :return: The id of this SourceCode.
         :rtype: str
@@ -172,6 +181,7 @@ class SourceCode(Model):
     def id(self, id):
         """Sets the id of this SourceCode.
 
+        identifier  # noqa: E501
 
         :param id: The id of this SourceCode.
         :type id: str
@@ -183,6 +193,7 @@ class SourceCode(Model):
     def label(self):
         """Gets the label of this SourceCode.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this SourceCode.
         :rtype: List[str]
@@ -193,6 +204,7 @@ class SourceCode(Model):
     def label(self, label):
         """Sets the label of this SourceCode.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this SourceCode.
         :type label: List[str]
@@ -204,6 +216,7 @@ class SourceCode(Model):
     def type(self):
         """Gets the type of this SourceCode.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this SourceCode.
         :rtype: List[str]
@@ -214,6 +227,7 @@ class SourceCode(Model):
     def type(self, type):
         """Sets the type of this SourceCode.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this SourceCode.
         :type type: List[str]

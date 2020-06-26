@@ -24,7 +24,7 @@ class TestSampleResourceController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/sampleresources',
+            '/v1.5.0/sampleresources',
             method='GET',
             headers=headers,
             query_string=query_string)
@@ -32,6 +32,7 @@ class TestSampleResourceController(BaseTestCase):
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
 
+        self.assertTrue(response.json)
 
 if __name__ == '__main__':
     unittest.main()

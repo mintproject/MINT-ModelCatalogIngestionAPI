@@ -1,38 +1,44 @@
 import connexion
 import six
-from openapi_server.utils.request import get_resource, get_all_resource, put_resource, post_resource, delete_resource
+from openapi_server import query_manager
 from openapi_server.utils.vars import SPATIALRESOLUTION_TYPE_NAME, SPATIALRESOLUTION_TYPE_URI
 
 from openapi_server.models.spatial_resolution import SpatialResolution  # noqa: E501
 from openapi_server import util
 
-def spatialresolutions_get(username=None, label=None):  # noqa: E501
-    """List all SpatialResolution entities
+def spatialresolutions_get(username=None, label=None, page=None, per_page=None):  # noqa: E501
+    """List all instances of SpatialResolution
 
-    Gets a list of all SpatialResolution entities # noqa: E501
+    Gets a list of all instances of SpatialResolution (more information in https://w3id.org/okn/o/sdm#SpatialResolution) # noqa: E501
 
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
     :param label: Filter by label
     :type label: str
+    :param page: Page number
+    :type page: int
+    :param per_page: Items per page
+    :type per_page: int
 
     :rtype: List[SpatialResolution]
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         username=username,
         label=label,
+        page=page,
+        per_page=per_page,
         rdf_type_uri=SPATIALRESOLUTION_TYPE_URI,
         rdf_type_name=SPATIALRESOLUTION_TYPE_NAME, 
         kls=SpatialResolution)
 
 def spatialresolutions_id_delete(id, user):  # noqa: E501
-    """Delete a SpatialResolution
+    """Delete an existing SpatialResolution
 
-    Delete an existing SpatialResolution # noqa: E501
+    Delete an existing SpatialResolution (more information in https://w3id.org/okn/o/sdm#SpatialResolution) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the SpatialResolution to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -41,37 +47,37 @@ def spatialresolutions_id_delete(id, user):  # noqa: E501
     """
 
 
-    return delete_resource(id=id,user=user,
+    return query_manager.delete_resource(id=id,user=user,
         rdf_type_uri=SPATIALRESOLUTION_TYPE_URI,
         rdf_type_name=SPATIALRESOLUTION_TYPE_NAME, 
         kls=SpatialResolution)
 
 def spatialresolutions_id_get(id, username=None):  # noqa: E501
-    """Get a SpatialResolution
+    """Get a single SpatialResolution by its id
 
-    Gets the details of a single instance of a SpatialResolution # noqa: E501
+    Gets the details of a given SpatialResolution (more information in https://w3id.org/okn/o/sdm#SpatialResolution) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the SpatialResolution to be retrieved
     :type id: str
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
 
     :rtype: SpatialResolution
     """
 
 
-    return get_resource(id=id,
+    return query_manager.get_resource(id=id,
         username=username,
         rdf_type_uri=SPATIALRESOLUTION_TYPE_URI,
         rdf_type_name=SPATIALRESOLUTION_TYPE_NAME, 
         kls=SpatialResolution)
 
 def spatialresolutions_id_put(id, user, spatial_resolution=None):  # noqa: E501
-    """Update a SpatialResolution
+    """Update an existing SpatialResolution
 
-    Updates an existing SpatialResolution # noqa: E501
+    Updates an existing SpatialResolution (more information in https://w3id.org/okn/o/sdm#SpatialResolution) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the SpatialResolution to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -84,20 +90,20 @@ def spatialresolutions_id_put(id, user, spatial_resolution=None):  # noqa: E501
     if connexion.request.is_json:
         spatial_resolution = SpatialResolution.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return put_resource(id=id,user=user,
+    return query_manager.put_resource(id=id,user=user,
         body=spatial_resolution,
         rdf_type_uri=SPATIALRESOLUTION_TYPE_URI,
         rdf_type_name=SPATIALRESOLUTION_TYPE_NAME, 
         kls=SpatialResolution)
 
 def spatialresolutions_post(user, spatial_resolution=None):  # noqa: E501
-    """Create a SpatialResolution
+    """Create one SpatialResolution
 
-    Create a new instance of a SpatialResolution # noqa: E501
+    Create a new instance of SpatialResolution (more information in https://w3id.org/okn/o/sdm#SpatialResolution) # noqa: E501
 
     :param user: Username
     :type user: str
-    :param spatial_resolution: A new SpatialResolutionto be created
+    :param spatial_resolution: Information about the SpatialResolutionto be created
     :type spatial_resolution: dict | bytes
 
     :rtype: SpatialResolution
@@ -106,7 +112,7 @@ def spatialresolutions_post(user, spatial_resolution=None):  # noqa: E501
     if connexion.request.is_json:
         spatial_resolution = SpatialResolution.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return post_resource(user=user,
+    return query_manager.post_resource(user=user,
         body=spatial_resolution,
         rdf_type_uri=SPATIALRESOLUTION_TYPE_URI,
         rdf_type_name=SPATIALRESOLUTION_TYPE_NAME, 

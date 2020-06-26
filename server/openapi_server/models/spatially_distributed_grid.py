@@ -117,6 +117,7 @@ class SpatiallyDistributedGrid(Model):
     def has_dimensionality(self):
         """Gets the has_dimensionality of this SpatiallyDistributedGrid.
 
+        Property to indicate dimensionality of the input or output of a dataset specification  # noqa: E501
 
         :return: The has_dimensionality of this SpatiallyDistributedGrid.
         :rtype: List[int]
@@ -127,6 +128,7 @@ class SpatiallyDistributedGrid(Model):
     def has_dimensionality(self, has_dimensionality):
         """Sets the has_dimensionality of this SpatiallyDistributedGrid.
 
+        Property to indicate dimensionality of the input or output of a dataset specification  # noqa: E501
 
         :param has_dimensionality: The has_dimensionality of this SpatiallyDistributedGrid.
         :type has_dimensionality: List[int]
@@ -138,6 +140,7 @@ class SpatiallyDistributedGrid(Model):
     def has_format(self):
         """Gets the has_format of this SpatiallyDistributedGrid.
 
+        Format followed by a file. For example, txt, nc, etc.  # noqa: E501
 
         :return: The has_format of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -148,6 +151,7 @@ class SpatiallyDistributedGrid(Model):
     def has_format(self, has_format):
         """Sets the has_format of this SpatiallyDistributedGrid.
 
+        Format followed by a file. For example, txt, nc, etc.  # noqa: E501
 
         :param has_format: The has_format of this SpatiallyDistributedGrid.
         :type has_format: List[str]
@@ -159,6 +163,7 @@ class SpatiallyDistributedGrid(Model):
     def has_file_structure(self):
         """Gets the has_file_structure of this SpatiallyDistributedGrid.
 
+        Relates a dataset specification to the data structure definition  # noqa: E501
 
         :return: The has_file_structure of this SpatiallyDistributedGrid.
         :rtype: List[object]
@@ -169,6 +174,7 @@ class SpatiallyDistributedGrid(Model):
     def has_file_structure(self, has_file_structure):
         """Sets the has_file_structure of this SpatiallyDistributedGrid.
 
+        Relates a dataset specification to the data structure definition  # noqa: E501
 
         :param has_file_structure: The has_file_structure of this SpatiallyDistributedGrid.
         :type has_file_structure: List[object]
@@ -180,6 +186,7 @@ class SpatiallyDistributedGrid(Model):
     def description(self):
         """Gets the description of this SpatiallyDistributedGrid.
 
+        small description  # noqa: E501
 
         :return: The description of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -190,6 +197,7 @@ class SpatiallyDistributedGrid(Model):
     def description(self, description):
         """Sets the description of this SpatiallyDistributedGrid.
 
+        small description  # noqa: E501
 
         :param description: The description of this SpatiallyDistributedGrid.
         :type description: List[str]
@@ -201,6 +209,7 @@ class SpatiallyDistributedGrid(Model):
     def has_presentation(self):
         """Gets the has_presentation of this SpatiallyDistributedGrid.
 
+        Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.  # noqa: E501
 
         :return: The has_presentation of this SpatiallyDistributedGrid.
         :rtype: List[VariablePresentation]
@@ -211,6 +220,7 @@ class SpatiallyDistributedGrid(Model):
     def has_presentation(self, has_presentation):
         """Sets the has_presentation of this SpatiallyDistributedGrid.
 
+        Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.  # noqa: E501
 
         :param has_presentation: The has_presentation of this SpatiallyDistributedGrid.
         :type has_presentation: List[VariablePresentation]
@@ -222,6 +232,7 @@ class SpatiallyDistributedGrid(Model):
     def label(self):
         """Gets the label of this SpatiallyDistributedGrid.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -232,6 +243,7 @@ class SpatiallyDistributedGrid(Model):
     def label(self, label):
         """Sets the label of this SpatiallyDistributedGrid.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this SpatiallyDistributedGrid.
         :type label: List[str]
@@ -243,6 +255,7 @@ class SpatiallyDistributedGrid(Model):
     def type(self):
         """Gets the type of this SpatiallyDistributedGrid.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -253,6 +266,7 @@ class SpatiallyDistributedGrid(Model):
     def type(self, type):
         """Sets the type of this SpatiallyDistributedGrid.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this SpatiallyDistributedGrid.
         :type type: List[str]
@@ -264,6 +278,7 @@ class SpatiallyDistributedGrid(Model):
     def has_fixed_resource(self):
         """Gets the has_fixed_resource of this SpatiallyDistributedGrid.
 
+        Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region.  # noqa: E501
 
         :return: The has_fixed_resource of this SpatiallyDistributedGrid.
         :rtype: List[SampleResource]
@@ -274,6 +289,7 @@ class SpatiallyDistributedGrid(Model):
     def has_fixed_resource(self, has_fixed_resource):
         """Sets the has_fixed_resource of this SpatiallyDistributedGrid.
 
+        Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region.  # noqa: E501
 
         :param has_fixed_resource: The has_fixed_resource of this SpatiallyDistributedGrid.
         :type has_fixed_resource: List[SampleResource]
@@ -285,6 +301,7 @@ class SpatiallyDistributedGrid(Model):
     def has_coordinate_system(self):
         """Gets the has_coordinate_system of this SpatiallyDistributedGrid.
 
+        Coordinate system used in a grid  # noqa: E501
 
         :return: The has_coordinate_system of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -295,6 +312,7 @@ class SpatiallyDistributedGrid(Model):
     def has_coordinate_system(self, has_coordinate_system):
         """Sets the has_coordinate_system of this SpatiallyDistributedGrid.
 
+        Coordinate system used in a grid  # noqa: E501
 
         :param has_coordinate_system: The has_coordinate_system of this SpatiallyDistributedGrid.
         :type has_coordinate_system: List[str]
@@ -306,6 +324,7 @@ class SpatiallyDistributedGrid(Model):
     def has_spatial_resolution(self):
         """Gets the has_spatial_resolution of this SpatiallyDistributedGrid.
 
+        Description not available  # noqa: E501
 
         :return: The has_spatial_resolution of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -316,6 +335,7 @@ class SpatiallyDistributedGrid(Model):
     def has_spatial_resolution(self, has_spatial_resolution):
         """Sets the has_spatial_resolution of this SpatiallyDistributedGrid.
 
+        Description not available  # noqa: E501
 
         :param has_spatial_resolution: The has_spatial_resolution of this SpatiallyDistributedGrid.
         :type has_spatial_resolution: List[str]
@@ -327,6 +347,7 @@ class SpatiallyDistributedGrid(Model):
     def has_shape(self):
         """Gets the has_shape of this SpatiallyDistributedGrid.
 
+        Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.  # noqa: E501
 
         :return: The has_shape of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -337,6 +358,7 @@ class SpatiallyDistributedGrid(Model):
     def has_shape(self, has_shape):
         """Sets the has_shape of this SpatiallyDistributedGrid.
 
+        Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.  # noqa: E501
 
         :param has_shape: The has_shape of this SpatiallyDistributedGrid.
         :type has_shape: List[str]
@@ -348,6 +370,7 @@ class SpatiallyDistributedGrid(Model):
     def has_dimension(self):
         """Gets the has_dimension of this SpatiallyDistributedGrid.
 
+        Description not available  # noqa: E501
 
         :return: The has_dimension of this SpatiallyDistributedGrid.
         :rtype: List[str]
@@ -358,6 +381,7 @@ class SpatiallyDistributedGrid(Model):
     def has_dimension(self, has_dimension):
         """Sets the has_dimension of this SpatiallyDistributedGrid.
 
+        Description not available  # noqa: E501
 
         :param has_dimension: The has_dimension of this SpatiallyDistributedGrid.
         :type has_dimension: List[str]
@@ -369,6 +393,7 @@ class SpatiallyDistributedGrid(Model):
     def position(self):
         """Gets the position of this SpatiallyDistributedGrid.
 
+        Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution  # noqa: E501
 
         :return: The position of this SpatiallyDistributedGrid.
         :rtype: List[int]
@@ -379,6 +404,7 @@ class SpatiallyDistributedGrid(Model):
     def position(self, position):
         """Sets the position of this SpatiallyDistributedGrid.
 
+        Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution  # noqa: E501
 
         :param position: The position of this SpatiallyDistributedGrid.
         :type position: List[int]
@@ -390,6 +416,7 @@ class SpatiallyDistributedGrid(Model):
     def id(self):
         """Gets the id of this SpatiallyDistributedGrid.
 
+        identifier  # noqa: E501
 
         :return: The id of this SpatiallyDistributedGrid.
         :rtype: str
@@ -400,6 +427,7 @@ class SpatiallyDistributedGrid(Model):
     def id(self, id):
         """Sets the id of this SpatiallyDistributedGrid.
 
+        identifier  # noqa: E501
 
         :param id: The id of this SpatiallyDistributedGrid.
         :type id: str

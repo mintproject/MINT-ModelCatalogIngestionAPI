@@ -78,6 +78,7 @@ class Person(Model):
     def identifier(self):
         """Gets the identifier of this Person.
 
+        Identifier of the resource being described  # noqa: E501
 
         :return: The identifier of this Person.
         :rtype: List[str]
@@ -88,6 +89,7 @@ class Person(Model):
     def identifier(self, identifier):
         """Sets the identifier of this Person.
 
+        Identifier of the resource being described  # noqa: E501
 
         :param identifier: The identifier of this Person.
         :type identifier: List[str]
@@ -99,6 +101,7 @@ class Person(Model):
     def website(self):
         """Gets the website of this Person.
 
+        Website of the software  # noqa: E501
 
         :return: The website of this Person.
         :rtype: List[str]
@@ -109,6 +112,7 @@ class Person(Model):
     def website(self, website):
         """Sets the website of this Person.
 
+        Website of the software  # noqa: E501
 
         :param website: The website of this Person.
         :type website: List[str]
@@ -120,6 +124,7 @@ class Person(Model):
     def description(self):
         """Gets the description of this Person.
 
+        small description  # noqa: E501
 
         :return: The description of this Person.
         :rtype: List[str]
@@ -130,6 +135,7 @@ class Person(Model):
     def description(self, description):
         """Sets the description of this Person.
 
+        small description  # noqa: E501
 
         :param description: The description of this Person.
         :type description: List[str]
@@ -141,6 +147,7 @@ class Person(Model):
     def id(self):
         """Gets the id of this Person.
 
+        identifier  # noqa: E501
 
         :return: The id of this Person.
         :rtype: str
@@ -151,6 +158,7 @@ class Person(Model):
     def id(self, id):
         """Sets the id of this Person.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Person.
         :type id: str
@@ -162,6 +170,7 @@ class Person(Model):
     def label(self):
         """Gets the label of this Person.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Person.
         :rtype: List[str]
@@ -172,6 +181,7 @@ class Person(Model):
     def label(self, label):
         """Sets the label of this Person.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Person.
         :type label: List[str]
@@ -183,6 +193,7 @@ class Person(Model):
     def type(self):
         """Gets the type of this Person.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Person.
         :rtype: List[str]
@@ -193,6 +204,7 @@ class Person(Model):
     def type(self, type):
         """Sets the type of this Person.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Person.
         :type type: List[str]
@@ -204,6 +216,7 @@ class Person(Model):
     def email(self):
         """Gets the email of this Person.
 
+        Description not available  # noqa: E501
 
         :return: The email of this Person.
         :rtype: List[str]
@@ -214,6 +227,7 @@ class Person(Model):
     def email(self, email):
         """Sets the email of this Person.
 
+        Description not available  # noqa: E501
 
         :param email: The email of this Person.
         :type email: List[str]

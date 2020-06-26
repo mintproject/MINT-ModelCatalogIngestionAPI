@@ -1,7 +1,6 @@
 FROM python:3-alpine
 
-RUN apk add build-base libffi-dev openssl-dev
-
+RUN apk add build-base libffi-dev openssl-dev git
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 

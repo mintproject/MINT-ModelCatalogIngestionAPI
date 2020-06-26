@@ -1,38 +1,44 @@
 import connexion
 import six
-from openapi_server.utils.request import get_resource, get_all_resource, put_resource, post_resource, delete_resource
+from openapi_server import query_manager
 from openapi_server.utils.vars import SOFTWARECONFIGURATION_TYPE_NAME, SOFTWARECONFIGURATION_TYPE_URI
 
 from openapi_server.models.software_configuration import SoftwareConfiguration  # noqa: E501
 from openapi_server import util
 
-def softwareconfigurations_get(username=None, label=None):  # noqa: E501
-    """List all SoftwareConfiguration entities
+def softwareconfigurations_get(username=None, label=None, page=None, per_page=None):  # noqa: E501
+    """List all instances of SoftwareConfiguration
 
-    Gets a list of all SoftwareConfiguration entities # noqa: E501
+    Gets a list of all instances of SoftwareConfiguration (more information in https://w3id.org/okn/o/sd#SoftwareConfiguration) # noqa: E501
 
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
     :param label: Filter by label
     :type label: str
+    :param page: Page number
+    :type page: int
+    :param per_page: Items per page
+    :type per_page: int
 
     :rtype: List[SoftwareConfiguration]
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         username=username,
         label=label,
+        page=page,
+        per_page=per_page,
         rdf_type_uri=SOFTWARECONFIGURATION_TYPE_URI,
         rdf_type_name=SOFTWARECONFIGURATION_TYPE_NAME, 
         kls=SoftwareConfiguration)
 
 def softwareconfigurations_id_delete(id, user):  # noqa: E501
-    """Delete a SoftwareConfiguration
+    """Delete an existing SoftwareConfiguration
 
-    Delete an existing SoftwareConfiguration # noqa: E501
+    Delete an existing SoftwareConfiguration (more information in https://w3id.org/okn/o/sd#SoftwareConfiguration) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the SoftwareConfiguration to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -41,37 +47,37 @@ def softwareconfigurations_id_delete(id, user):  # noqa: E501
     """
 
 
-    return delete_resource(id=id,user=user,
+    return query_manager.delete_resource(id=id,user=user,
         rdf_type_uri=SOFTWARECONFIGURATION_TYPE_URI,
         rdf_type_name=SOFTWARECONFIGURATION_TYPE_NAME, 
         kls=SoftwareConfiguration)
 
 def softwareconfigurations_id_get(id, username=None):  # noqa: E501
-    """Get a SoftwareConfiguration
+    """Get a single SoftwareConfiguration by its id
 
-    Gets the details of a single instance of a SoftwareConfiguration # noqa: E501
+    Gets the details of a given SoftwareConfiguration (more information in https://w3id.org/okn/o/sd#SoftwareConfiguration) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the SoftwareConfiguration to be retrieved
     :type id: str
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
 
     :rtype: SoftwareConfiguration
     """
 
 
-    return get_resource(id=id,
+    return query_manager.get_resource(id=id,
         username=username,
         rdf_type_uri=SOFTWARECONFIGURATION_TYPE_URI,
         rdf_type_name=SOFTWARECONFIGURATION_TYPE_NAME, 
         kls=SoftwareConfiguration)
 
 def softwareconfigurations_id_put(id, user, software_configuration=None):  # noqa: E501
-    """Update a SoftwareConfiguration
+    """Update an existing SoftwareConfiguration
 
-    Updates an existing SoftwareConfiguration # noqa: E501
+    Updates an existing SoftwareConfiguration (more information in https://w3id.org/okn/o/sd#SoftwareConfiguration) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the SoftwareConfiguration to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -84,20 +90,20 @@ def softwareconfigurations_id_put(id, user, software_configuration=None):  # noq
     if connexion.request.is_json:
         software_configuration = SoftwareConfiguration.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return put_resource(id=id,user=user,
+    return query_manager.put_resource(id=id,user=user,
         body=software_configuration,
         rdf_type_uri=SOFTWARECONFIGURATION_TYPE_URI,
         rdf_type_name=SOFTWARECONFIGURATION_TYPE_NAME, 
         kls=SoftwareConfiguration)
 
 def softwareconfigurations_post(user, software_configuration=None):  # noqa: E501
-    """Create a SoftwareConfiguration
+    """Create one SoftwareConfiguration
 
-    Create a new instance of a SoftwareConfiguration # noqa: E501
+    Create a new instance of SoftwareConfiguration (more information in https://w3id.org/okn/o/sd#SoftwareConfiguration) # noqa: E501
 
     :param user: Username
     :type user: str
-    :param software_configuration: A new SoftwareConfigurationto be created
+    :param software_configuration: Information about the SoftwareConfigurationto be created
     :type software_configuration: dict | bytes
 
     :rtype: SoftwareConfiguration
@@ -106,7 +112,7 @@ def softwareconfigurations_post(user, software_configuration=None):  # noqa: E50
     if connexion.request.is_json:
         software_configuration = SoftwareConfiguration.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return post_resource(user=user,
+    return query_manager.post_resource(user=user,
         body=software_configuration,
         rdf_type_uri=SOFTWARECONFIGURATION_TYPE_URI,
         rdf_type_name=SOFTWARECONFIGURATION_TYPE_NAME, 

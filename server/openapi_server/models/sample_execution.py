@@ -68,6 +68,7 @@ class SampleExecution(Model):
     def description(self):
         """Gets the description of this SampleExecution.
 
+        small description  # noqa: E501
 
         :return: The description of this SampleExecution.
         :rtype: List[str]
@@ -78,6 +79,7 @@ class SampleExecution(Model):
     def description(self, description):
         """Sets the description of this SampleExecution.
 
+        small description  # noqa: E501
 
         :param description: The description of this SampleExecution.
         :type description: List[str]
@@ -89,6 +91,7 @@ class SampleExecution(Model):
     def id(self):
         """Gets the id of this SampleExecution.
 
+        identifier  # noqa: E501
 
         :return: The id of this SampleExecution.
         :rtype: str
@@ -99,6 +102,7 @@ class SampleExecution(Model):
     def id(self, id):
         """Sets the id of this SampleExecution.
 
+        identifier  # noqa: E501
 
         :param id: The id of this SampleExecution.
         :type id: str
@@ -110,6 +114,7 @@ class SampleExecution(Model):
     def label(self):
         """Gets the label of this SampleExecution.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this SampleExecution.
         :rtype: List[str]
@@ -120,6 +125,7 @@ class SampleExecution(Model):
     def label(self, label):
         """Sets the label of this SampleExecution.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this SampleExecution.
         :type label: List[str]
@@ -131,6 +137,7 @@ class SampleExecution(Model):
     def type(self):
         """Gets the type of this SampleExecution.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this SampleExecution.
         :rtype: List[str]
@@ -141,6 +148,7 @@ class SampleExecution(Model):
     def type(self, type):
         """Sets the type of this SampleExecution.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this SampleExecution.
         :type type: List[str]
@@ -152,6 +160,7 @@ class SampleExecution(Model):
     def has_execution_command(self):
         """Gets the has_execution_command of this SampleExecution.
 
+        Execution instructions on how to run the image  # noqa: E501
 
         :return: The has_execution_command of this SampleExecution.
         :rtype: List[str]
@@ -162,6 +171,7 @@ class SampleExecution(Model):
     def has_execution_command(self, has_execution_command):
         """Sets the has_execution_command of this SampleExecution.
 
+        Execution instructions on how to run the image  # noqa: E501
 
         :param has_execution_command: The has_execution_command of this SampleExecution.
         :type has_execution_command: List[str]

@@ -97,6 +97,7 @@ class DatasetSpecification(Model):
     def has_dimensionality(self):
         """Gets the has_dimensionality of this DatasetSpecification.
 
+        Property to indicate dimensionality of the input or output of a dataset specification  # noqa: E501
 
         :return: The has_dimensionality of this DatasetSpecification.
         :rtype: List[int]
@@ -107,6 +108,7 @@ class DatasetSpecification(Model):
     def has_dimensionality(self, has_dimensionality):
         """Sets the has_dimensionality of this DatasetSpecification.
 
+        Property to indicate dimensionality of the input or output of a dataset specification  # noqa: E501
 
         :param has_dimensionality: The has_dimensionality of this DatasetSpecification.
         :type has_dimensionality: List[int]
@@ -118,6 +120,7 @@ class DatasetSpecification(Model):
     def has_format(self):
         """Gets the has_format of this DatasetSpecification.
 
+        Format followed by a file. For example, txt, nc, etc.  # noqa: E501
 
         :return: The has_format of this DatasetSpecification.
         :rtype: List[str]
@@ -128,6 +131,7 @@ class DatasetSpecification(Model):
     def has_format(self, has_format):
         """Sets the has_format of this DatasetSpecification.
 
+        Format followed by a file. For example, txt, nc, etc.  # noqa: E501
 
         :param has_format: The has_format of this DatasetSpecification.
         :type has_format: List[str]
@@ -139,6 +143,7 @@ class DatasetSpecification(Model):
     def has_file_structure(self):
         """Gets the has_file_structure of this DatasetSpecification.
 
+        Relates a dataset specification to the data structure definition  # noqa: E501
 
         :return: The has_file_structure of this DatasetSpecification.
         :rtype: List[object]
@@ -149,6 +154,7 @@ class DatasetSpecification(Model):
     def has_file_structure(self, has_file_structure):
         """Sets the has_file_structure of this DatasetSpecification.
 
+        Relates a dataset specification to the data structure definition  # noqa: E501
 
         :param has_file_structure: The has_file_structure of this DatasetSpecification.
         :type has_file_structure: List[object]
@@ -160,6 +166,7 @@ class DatasetSpecification(Model):
     def description(self):
         """Gets the description of this DatasetSpecification.
 
+        small description  # noqa: E501
 
         :return: The description of this DatasetSpecification.
         :rtype: List[str]
@@ -170,6 +177,7 @@ class DatasetSpecification(Model):
     def description(self, description):
         """Sets the description of this DatasetSpecification.
 
+        small description  # noqa: E501
 
         :param description: The description of this DatasetSpecification.
         :type description: List[str]
@@ -181,6 +189,7 @@ class DatasetSpecification(Model):
     def has_presentation(self):
         """Gets the has_presentation of this DatasetSpecification.
 
+        Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.  # noqa: E501
 
         :return: The has_presentation of this DatasetSpecification.
         :rtype: List[VariablePresentation]
@@ -191,6 +200,7 @@ class DatasetSpecification(Model):
     def has_presentation(self, has_presentation):
         """Sets the has_presentation of this DatasetSpecification.
 
+        Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.  # noqa: E501
 
         :param has_presentation: The has_presentation of this DatasetSpecification.
         :type has_presentation: List[VariablePresentation]
@@ -202,6 +212,7 @@ class DatasetSpecification(Model):
     def position(self):
         """Gets the position of this DatasetSpecification.
 
+        Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution  # noqa: E501
 
         :return: The position of this DatasetSpecification.
         :rtype: List[int]
@@ -212,6 +223,7 @@ class DatasetSpecification(Model):
     def position(self, position):
         """Sets the position of this DatasetSpecification.
 
+        Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution  # noqa: E501
 
         :param position: The position of this DatasetSpecification.
         :type position: List[int]
@@ -223,6 +235,7 @@ class DatasetSpecification(Model):
     def id(self):
         """Gets the id of this DatasetSpecification.
 
+        identifier  # noqa: E501
 
         :return: The id of this DatasetSpecification.
         :rtype: str
@@ -233,6 +246,7 @@ class DatasetSpecification(Model):
     def id(self, id):
         """Sets the id of this DatasetSpecification.
 
+        identifier  # noqa: E501
 
         :param id: The id of this DatasetSpecification.
         :type id: str
@@ -244,6 +258,7 @@ class DatasetSpecification(Model):
     def label(self):
         """Gets the label of this DatasetSpecification.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this DatasetSpecification.
         :rtype: List[str]
@@ -254,6 +269,7 @@ class DatasetSpecification(Model):
     def label(self, label):
         """Sets the label of this DatasetSpecification.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this DatasetSpecification.
         :type label: List[str]
@@ -265,6 +281,7 @@ class DatasetSpecification(Model):
     def type(self):
         """Gets the type of this DatasetSpecification.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this DatasetSpecification.
         :rtype: List[str]
@@ -275,6 +292,7 @@ class DatasetSpecification(Model):
     def type(self, type):
         """Sets the type of this DatasetSpecification.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this DatasetSpecification.
         :type type: List[str]
@@ -286,6 +304,7 @@ class DatasetSpecification(Model):
     def has_fixed_resource(self):
         """Gets the has_fixed_resource of this DatasetSpecification.
 
+        Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region.  # noqa: E501
 
         :return: The has_fixed_resource of this DatasetSpecification.
         :rtype: List[SampleResource]
@@ -296,6 +315,7 @@ class DatasetSpecification(Model):
     def has_fixed_resource(self, has_fixed_resource):
         """Sets the has_fixed_resource of this DatasetSpecification.
 
+        Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region.  # noqa: E501
 
         :param has_fixed_resource: The has_fixed_resource of this DatasetSpecification.
         :type has_fixed_resource: List[SampleResource]

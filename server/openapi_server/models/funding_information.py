@@ -75,6 +75,7 @@ class FundingInformation(Model):
     def description(self):
         """Gets the description of this FundingInformation.
 
+        small description  # noqa: E501
 
         :return: The description of this FundingInformation.
         :rtype: List[str]
@@ -85,6 +86,7 @@ class FundingInformation(Model):
     def description(self, description):
         """Sets the description of this FundingInformation.
 
+        small description  # noqa: E501
 
         :param description: The description of this FundingInformation.
         :type description: List[str]
@@ -96,6 +98,7 @@ class FundingInformation(Model):
     def id(self):
         """Gets the id of this FundingInformation.
 
+        identifier  # noqa: E501
 
         :return: The id of this FundingInformation.
         :rtype: str
@@ -106,6 +109,7 @@ class FundingInformation(Model):
     def id(self, id):
         """Sets the id of this FundingInformation.
 
+        identifier  # noqa: E501
 
         :param id: The id of this FundingInformation.
         :type id: str
@@ -117,6 +121,7 @@ class FundingInformation(Model):
     def label(self):
         """Gets the label of this FundingInformation.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this FundingInformation.
         :rtype: List[str]
@@ -127,6 +132,7 @@ class FundingInformation(Model):
     def label(self, label):
         """Sets the label of this FundingInformation.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this FundingInformation.
         :type label: List[str]
@@ -138,6 +144,7 @@ class FundingInformation(Model):
     def type(self):
         """Gets the type of this FundingInformation.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this FundingInformation.
         :rtype: List[str]
@@ -148,6 +155,7 @@ class FundingInformation(Model):
     def type(self, type):
         """Sets the type of this FundingInformation.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this FundingInformation.
         :type type: List[str]
@@ -159,6 +167,7 @@ class FundingInformation(Model):
     def funding_source(self):
         """Gets the funding_source of this FundingInformation.
 
+        Description not available  # noqa: E501
 
         :return: The funding_source of this FundingInformation.
         :rtype: List[Organization]
@@ -169,6 +178,7 @@ class FundingInformation(Model):
     def funding_source(self, funding_source):
         """Sets the funding_source of this FundingInformation.
 
+        Description not available  # noqa: E501
 
         :param funding_source: The funding_source of this FundingInformation.
         :type funding_source: List[Organization]
@@ -180,6 +190,7 @@ class FundingInformation(Model):
     def funding_grant(self):
         """Gets the funding_grant of this FundingInformation.
 
+        Grant number used for funding  # noqa: E501
 
         :return: The funding_grant of this FundingInformation.
         :rtype: List[str]
@@ -190,6 +201,7 @@ class FundingInformation(Model):
     def funding_grant(self, funding_grant):
         """Sets the funding_grant of this FundingInformation.
 
+        Grant number used for funding  # noqa: E501
 
         :param funding_grant: The funding_grant of this FundingInformation.
         :type funding_grant: List[str]

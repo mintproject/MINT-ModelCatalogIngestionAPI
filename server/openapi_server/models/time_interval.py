@@ -75,6 +75,7 @@ class TimeInterval(Model):
     def description(self):
         """Gets the description of this TimeInterval.
 
+        small description  # noqa: E501
 
         :return: The description of this TimeInterval.
         :rtype: List[str]
@@ -85,6 +86,7 @@ class TimeInterval(Model):
     def description(self, description):
         """Sets the description of this TimeInterval.
 
+        small description  # noqa: E501
 
         :param description: The description of this TimeInterval.
         :type description: List[str]
@@ -96,6 +98,7 @@ class TimeInterval(Model):
     def id(self):
         """Gets the id of this TimeInterval.
 
+        identifier  # noqa: E501
 
         :return: The id of this TimeInterval.
         :rtype: str
@@ -106,6 +109,7 @@ class TimeInterval(Model):
     def id(self, id):
         """Sets the id of this TimeInterval.
 
+        identifier  # noqa: E501
 
         :param id: The id of this TimeInterval.
         :type id: str
@@ -117,6 +121,7 @@ class TimeInterval(Model):
     def label(self):
         """Gets the label of this TimeInterval.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this TimeInterval.
         :rtype: List[str]
@@ -127,6 +132,7 @@ class TimeInterval(Model):
     def label(self, label):
         """Sets the label of this TimeInterval.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this TimeInterval.
         :type label: List[str]
@@ -138,6 +144,7 @@ class TimeInterval(Model):
     def type(self):
         """Gets the type of this TimeInterval.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this TimeInterval.
         :rtype: List[str]
@@ -148,6 +155,7 @@ class TimeInterval(Model):
     def type(self, type):
         """Sets the type of this TimeInterval.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this TimeInterval.
         :type type: List[str]
@@ -159,6 +167,7 @@ class TimeInterval(Model):
     def interval_value(self):
         """Gets the interval_value of this TimeInterval.
 
+        Value used in the time interval of a model (e.g., 1 month, 5 days, 'harvest cycle')  # noqa: E501
 
         :return: The interval_value of this TimeInterval.
         :rtype: List[object]
@@ -169,6 +178,7 @@ class TimeInterval(Model):
     def interval_value(self, interval_value):
         """Sets the interval_value of this TimeInterval.
 
+        Value used in the time interval of a model (e.g., 1 month, 5 days, 'harvest cycle')  # noqa: E501
 
         :param interval_value: The interval_value of this TimeInterval.
         :type interval_value: List[object]
@@ -180,6 +190,7 @@ class TimeInterval(Model):
     def interval_unit(self):
         """Gets the interval_unit of this TimeInterval.
 
+        Unit used in an interval (e.g., month)  # noqa: E501
 
         :return: The interval_unit of this TimeInterval.
         :rtype: List[Unit]
@@ -190,6 +201,7 @@ class TimeInterval(Model):
     def interval_unit(self, interval_unit):
         """Sets the interval_unit of this TimeInterval.
 
+        Unit used in an interval (e.g., month)  # noqa: E501
 
         :param interval_unit: The interval_unit of this TimeInterval.
         :type interval_unit: List[Unit]

@@ -1,38 +1,44 @@
 import connexion
 import six
-from openapi_server.utils.request import get_resource, get_all_resource, put_resource, post_resource, delete_resource
+from openapi_server import query_manager
 from openapi_server.utils.vars import HYBRIDMODEL_TYPE_NAME, HYBRIDMODEL_TYPE_URI
 
 from openapi_server.models.hybrid_model import HybridModel  # noqa: E501
 from openapi_server import util
 
-def hybridmodels_get(username=None, label=None):  # noqa: E501
-    """List all HybridModel entities
+def hybridmodels_get(username=None, label=None, page=None, per_page=None):  # noqa: E501
+    """List all instances of HybridModel
 
-    Gets a list of all HybridModel entities # noqa: E501
+    Gets a list of all instances of HybridModel (more information in https://w3id.org/okn/o/sdm#HybridModel) # noqa: E501
 
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
     :param label: Filter by label
     :type label: str
+    :param page: Page number
+    :type page: int
+    :param per_page: Items per page
+    :type per_page: int
 
     :rtype: List[HybridModel]
     """
 
 
-    return get_resource(
+    return query_manager.get_resource(
         username=username,
         label=label,
+        page=page,
+        per_page=per_page,
         rdf_type_uri=HYBRIDMODEL_TYPE_URI,
         rdf_type_name=HYBRIDMODEL_TYPE_NAME, 
         kls=HybridModel)
 
 def hybridmodels_id_delete(id, user):  # noqa: E501
-    """Delete a HybridModel
+    """Delete an existing HybridModel
 
-    Delete an existing HybridModel # noqa: E501
+    Delete an existing HybridModel (more information in https://w3id.org/okn/o/sdm#HybridModel) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the HybridModel to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -41,37 +47,37 @@ def hybridmodels_id_delete(id, user):  # noqa: E501
     """
 
 
-    return delete_resource(id=id,user=user,
+    return query_manager.delete_resource(id=id,user=user,
         rdf_type_uri=HYBRIDMODEL_TYPE_URI,
         rdf_type_name=HYBRIDMODEL_TYPE_NAME, 
         kls=HybridModel)
 
 def hybridmodels_id_get(id, username=None):  # noqa: E501
-    """Get a HybridModel
+    """Get a single HybridModel by its id
 
-    Gets the details of a single instance of a HybridModel # noqa: E501
+    Gets the details of a given HybridModel (more information in https://w3id.org/okn/o/sdm#HybridModel) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the HybridModel to be retrieved
     :type id: str
-    :param username: Username to query
+    :param username: Name of the user graph to query
     :type username: str
 
     :rtype: HybridModel
     """
 
 
-    return get_resource(id=id,
+    return query_manager.get_resource(id=id,
         username=username,
         rdf_type_uri=HYBRIDMODEL_TYPE_URI,
         rdf_type_name=HYBRIDMODEL_TYPE_NAME, 
         kls=HybridModel)
 
 def hybridmodels_id_put(id, user, hybrid_model=None):  # noqa: E501
-    """Update a HybridModel
+    """Update an existing HybridModel
 
-    Updates an existing HybridModel # noqa: E501
+    Updates an existing HybridModel (more information in https://w3id.org/okn/o/sdm#HybridModel) # noqa: E501
 
-    :param id: The ID of the resource
+    :param id: The ID of the HybridModel to be retrieved
     :type id: str
     :param user: Username
     :type user: str
@@ -84,20 +90,20 @@ def hybridmodels_id_put(id, user, hybrid_model=None):  # noqa: E501
     if connexion.request.is_json:
         hybrid_model = HybridModel.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return put_resource(id=id,user=user,
+    return query_manager.put_resource(id=id,user=user,
         body=hybrid_model,
         rdf_type_uri=HYBRIDMODEL_TYPE_URI,
         rdf_type_name=HYBRIDMODEL_TYPE_NAME, 
         kls=HybridModel)
 
 def hybridmodels_post(user, hybrid_model=None):  # noqa: E501
-    """Create a HybridModel
+    """Create one HybridModel
 
-    Create a new instance of a HybridModel # noqa: E501
+    Create a new instance of HybridModel (more information in https://w3id.org/okn/o/sdm#HybridModel) # noqa: E501
 
     :param user: Username
     :type user: str
-    :param hybrid_model: A new HybridModelto be created
+    :param hybrid_model: Information about the HybridModelto be created
     :type hybrid_model: dict | bytes
 
     :rtype: HybridModel
@@ -106,7 +112,7 @@ def hybridmodels_post(user, hybrid_model=None):  # noqa: E501
     if connexion.request.is_json:
         hybrid_model = HybridModel.from_dict(connexion.request.get_json())  # noqa: E501
 
-    return post_resource(user=user,
+    return query_manager.post_resource(user=user,
         body=hybrid_model,
         rdf_type_uri=HYBRIDMODEL_TYPE_URI,
         rdf_type_name=HYBRIDMODEL_TYPE_NAME, 

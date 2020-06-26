@@ -73,6 +73,7 @@ class Organization(Model):
     def identifier(self):
         """Gets the identifier of this Organization.
 
+        Identifier of the resource being described  # noqa: E501
 
         :return: The identifier of this Organization.
         :rtype: List[str]
@@ -83,6 +84,7 @@ class Organization(Model):
     def identifier(self, identifier):
         """Sets the identifier of this Organization.
 
+        Identifier of the resource being described  # noqa: E501
 
         :param identifier: The identifier of this Organization.
         :type identifier: List[str]
@@ -94,6 +96,7 @@ class Organization(Model):
     def website(self):
         """Gets the website of this Organization.
 
+        Website of the software  # noqa: E501
 
         :return: The website of this Organization.
         :rtype: List[str]
@@ -104,6 +107,7 @@ class Organization(Model):
     def website(self, website):
         """Sets the website of this Organization.
 
+        Website of the software  # noqa: E501
 
         :param website: The website of this Organization.
         :type website: List[str]
@@ -115,6 +119,7 @@ class Organization(Model):
     def description(self):
         """Gets the description of this Organization.
 
+        small description  # noqa: E501
 
         :return: The description of this Organization.
         :rtype: List[str]
@@ -125,6 +130,7 @@ class Organization(Model):
     def description(self, description):
         """Sets the description of this Organization.
 
+        small description  # noqa: E501
 
         :param description: The description of this Organization.
         :type description: List[str]
@@ -136,6 +142,7 @@ class Organization(Model):
     def id(self):
         """Gets the id of this Organization.
 
+        identifier  # noqa: E501
 
         :return: The id of this Organization.
         :rtype: str
@@ -146,6 +153,7 @@ class Organization(Model):
     def id(self, id):
         """Sets the id of this Organization.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Organization.
         :type id: str
@@ -157,6 +165,7 @@ class Organization(Model):
     def label(self):
         """Gets the label of this Organization.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Organization.
         :rtype: List[str]
@@ -167,6 +176,7 @@ class Organization(Model):
     def label(self, label):
         """Sets the label of this Organization.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Organization.
         :type label: List[str]
@@ -178,6 +188,7 @@ class Organization(Model):
     def type(self):
         """Gets the type of this Organization.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Organization.
         :rtype: List[str]
@@ -188,6 +199,7 @@ class Organization(Model):
     def type(self, type):
         """Sets the type of this Organization.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Organization.
         :type type: List[str]

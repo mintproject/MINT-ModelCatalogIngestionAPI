@@ -136,6 +136,7 @@ class Parameter(Model):
     def has_default_value(self):
         """Gets the has_default_value of this Parameter.
 
+        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :return: The has_default_value of this Parameter.
         :rtype: List[object]
@@ -146,6 +147,7 @@ class Parameter(Model):
     def has_default_value(self, has_default_value):
         """Sets the has_default_value of this Parameter.
 
+        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :param has_default_value: The has_default_value of this Parameter.
         :type has_default_value: List[object]
@@ -157,6 +159,7 @@ class Parameter(Model):
     def has_maximum_accepted_value(self):
         """Gets the has_maximum_accepted_value of this Parameter.
 
+        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :return: The has_maximum_accepted_value of this Parameter.
         :rtype: List[object]
@@ -167,6 +170,7 @@ class Parameter(Model):
     def has_maximum_accepted_value(self, has_maximum_accepted_value):
         """Sets the has_maximum_accepted_value of this Parameter.
 
+        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :param has_maximum_accepted_value: The has_maximum_accepted_value of this Parameter.
         :type has_maximum_accepted_value: List[object]
@@ -178,6 +182,7 @@ class Parameter(Model):
     def description(self):
         """Gets the description of this Parameter.
 
+        small description  # noqa: E501
 
         :return: The description of this Parameter.
         :rtype: List[str]
@@ -188,6 +193,7 @@ class Parameter(Model):
     def description(self, description):
         """Sets the description of this Parameter.
 
+        small description  # noqa: E501
 
         :param description: The description of this Parameter.
         :type description: List[str]
@@ -199,6 +205,7 @@ class Parameter(Model):
     def has_data_type(self):
         """Gets the has_data_type of this Parameter.
 
+        Property that indicates the data type of a parameter  # noqa: E501
 
         :return: The has_data_type of this Parameter.
         :rtype: List[str]
@@ -209,6 +216,7 @@ class Parameter(Model):
     def has_data_type(self, has_data_type):
         """Sets the has_data_type of this Parameter.
 
+        Property that indicates the data type of a parameter  # noqa: E501
 
         :param has_data_type: The has_data_type of this Parameter.
         :type has_data_type: List[str]
@@ -220,6 +228,7 @@ class Parameter(Model):
     def has_fixed_value(self):
         """Gets the has_fixed_value of this Parameter.
 
+        Value of a parameter in a software setup.  # noqa: E501
 
         :return: The has_fixed_value of this Parameter.
         :rtype: List[object]
@@ -230,6 +239,7 @@ class Parameter(Model):
     def has_fixed_value(self, has_fixed_value):
         """Sets the has_fixed_value of this Parameter.
 
+        Value of a parameter in a software setup.  # noqa: E501
 
         :param has_fixed_value: The has_fixed_value of this Parameter.
         :type has_fixed_value: List[object]
@@ -241,6 +251,7 @@ class Parameter(Model):
     def has_presentation(self):
         """Gets the has_presentation of this Parameter.
 
+        Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.  # noqa: E501
 
         :return: The has_presentation of this Parameter.
         :rtype: List[VariablePresentation]
@@ -251,6 +262,7 @@ class Parameter(Model):
     def has_presentation(self, has_presentation):
         """Sets the has_presentation of this Parameter.
 
+        Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.  # noqa: E501
 
         :param has_presentation: The has_presentation of this Parameter.
         :type has_presentation: List[VariablePresentation]
@@ -262,6 +274,7 @@ class Parameter(Model):
     def label(self):
         """Gets the label of this Parameter.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Parameter.
         :rtype: List[str]
@@ -272,6 +285,7 @@ class Parameter(Model):
     def label(self, label):
         """Sets the label of this Parameter.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Parameter.
         :type label: List[str]
@@ -283,6 +297,7 @@ class Parameter(Model):
     def recommended_increment(self):
         """Gets the recommended_increment of this Parameter.
 
+        Value that represents how a parameter should be incremented on each iteration of a software component execution. This value is important when preparing execution ensembles automatically, e.g., simulating crop production varying the parameter \"fertilizer amount\" in increments of 10%.  # noqa: E501
 
         :return: The recommended_increment of this Parameter.
         :rtype: List[float]
@@ -293,6 +308,7 @@ class Parameter(Model):
     def recommended_increment(self, recommended_increment):
         """Sets the recommended_increment of this Parameter.
 
+        Value that represents how a parameter should be incremented on each iteration of a software component execution. This value is important when preparing execution ensembles automatically, e.g., simulating crop production varying the parameter \"fertilizer amount\" in increments of 10%.  # noqa: E501
 
         :param recommended_increment: The recommended_increment of this Parameter.
         :type recommended_increment: List[float]
@@ -304,6 +320,7 @@ class Parameter(Model):
     def type(self):
         """Gets the type of this Parameter.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Parameter.
         :rtype: List[str]
@@ -314,6 +331,7 @@ class Parameter(Model):
     def type(self, type):
         """Sets the type of this Parameter.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Parameter.
         :type type: List[str]
@@ -325,6 +343,7 @@ class Parameter(Model):
     def has_minimum_accepted_value(self):
         """Gets the has_minimum_accepted_value of this Parameter.
 
+        Minimum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :return: The has_minimum_accepted_value of this Parameter.
         :rtype: List[object]
@@ -335,6 +354,7 @@ class Parameter(Model):
     def has_minimum_accepted_value(self, has_minimum_accepted_value):
         """Sets the has_minimum_accepted_value of this Parameter.
 
+        Minimum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :param has_minimum_accepted_value: The has_minimum_accepted_value of this Parameter.
         :type has_minimum_accepted_value: List[object]
@@ -346,6 +366,7 @@ class Parameter(Model):
     def has_accepted_values(self):
         """Gets the has_accepted_values of this Parameter.
 
+        Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \"Maize\" or \"Sorghum\"  # noqa: E501
 
         :return: The has_accepted_values of this Parameter.
         :rtype: List[str]
@@ -356,6 +377,7 @@ class Parameter(Model):
     def has_accepted_values(self, has_accepted_values):
         """Sets the has_accepted_values of this Parameter.
 
+        Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \"Maize\" or \"Sorghum\"  # noqa: E501
 
         :param has_accepted_values: The has_accepted_values of this Parameter.
         :type has_accepted_values: List[str]
@@ -367,6 +389,7 @@ class Parameter(Model):
     def adjusts_variable(self):
         """Gets the adjusts_variable of this Parameter.
 
+        Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \"fertilizer percentage adjustment\" parameter can quantify a \"fertilizer price\" variable  # noqa: E501
 
         :return: The adjusts_variable of this Parameter.
         :rtype: List[Variable]
@@ -377,6 +400,7 @@ class Parameter(Model):
     def adjusts_variable(self, adjusts_variable):
         """Sets the adjusts_variable of this Parameter.
 
+        Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \"fertilizer percentage adjustment\" parameter can quantify a \"fertilizer price\" variable  # noqa: E501
 
         :param adjusts_variable: The adjusts_variable of this Parameter.
         :type adjusts_variable: List[Variable]
@@ -388,6 +412,7 @@ class Parameter(Model):
     def relevant_for_intervention(self):
         """Gets the relevant_for_intervention of this Parameter.
 
+        Description not available  # noqa: E501
 
         :return: The relevant_for_intervention of this Parameter.
         :rtype: List[Intervention]
@@ -398,6 +423,7 @@ class Parameter(Model):
     def relevant_for_intervention(self, relevant_for_intervention):
         """Sets the relevant_for_intervention of this Parameter.
 
+        Description not available  # noqa: E501
 
         :param relevant_for_intervention: The relevant_for_intervention of this Parameter.
         :type relevant_for_intervention: List[Intervention]
@@ -409,6 +435,7 @@ class Parameter(Model):
     def position(self):
         """Gets the position of this Parameter.
 
+        Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution  # noqa: E501
 
         :return: The position of this Parameter.
         :rtype: List[int]
@@ -419,6 +446,7 @@ class Parameter(Model):
     def position(self, position):
         """Sets the position of this Parameter.
 
+        Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution  # noqa: E501
 
         :param position: The position of this Parameter.
         :type position: List[int]
@@ -430,6 +458,7 @@ class Parameter(Model):
     def id(self):
         """Gets the id of this Parameter.
 
+        identifier  # noqa: E501
 
         :return: The id of this Parameter.
         :rtype: str
@@ -440,6 +469,7 @@ class Parameter(Model):
     def id(self, id):
         """Sets the id of this Parameter.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Parameter.
         :type id: str
@@ -451,6 +481,7 @@ class Parameter(Model):
     def uses_unit(self):
         """Gets the uses_unit of this Parameter.
 
+        Property used to link a variable presentation or time interval to the unit they are represented in  # noqa: E501
 
         :return: The uses_unit of this Parameter.
         :rtype: List[Unit]
@@ -461,6 +492,7 @@ class Parameter(Model):
     def uses_unit(self, uses_unit):
         """Sets the uses_unit of this Parameter.
 
+        Property used to link a variable presentation or time interval to the unit they are represented in  # noqa: E501
 
         :param uses_unit: The uses_unit of this Parameter.
         :type uses_unit: List[Unit]
@@ -472,6 +504,7 @@ class Parameter(Model):
     def has_step_size(self):
         """Gets the has_step_size of this Parameter.
 
+        Property that determines what are the increments (step size) that are commonly used to vary a parameter. This is commonly used for automatically setting up software tests. For example, if I want to set up a model and try 30 reasonable values on a parameter, I may use the default value and the step size to create the appropriate increments. If the step size is 0.1 and the default value is 0, then I will will be able to create setups: 0, 0.1, 0.2...2.9,3  # noqa: E501
 
         :return: The has_step_size of this Parameter.
         :rtype: List[float]
@@ -482,6 +515,7 @@ class Parameter(Model):
     def has_step_size(self, has_step_size):
         """Sets the has_step_size of this Parameter.
 
+        Property that determines what are the increments (step size) that are commonly used to vary a parameter. This is commonly used for automatically setting up software tests. For example, if I want to set up a model and try 30 reasonable values on a parameter, I may use the default value and the step size to create the appropriate increments. If the step size is 0.1 and the default value is 0, then I will will be able to create setups: 0, 0.1, 0.2...2.9,3  # noqa: E501
 
         :param has_step_size: The has_step_size of this Parameter.
         :type has_step_size: List[float]

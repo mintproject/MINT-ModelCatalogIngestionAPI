@@ -24,7 +24,7 @@ class TestSVOVariableController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/svovariables',
+            '/v1.5.0/svovariables',
             method='GET',
             headers=headers,
             query_string=query_string)

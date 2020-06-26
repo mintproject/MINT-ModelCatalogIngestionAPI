@@ -73,6 +73,7 @@ class SampleResource(Model):
     def data_catalog_identifier(self):
         """Gets the data_catalog_identifier of this SampleResource.
 
+        An identifier for resources with metadata entries in a data catalog  # noqa: E501
 
         :return: The data_catalog_identifier of this SampleResource.
         :rtype: List[str]
@@ -83,6 +84,7 @@ class SampleResource(Model):
     def data_catalog_identifier(self, data_catalog_identifier):
         """Sets the data_catalog_identifier of this SampleResource.
 
+        An identifier for resources with metadata entries in a data catalog  # noqa: E501
 
         :param data_catalog_identifier: The data_catalog_identifier of this SampleResource.
         :type data_catalog_identifier: List[str]
@@ -94,6 +96,7 @@ class SampleResource(Model):
     def description(self):
         """Gets the description of this SampleResource.
 
+        small description  # noqa: E501
 
         :return: The description of this SampleResource.
         :rtype: List[str]
@@ -104,6 +107,7 @@ class SampleResource(Model):
     def description(self, description):
         """Sets the description of this SampleResource.
 
+        small description  # noqa: E501
 
         :param description: The description of this SampleResource.
         :type description: List[str]
@@ -115,6 +119,7 @@ class SampleResource(Model):
     def id(self):
         """Gets the id of this SampleResource.
 
+        identifier  # noqa: E501
 
         :return: The id of this SampleResource.
         :rtype: str
@@ -125,6 +130,7 @@ class SampleResource(Model):
     def id(self, id):
         """Sets the id of this SampleResource.
 
+        identifier  # noqa: E501
 
         :param id: The id of this SampleResource.
         :type id: str
@@ -136,6 +142,7 @@ class SampleResource(Model):
     def label(self):
         """Gets the label of this SampleResource.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this SampleResource.
         :rtype: List[str]
@@ -146,6 +153,7 @@ class SampleResource(Model):
     def label(self, label):
         """Sets the label of this SampleResource.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this SampleResource.
         :type label: List[str]
@@ -157,6 +165,7 @@ class SampleResource(Model):
     def type(self):
         """Gets the type of this SampleResource.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this SampleResource.
         :rtype: List[str]
@@ -167,6 +176,7 @@ class SampleResource(Model):
     def type(self, type):
         """Sets the type of this SampleResource.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this SampleResource.
         :type type: List[str]
@@ -178,6 +188,7 @@ class SampleResource(Model):
     def value(self):
         """Gets the value of this SampleResource.
 
+        Value associated to the described entity  # noqa: E501
 
         :return: The value of this SampleResource.
         :rtype: List[object]
@@ -188,6 +199,7 @@ class SampleResource(Model):
     def value(self, value):
         """Sets the value of this SampleResource.
 
+        Value associated to the described entity  # noqa: E501
 
         :param value: The value of this SampleResource.
         :type value: List[object]

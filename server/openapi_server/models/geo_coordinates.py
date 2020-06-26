@@ -78,6 +78,7 @@ class GeoCoordinates(Model):
     def elevation(self):
         """Gets the elevation of this GeoCoordinates.
 
+        Description not available  # noqa: E501
 
         :return: The elevation of this GeoCoordinates.
         :rtype: List[str]
@@ -88,6 +89,7 @@ class GeoCoordinates(Model):
     def elevation(self, elevation):
         """Sets the elevation of this GeoCoordinates.
 
+        Description not available  # noqa: E501
 
         :param elevation: The elevation of this GeoCoordinates.
         :type elevation: List[str]
@@ -99,6 +101,7 @@ class GeoCoordinates(Model):
     def latitude(self):
         """Gets the latitude of this GeoCoordinates.
 
+        Description not available  # noqa: E501
 
         :return: The latitude of this GeoCoordinates.
         :rtype: List[str]
@@ -109,6 +112,7 @@ class GeoCoordinates(Model):
     def latitude(self, latitude):
         """Sets the latitude of this GeoCoordinates.
 
+        Description not available  # noqa: E501
 
         :param latitude: The latitude of this GeoCoordinates.
         :type latitude: List[str]
@@ -120,6 +124,7 @@ class GeoCoordinates(Model):
     def description(self):
         """Gets the description of this GeoCoordinates.
 
+        small description  # noqa: E501
 
         :return: The description of this GeoCoordinates.
         :rtype: List[str]
@@ -130,6 +135,7 @@ class GeoCoordinates(Model):
     def description(self, description):
         """Sets the description of this GeoCoordinates.
 
+        small description  # noqa: E501
 
         :param description: The description of this GeoCoordinates.
         :type description: List[str]
@@ -141,6 +147,7 @@ class GeoCoordinates(Model):
     def id(self):
         """Gets the id of this GeoCoordinates.
 
+        identifier  # noqa: E501
 
         :return: The id of this GeoCoordinates.
         :rtype: str
@@ -151,6 +158,7 @@ class GeoCoordinates(Model):
     def id(self, id):
         """Sets the id of this GeoCoordinates.
 
+        identifier  # noqa: E501
 
         :param id: The id of this GeoCoordinates.
         :type id: str
@@ -162,6 +170,7 @@ class GeoCoordinates(Model):
     def label(self):
         """Gets the label of this GeoCoordinates.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this GeoCoordinates.
         :rtype: List[str]
@@ -172,6 +181,7 @@ class GeoCoordinates(Model):
     def label(self, label):
         """Sets the label of this GeoCoordinates.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this GeoCoordinates.
         :type label: List[str]
@@ -183,6 +193,7 @@ class GeoCoordinates(Model):
     def type(self):
         """Gets the type of this GeoCoordinates.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this GeoCoordinates.
         :rtype: List[str]
@@ -193,6 +204,7 @@ class GeoCoordinates(Model):
     def type(self, type):
         """Sets the type of this GeoCoordinates.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this GeoCoordinates.
         :type type: List[str]
@@ -204,6 +216,7 @@ class GeoCoordinates(Model):
     def longitude(self):
         """Gets the longitude of this GeoCoordinates.
 
+        Description not available  # noqa: E501
 
         :return: The longitude of this GeoCoordinates.
         :rtype: List[str]
@@ -214,6 +227,7 @@ class GeoCoordinates(Model):
     def longitude(self, longitude):
         """Sets the longitude of this GeoCoordinates.
 
+        Description not available  # noqa: E501
 
         :param longitude: The longitude of this GeoCoordinates.
         :type longitude: List[str]

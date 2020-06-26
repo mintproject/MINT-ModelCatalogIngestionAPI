@@ -24,7 +24,7 @@ class TestSoftwareConfigurationController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/softwareconfigurations',
+            '/v1.5.0/softwareconfigurations',
             method='GET',
             headers=headers,
             query_string=query_string)

@@ -24,13 +24,14 @@ class TestRegionController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/regions',
+            '/v1.5.0/regions',
             method='GET',
             headers=headers,
             query_string=query_string)
         self.logger.info("Response length {}".format(len(response.json)))
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
+        self.assertTrue(response.json)
 
     def test_id_get_circular(self):
         """Test case for test_id_get_circular
@@ -44,7 +45,7 @@ class TestRegionController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/regions/{id}'.format(id=resource_name),
+            '/v1.5.0/regions/{id}'.format(id=resource_name),
             method='GET',
             headers=headers,
             query_string=query_string)

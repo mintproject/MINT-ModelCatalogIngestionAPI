@@ -24,13 +24,14 @@ class TestTimeIntervalController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v1.4.0/timeintervals',
+            '/v1.5.0/timeintervals',
             method='GET',
             headers=headers,
             query_string=query_string)
         self.logger.info("Response length {}".format(len(response.json)))
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
+        self.assertTrue(response.json)
 
 
 if __name__ == '__main__':

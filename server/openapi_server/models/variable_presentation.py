@@ -114,6 +114,7 @@ class VariablePresentation(Model):
     def has_default_value(self):
         """Gets the has_default_value of this VariablePresentation.
 
+        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :return: The has_default_value of this VariablePresentation.
         :rtype: List[object]
@@ -124,6 +125,7 @@ class VariablePresentation(Model):
     def has_default_value(self, has_default_value):
         """Sets the has_default_value of this VariablePresentation.
 
+        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :param has_default_value: The has_default_value of this VariablePresentation.
         :type has_default_value: List[object]
@@ -135,6 +137,7 @@ class VariablePresentation(Model):
     def has_standard_variable(self):
         """Gets the has_standard_variable of this VariablePresentation.
 
+        the standard name of a variable  # noqa: E501
 
         :return: The has_standard_variable of this VariablePresentation.
         :rtype: List[StandardVariable]
@@ -145,6 +148,7 @@ class VariablePresentation(Model):
     def has_standard_variable(self, has_standard_variable):
         """Sets the has_standard_variable of this VariablePresentation.
 
+        the standard name of a variable  # noqa: E501
 
         :param has_standard_variable: The has_standard_variable of this VariablePresentation.
         :type has_standard_variable: List[StandardVariable]
@@ -156,6 +160,7 @@ class VariablePresentation(Model):
     def has_maximum_accepted_value(self):
         """Gets the has_maximum_accepted_value of this VariablePresentation.
 
+        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :return: The has_maximum_accepted_value of this VariablePresentation.
         :rtype: List[object]
@@ -166,6 +171,7 @@ class VariablePresentation(Model):
     def has_maximum_accepted_value(self, has_maximum_accepted_value):
         """Sets the has_maximum_accepted_value of this VariablePresentation.
 
+        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :param has_maximum_accepted_value: The has_maximum_accepted_value of this VariablePresentation.
         :type has_maximum_accepted_value: List[object]
@@ -177,6 +183,7 @@ class VariablePresentation(Model):
     def has_constraint(self):
         """Gets the has_constraint of this VariablePresentation.
 
+        Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property  # noqa: E501
 
         :return: The has_constraint of this VariablePresentation.
         :rtype: List[str]
@@ -187,6 +194,7 @@ class VariablePresentation(Model):
     def has_constraint(self, has_constraint):
         """Sets the has_constraint of this VariablePresentation.
 
+        Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property  # noqa: E501
 
         :param has_constraint: The has_constraint of this VariablePresentation.
         :type has_constraint: List[str]
@@ -198,6 +206,7 @@ class VariablePresentation(Model):
     def description(self):
         """Gets the description of this VariablePresentation.
 
+        small description  # noqa: E501
 
         :return: The description of this VariablePresentation.
         :rtype: List[str]
@@ -208,6 +217,7 @@ class VariablePresentation(Model):
     def description(self, description):
         """Sets the description of this VariablePresentation.
 
+        small description  # noqa: E501
 
         :param description: The description of this VariablePresentation.
         :type description: List[str]
@@ -219,6 +229,7 @@ class VariablePresentation(Model):
     def label(self):
         """Gets the label of this VariablePresentation.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this VariablePresentation.
         :rtype: List[str]
@@ -229,6 +240,7 @@ class VariablePresentation(Model):
     def label(self, label):
         """Sets the label of this VariablePresentation.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this VariablePresentation.
         :type label: List[str]
@@ -240,6 +252,7 @@ class VariablePresentation(Model):
     def type(self):
         """Gets the type of this VariablePresentation.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this VariablePresentation.
         :rtype: List[str]
@@ -250,6 +263,7 @@ class VariablePresentation(Model):
     def type(self, type):
         """Sets the type of this VariablePresentation.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this VariablePresentation.
         :type type: List[str]
@@ -261,6 +275,7 @@ class VariablePresentation(Model):
     def has_long_name(self):
         """Gets the has_long_name of this VariablePresentation.
 
+        Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name.  # noqa: E501
 
         :return: The has_long_name of this VariablePresentation.
         :rtype: List[str]
@@ -271,6 +286,7 @@ class VariablePresentation(Model):
     def has_long_name(self, has_long_name):
         """Sets the has_long_name of this VariablePresentation.
 
+        Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name.  # noqa: E501
 
         :param has_long_name: The has_long_name of this VariablePresentation.
         :type has_long_name: List[str]
@@ -282,6 +298,7 @@ class VariablePresentation(Model):
     def has_short_name(self):
         """Gets the has_short_name of this VariablePresentation.
 
+        A short name (e.g., temperature) capturing the high-level concept of the variable  # noqa: E501
 
         :return: The has_short_name of this VariablePresentation.
         :rtype: List[str]
@@ -292,6 +309,7 @@ class VariablePresentation(Model):
     def has_short_name(self, has_short_name):
         """Sets the has_short_name of this VariablePresentation.
 
+        A short name (e.g., temperature) capturing the high-level concept of the variable  # noqa: E501
 
         :param has_short_name: The has_short_name of this VariablePresentation.
         :type has_short_name: List[str]
@@ -303,6 +321,7 @@ class VariablePresentation(Model):
     def has_minimum_accepted_value(self):
         """Gets the has_minimum_accepted_value of this VariablePresentation.
 
+        Minimum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :return: The has_minimum_accepted_value of this VariablePresentation.
         :rtype: List[object]
@@ -313,6 +332,7 @@ class VariablePresentation(Model):
     def has_minimum_accepted_value(self, has_minimum_accepted_value):
         """Sets the has_minimum_accepted_value of this VariablePresentation.
 
+        Minimum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
         :param has_minimum_accepted_value: The has_minimum_accepted_value of this VariablePresentation.
         :type has_minimum_accepted_value: List[object]
@@ -324,6 +344,7 @@ class VariablePresentation(Model):
     def id(self):
         """Gets the id of this VariablePresentation.
 
+        identifier  # noqa: E501
 
         :return: The id of this VariablePresentation.
         :rtype: str
@@ -334,6 +355,7 @@ class VariablePresentation(Model):
     def id(self, id):
         """Sets the id of this VariablePresentation.
 
+        identifier  # noqa: E501
 
         :param id: The id of this VariablePresentation.
         :type id: str
@@ -345,6 +367,7 @@ class VariablePresentation(Model):
     def part_of_dataset(self):
         """Gets the part_of_dataset of this VariablePresentation.
 
+        Associates a presentation with a dataset where the presentation occurs  # noqa: E501
 
         :return: The part_of_dataset of this VariablePresentation.
         :rtype: List[DatasetSpecification]
@@ -355,6 +378,7 @@ class VariablePresentation(Model):
     def part_of_dataset(self, part_of_dataset):
         """Sets the part_of_dataset of this VariablePresentation.
 
+        Associates a presentation with a dataset where the presentation occurs  # noqa: E501
 
         :param part_of_dataset: The part_of_dataset of this VariablePresentation.
         :type part_of_dataset: List[DatasetSpecification]
@@ -366,6 +390,7 @@ class VariablePresentation(Model):
     def uses_unit(self):
         """Gets the uses_unit of this VariablePresentation.
 
+        Property used to link a variable presentation or time interval to the unit they are represented in  # noqa: E501
 
         :return: The uses_unit of this VariablePresentation.
         :rtype: List[Unit]
@@ -376,6 +401,7 @@ class VariablePresentation(Model):
     def uses_unit(self, uses_unit):
         """Sets the uses_unit of this VariablePresentation.
 
+        Property used to link a variable presentation or time interval to the unit they are represented in  # noqa: E501
 
         :param uses_unit: The uses_unit of this VariablePresentation.
         :type uses_unit: List[Unit]

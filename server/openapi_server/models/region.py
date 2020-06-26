@@ -73,6 +73,7 @@ class Region(Model):
     def geo(self):
         """Gets the geo of this Region.
 
+        Description not available  # noqa: E501
 
         :return: The geo of this Region.
         :rtype: List[object]
@@ -83,6 +84,7 @@ class Region(Model):
     def geo(self, geo):
         """Sets the geo of this Region.
 
+        Description not available  # noqa: E501
 
         :param geo: The geo of this Region.
         :type geo: List[object]
@@ -94,6 +96,7 @@ class Region(Model):
     def description(self):
         """Gets the description of this Region.
 
+        small description  # noqa: E501
 
         :return: The description of this Region.
         :rtype: List[str]
@@ -104,6 +107,7 @@ class Region(Model):
     def description(self, description):
         """Sets the description of this Region.
 
+        small description  # noqa: E501
 
         :param description: The description of this Region.
         :type description: List[str]
@@ -115,6 +119,7 @@ class Region(Model):
     def part_of(self):
         """Gets the part_of of this Region.
 
+        Indicates whether a region is part of another region  # noqa: E501
 
         :return: The part_of of this Region.
         :rtype: List[Region]
@@ -125,6 +130,7 @@ class Region(Model):
     def part_of(self, part_of):
         """Sets the part_of of this Region.
 
+        Indicates whether a region is part of another region  # noqa: E501
 
         :param part_of: The part_of of this Region.
         :type part_of: List[Region]
@@ -136,6 +142,7 @@ class Region(Model):
     def id(self):
         """Gets the id of this Region.
 
+        identifier  # noqa: E501
 
         :return: The id of this Region.
         :rtype: str
@@ -146,6 +153,7 @@ class Region(Model):
     def id(self, id):
         """Sets the id of this Region.
 
+        identifier  # noqa: E501
 
         :param id: The id of this Region.
         :type id: str
@@ -157,6 +165,7 @@ class Region(Model):
     def label(self):
         """Gets the label of this Region.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this Region.
         :rtype: List[str]
@@ -167,6 +176,7 @@ class Region(Model):
     def label(self, label):
         """Sets the label of this Region.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this Region.
         :type label: List[str]
@@ -178,6 +188,7 @@ class Region(Model):
     def type(self):
         """Gets the type of this Region.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this Region.
         :rtype: List[str]
@@ -188,6 +199,7 @@ class Region(Model):
     def type(self, type):
         """Sets the type of this Region.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this Region.
         :type type: List[str]

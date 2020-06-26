@@ -1,6 +1,5 @@
 #+ summary: Return the query to a resource by the resource_iri
-PREFIX sd: <https://w3id.org/okn/o/sd#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 CONSTRUCT {
     ?_resource_iri ?predicate ?prop .
     ?prop a ?type .

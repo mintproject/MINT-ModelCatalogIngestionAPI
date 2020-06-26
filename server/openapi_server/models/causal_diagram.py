@@ -68,6 +68,7 @@ class CausalDiagram(Model):
     def description(self):
         """Gets the description of this CausalDiagram.
 
+        small description  # noqa: E501
 
         :return: The description of this CausalDiagram.
         :rtype: List[str]
@@ -78,6 +79,7 @@ class CausalDiagram(Model):
     def description(self, description):
         """Sets the description of this CausalDiagram.
 
+        small description  # noqa: E501
 
         :param description: The description of this CausalDiagram.
         :type description: List[str]
@@ -89,6 +91,7 @@ class CausalDiagram(Model):
     def id(self):
         """Gets the id of this CausalDiagram.
 
+        identifier  # noqa: E501
 
         :return: The id of this CausalDiagram.
         :rtype: str
@@ -99,6 +102,7 @@ class CausalDiagram(Model):
     def id(self, id):
         """Sets the id of this CausalDiagram.
 
+        identifier  # noqa: E501
 
         :param id: The id of this CausalDiagram.
         :type id: str
@@ -110,6 +114,7 @@ class CausalDiagram(Model):
     def label(self):
         """Gets the label of this CausalDiagram.
 
+        short description of the resource  # noqa: E501
 
         :return: The label of this CausalDiagram.
         :rtype: List[str]
@@ -120,6 +125,7 @@ class CausalDiagram(Model):
     def label(self, label):
         """Sets the label of this CausalDiagram.
 
+        short description of the resource  # noqa: E501
 
         :param label: The label of this CausalDiagram.
         :type label: List[str]
@@ -131,6 +137,7 @@ class CausalDiagram(Model):
     def type(self):
         """Gets the type of this CausalDiagram.
 
+        type of the resource  # noqa: E501
 
         :return: The type of this CausalDiagram.
         :rtype: List[str]
@@ -141,6 +148,7 @@ class CausalDiagram(Model):
     def type(self, type):
         """Sets the type of this CausalDiagram.
 
+        type of the resource  # noqa: E501
 
         :param type: The type of this CausalDiagram.
         :type type: List[str]
@@ -152,6 +160,7 @@ class CausalDiagram(Model):
     def has_part(self):
         """Gets the has_part of this CausalDiagram.
 
+        Description not available  # noqa: E501
 
         :return: The has_part of this CausalDiagram.
         :rtype: List[object]
@@ -162,6 +171,7 @@ class CausalDiagram(Model):
     def has_part(self, has_part):
         """Sets the has_part of this CausalDiagram.
 
+        Description not available  # noqa: E501
 
         :param has_part: The has_part of this CausalDiagram.
         :type has_part: List[object]
