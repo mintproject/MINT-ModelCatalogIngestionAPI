@@ -1,0 +1,15 @@
+Software
+Image
+SampleExecution
+SampleResource
+SourceCode
+ConfigurationSetup
+DatasetSpecification
+FundingInformation
+SoftwareVersion
+Image
+SoftwareImage
+Person
+Visualization
+Parameter
+DatasetSpecification
