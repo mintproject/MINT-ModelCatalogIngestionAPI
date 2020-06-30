@@ -2,8 +2,8 @@
 set -e
 dir=${PWD}
 SERVER_DIR=server
-docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v4.1.2 \
-     generate  \
+docker run -ti --rm -v ${PWD}:/local -e JAVA_OPTS="-Xmx64G" openapitools/openapi-generator-cli:v4.1.2 \
+    generate  \
      -i /local/model-catalog.yaml\
      -g python-flask  \
      -o /local/$SERVER_DIR/ \
