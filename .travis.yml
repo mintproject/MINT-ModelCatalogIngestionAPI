@@ -8,6 +8,7 @@ install:
   - pip install -U tox
 script:
   - cd server
+  - pip install pythonql3==0.9.61
   - pip install -r requirements.txt 
   - pip install -r test-requirements.txt 
   - tox
